@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project showcase</title>
+  <meta name="description" content="SEO Optimizer, NBA Z Lock, and other active projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222c;
+      --border: #2d3a47;
+      --text: #e8eef4;
+      --muted: #8b9bab;
+      --accent: #3ecf8e;
+      --accent-dim: #2a9d6c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    header { margin-bottom: 2.5rem; }
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 36rem;
+      margin: 0;
+    }
+    .mono {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 0.85rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    article h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    article p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      flex: 1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.25rem;
+    }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+    a.btn:hover {
+      border-color: var(--accent-dim);
+      background: rgba(62, 207, 142, 0.08);
+    }
+    a.btn.primary {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    a.btn.primary:hover {
+      background: var(--accent-dim);
+      border-color: var(--accent-dim);
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Project showcase</h1>
+      <p class="lede">Monorepo: SEO Optimizer and NBA Z Lock live under <span class="mono">projects/</span>. “Browse code” opens the folder on GitHub; add a live demo link when you host one.</p>
+    </header>
+
+    <div class="grid">
+      <article>
+        <h2>SEO Optimizer</h2>
+        <p>Engineering Content Generator: ingest articles, scrape URLs, AI Q&A posts, export—content and SEO workflow (Windows app + launcher scripts in repo).</p>
+        <div class="links">
+          <a class="btn primary" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/seo-optimizer">Browse code</a>
+          <a class="btn" href="https://example.com">Live demo</a>
+        </div>
+      </article>
+
+      <article>
+        <h2>NBA Z Lock</h2>
+        <p>NBA predictions, injuries, and data pipeline with a Flask web UI—Python project with docs and tests in-repo.</p>
+        <div class="links">
+          <a class="btn primary" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/nba-z-lock">Browse code</a>
+          <a class="btn" href="https://example.com">Live demo</a>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <span class="mono">Pages:</span>
+      <a href="https://fredzaser1111.github.io/Project-Showcase/" style="color: var(--accent);">fredzaser1111.github.io/Project-Showcase/</a>
+      (enable in repo Settings → Pages, branch <span class="mono">main</span>, folder <span class="mono">/ (root)</span>)
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Dependencies & environments
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+
+# Build output
+dist/
+build/
+*.egg-info/
+
+# Frozen / local app bundles (commit source instead; keeps the repo small)
+**/_internal/
+*.exe
+*.lnk
+
+# Local / scratch output (keep examples out of the public repo)
+error_output.txt
+**/error_output.txt
+uploads/
+**/uploads/
+*.db

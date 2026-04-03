@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Z-LOCK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ cache_bust if cache_bust else '' }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏀 NBA Z-LOCK</h1>
+            <p class="subtitle">Advanced ML-powered game predictions</p>
+        </header>
+
+        <main>
+            <div class="prediction-card">
+                <h2>Game Prediction</h2>
+                
+                <div class="team-selector">
+                    <div class="team-input">
+                        <label for="home-team">Home Team</label>
+                        <select id="home-team" class="team-select">
+                            <option value="">Select Home Team...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="vs-divider">VS</div>
+                    
+                    <div class="team-input">
+                        <label for="visitor-team">Visitor Team</label>
+                        <select id="visitor-team" class="team-select">
+                            <option value="">Select Visitor Team...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="game-date-input">
+                    <label for="game-date">Game Date (Optional)</label>
+                    <input type="date" id="game-date" class="date-input">
+                </div>
+
+                <div class="injury-section">
+                    <h3>⚕️ Injury Status (Optional)</h3>
+                    <p class="injury-note">Select injured players from each team to improve prediction accuracy</p>
+                    
+                    <div class="injury-inputs">
+                        <div class="injury-team">
+                            <label for="home-injured-players">Home Team - Injured Players</label>
+                            <select id="home-injured-players" class="injury-select-multi" multiple size="8">
+                                <option disabled>Select home team first</option>
+                            </select>
+                            <div class="injury-controls">
+                                <div class="injury-selected-count" id="home-selected-count">0 players selected</div>
+                                <div class="injury-buttons">
+                                    <button type="button" class="clear-team-injuries-btn" id="clear-home-injuries-btn" title="Clear all selected players">
+                                        Clear
+                                    </button>
+                                    <button type="button" class="no-injuries-btn" id="no-home-injuries-btn" title="Mark as no injuries">
+                                        ✓ No Injuries
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="injury-team">
+                            <label for="visitor-injured-players">Visitor Team - Injured Players</label>
+                            <select id="visitor-injured-players" class="injury-select-multi" multiple size="8">
+                                <option disabled>Select visitor team first</option>
+                            </select>
+                            <div class="injury-controls">
+                                <div class="injury-selected-count" id="visitor-selected-count">0 players selected</div>
+                                <div class="injury-buttons">
+                                    <button type="button" class="clear-team-injuries-btn" id="clear-visitor-injuries-btn" title="Clear all selected players">
+                                        Clear
+                                    </button>
+                                    <button type="button" class="no-injuries-btn" id="no-visitor-injuries-btn" title="Mark as no injuries">
+                                        ✓ No Injuries
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Status Management (shown when players are selected) -->
+                    <div id="injury-status-management" class="injury-status-management hidden">
+                        <h4>Set Player Status & Probability</h4>
+                        <div class="status-management-teams">
+                            <div class="status-team-section">
+                                <h5>Home Team Players</h5>
+                                <div id="home-status-players" class="status-players-list"></div>
+                            </div>
+                            <div class="status-team-section">
+                                <h5>Visitor Team Players</h5>
+                                <div id="visitor-status-players" class="status-players-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="injury-help">
+                        <p><strong>How to use:</strong></p>
+                        <ul>
+                            <li><strong>Select players</strong> from the dropdowns above</li>
+                            <li><strong>Set status</strong> for each selected player: Out (0%), Questionable (with %), or Available (100%)</li>
+                            <li><strong>Questionable</strong> means uncertain - adjust the probability slider (e.g., 50% = 50% chance of playing)</li>
+                            <li><strong>Out</strong> = 0% chance, <strong>Available</strong> = 100% chance</li>
+                        </ul>
+                        <p style="margin-top: 8px;">Players are automatically classified as <strong>Star ⭐</strong>, <strong>Key 🔑</strong>, or <strong>Role 👥</strong></p>
+                    </div>
+                    
+                    <button id="clear-injuries-btn" class="clear-injuries-btn">Clear All Injuries (Both Teams)</button>
+                </div>
+
+                <button id="predict-btn" class="predict-button" disabled>
+                    Get Prediction
+                </button>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing matchup...</p>
+                </div>
+
+                <div id="error" class="error hidden"></div>
+
+                <div id="prediction-result" class="prediction-result hidden">
+                    <div class="result-header">
+                        <h3>Prediction Result</h3>
+                        <div class="confidence-badge" id="confidence-badge">
+                            <span id="confidence-text">0%</span> Confidence
+                        </div>
+                    </div>
+
+                    <div class="matchup-display">
+                        <div class="team-card home-team-card">
+                            <h4 id="home-team-name">Home Team</h4>
+                            <div class="win-probability">
+                                <span class="prob-value" id="home-prob">0%</span>
+                                <span class="prob-label">Win Probability</span>
+                            </div>
+                            <div class="moneyline">
+                                <span class="ml-label">Money Line:</span>
+                                <span class="ml-value" id="home-ml">-</span>
+                            </div>
+                        </div>
+
+                        <div class="vs-divider-large">VS</div>
+
+                        <div class="team-card visitor-team-card">
+                            <h4 id="visitor-team-name">Visitor Team</h4>
+                            <div class="win-probability">
+                                <span class="prob-value" id="visitor-prob">0%</span>
+                                <span class="prob-label">Win Probability</span>
+                            </div>
+                            <div class="moneyline">
+                                <span class="ml-label">Money Line:</span>
+                                <span class="ml-value" id="visitor-ml">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prediction-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Predicted Winner:</span>
+                            <span class="summary-value" id="predicted-winner">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Favorite:</span>
+                            <span class="summary-value" id="favorite-team">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Model Status</h3>
+                <div id="model-status" class="model-status">
+                    <p>Checking model status...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by NBA_API (NBA.com) & Machine Learning</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}?v={{ cache_bust if cache_bust else '' }}"></script>
+</body>
+</html>
+
