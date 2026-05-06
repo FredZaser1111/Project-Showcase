@@ -1,6 +1,6 @@
 # Project Showcase (monorepo)
 
-One GitHub repository for the landing page **and** both projects. Push from this folder only.
+One GitHub repository for the landing page **and** project workspaces. Push from this folder only.
 
 **Repository:** [github.com/FredZaser1111/Project-Showcase](https://github.com/FredZaser1111/Project-Showcase)
 
@@ -15,6 +15,7 @@ One GitHub repository for the landing page **and** both projects. Push from this
 | `index.html` | Landing page for GitHub Pages |
 | `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
+| `projects/tomorrows-golden-slate/` | Tomorrow's Golden Slate (starter project workspace) |
 
 Update and push from the repo root:
 
@@ -47,6 +48,18 @@ git push
 | Live demo | Add your URL here when you have one |
 
 **Highlights:** NBA game data, predictions, injuries, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
+
+---
+
+## Tomorrow's Golden Slate
+
+| | Link |
+| --- | --- |
+| Code in this repo | [projects/tomorrows-golden-slate](projects/tomorrows-golden-slate) |
+| Browse on GitHub | [tree/main/projects/tomorrows-golden-slate](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/tomorrows-golden-slate) |
+| Live demo | Add your URL here when you have one |
+
+**Highlights:** Starter workspace for Tomorrow's Golden Slate. Add source files, setup steps, and usage notes as the project takes shape.
 
 ---
 
