@@ -179,3 +179,4 @@ inputs. More filled columns produce better rankings.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
 - `example_candidates.csv` - example slate input format.
 - `slate_template.csv` - fillable CSV for real slates.
+- `tracking/` - saved cards, outcomes, and notes for model adjustment.
