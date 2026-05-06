@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import itertools
 import math
 from dataclasses import dataclass
@@ -363,6 +364,13 @@ def load_candidates(path: Path) -> list[Candidate]:
         if reader.fieldnames is None:
             raise ValueError(f"{path} has no header row")
         return [build_candidate(row, index + 2) for index, row in enumerate(reader)]
+
+
+def load_candidates_from_text(csv_text: str) -> list[Candidate]:
+    reader = csv.DictReader(io.StringIO(csv_text.strip()))
+    if reader.fieldnames is None:
+        raise ValueError("CSV input has no header row")
+    return [build_candidate(row, index + 2) for index, row in enumerate(reader)]
 
 
 def filter_candidates(

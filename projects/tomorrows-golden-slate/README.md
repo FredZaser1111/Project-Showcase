@@ -48,6 +48,30 @@ Use these measures before adding any leg to the slate:
 candidate 3PM prop legs, scores each player, and prints only legs that pass the
 +EV filters.
 
+## Use it ASAP in your browser
+
+This project now includes a no-install local web app. From this folder, run:
+
+```bash
+python3 app.py
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Fastest workflow:
+
+1. Copy tomorrow's 3PM prop slate into CSV format.
+2. Paste it into the text box, or upload a CSV file.
+3. Adjust filters for minimum probability, edge, EV, no-vig edge, 3PA, and parlay size.
+4. Click **Screen Slate**.
+5. Review the ranked +EV legs and parlay combinations.
+
+Use `example_candidates.csv` if you want to test the app before entering a real slate.
+
 Run the included example:
 
 ```bash
@@ -112,11 +136,12 @@ Core input columns:
 
 1. Pull tomorrow's NBA 3PM prop lines and odds into a CSV.
 2. Add season and recent shooting data for every candidate.
-3. Run the screener.
-4. Review the top +EV underdog/ceiling candidates.
+3. Run `python3 app.py` and paste/upload the slate.
+4. Review the top +EV underdog/ceiling candidates in the browser.
 5. Track final decisions and results so the probability model can be calibrated.
 
 ## Files
 
+- `app.py` - local browser app for screening pasted or uploaded CSV slates.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
 - `example_candidates.csv` - example slate input format.
