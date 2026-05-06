@@ -219,6 +219,7 @@ INDEX_HTML = """<!doctype html>
         <div class="actions">
           <button id="screenBtn">Screen slate</button>
           <button class="secondary" id="sampleBtn" type="button">Load sample</button>
+          <a class="download" href="/slate_template.csv" download>Download CSV template</a>
         </div>
         <p class="small"><label for="csvFile">Or upload CSV</label><input id="csvFile" type="file" accept=".csv,text/csv"></p>
         <p class="small">Tip: include <code>under_american_odds</code> when you have it. That lets the app compare your model to the no-vig fair market too.</p>
@@ -351,6 +352,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/":
             self.send_text(index_html(), content_type="text/html")
             return
+        if path == "/slate_template.csv":
+            self.send_template()
+            return
         self.send_error(HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:
@@ -382,6 +386,18 @@ class Handler(BaseHTTPRequestHandler):
 
     def send_json(self, payload: dict[str, Any], *, status: HTTPStatus = HTTPStatus.OK) -> None:
         self.send_text(json.dumps(payload), content_type="application/json", status=status)
+
+    def send_template(self) -> None:
+        template_path = __file__.replace("app.py", "slate_template.csv")
+        with open(template_path, encoding="utf-8") as template_file:
+            content = template_file.read()
+        encoded = content.encode("utf-8")
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", "text/csv; charset=utf-8")
+        self.send_header("Content-Disposition", 'attachment; filename="slate_template.csv"')
+        self.send_header("Content-Length", str(len(encoded)))
+        self.end_headers()
+        self.wfile.write(encoded)
 
 
 def parse_args() -> argparse.Namespace:
