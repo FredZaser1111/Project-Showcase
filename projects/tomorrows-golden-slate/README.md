@@ -71,6 +71,7 @@ Fastest workflow:
 5. Review the ranked +EV legs and parlay combinations.
 
 Use `example_candidates.csv` if you want to test the app before entering a real slate.
+Use `slate_template.csv` as the fillable sheet for tomorrow's real slate.
 
 Run the included example:
 
@@ -119,6 +120,38 @@ Core input columns:
 | `spread` | `5.5` | Positive values mean the player's team is an underdog. |
 | `opponent_3pa_allowed_index` | `1.08` | `1.00` is league average; higher means more 3PA allowed. |
 
+## Fillable slate template
+
+Use `slate_template.csv` when you want me to generate cards for a real slate.
+It is header-only on purpose: fill one row per player prop, then send the
+completed CSV back here. Use `example_candidates.csv` only as a reference for
+what filled rows look like.
+
+Recommended minimum columns to fill:
+
+- `player`
+- `team`
+- `opponent`
+- `market`
+- `line`
+- `american_odds`
+- `under_american_odds` when available
+- `model_probability` if you already have a projection
+- `season_hit_rate`
+- `recent_hit_rate`
+- `last5_hit_rate`
+- `season_3pa`
+- `recent_3pa`
+- `season_3p_pct`
+- `recent_3p_pct`
+- `minutes`
+- `team_is_underdog`
+- `spread`
+
+If `model_probability` is blank, the tool will try to derive one from volume,
+shooting percentage, hit rates, minutes, usage, matchup, and underdog/spread
+inputs. More filled columns produce better rankings.
+
 ## Model guardrails
 
 - Do not include legs with model probability below 50%.
@@ -145,3 +178,4 @@ Core input columns:
 - `app.py` - local browser app for screening pasted or uploaded CSV slates.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
 - `example_candidates.csv` - example slate input format.
+- `slate_template.csv` - fillable CSV for real slates.
