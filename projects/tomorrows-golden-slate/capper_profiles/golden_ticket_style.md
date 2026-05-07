@@ -146,3 +146,18 @@ Second-round playoff tickets should emphasize:
 The goal is not to copy the old slips exactly. The goal is to copy the logic:
 find alt lines where playoff context makes the outcome more likely than the
 public price implies.
+
+## Playoff tuning overlay
+
+Before finalizing a Golden Ticket, apply `playoff_tuning.md` and
+`playoff_tuning.py`:
+
+- top-seven rotation minutes receive a 15-20% boost,
+- non-Denver series receive a 5% pace drag,
+- scoring efficiency is penalized for playoff defensive intensity,
+- series-to-date trends outrank full-season baselines,
+- Game 6/7 or elimination spots get a clutch/veteran-poise review.
+
+This overlay should make the model more skeptical of fragile role-player points
+while preserving edges in star multi-category anchors, rebounding, defense, and
+trusted rotation activity.

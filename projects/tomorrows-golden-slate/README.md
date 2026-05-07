@@ -176,9 +176,9 @@ inputs. More filled columns produce better rankings.
 ## Files
 
 - `app.py` - local browser app for screening pasted or uploaded CSV slates.
+- `playoff_tuning.py` - reusable playoff projection adjustment calculator.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
 - `example_candidates.csv` - example slate input format.
 - `slate_template.csv` - fillable CSV for real slates.
-- `capper_profiles/` - reusable betting-style profiles, including Golden Ticket logic.
-- `tracking/` - placed cards, candidate builds, and result review notes.
+- `capper_profiles/` - reusable betting-style profiles and playoff tuning rules.
 - `tracking/` - saved cards, outcomes, and notes for model adjustment.
