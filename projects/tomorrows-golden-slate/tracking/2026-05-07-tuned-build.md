@@ -119,6 +119,18 @@ Final: Pistons 107, Cavaliers 97.
 | Jalen Duren 3+ assists | 1 assist | Miss | Big-man passing expander was too fragile; teammate conversion/touch role did not hold. |
 | Evan Mobley 4+ assists | 4 assists | Hit | Mobley connector role did show up even while rebounds collapsed. |
 
+### Cavaliers at Pistons diversion slip
+
+Final: Pistons 107, Cavaliers 97.
+
+| Leg | Result seen | Outcome | Lesson |
+| --- | ---: | --- | --- |
+| Donovan Mitchell 25+ points | cleared 25 | Hit | Primary scorer response angle was correct. |
+| James Harden 7+ assists | did not clear 7 | Miss | Main-line assist ladder was too optimistic; one-game series confirmation over-weighted the Game 1 path. |
+| Evan Mobley 2+ blocks | cleared 2 | Hit | Mobley defensive activity was a better category than Mobley rebounds. |
+| Jalen Duren 12+ rebounds | did not clear 12 | Miss | Duren board ceiling did not carry over; physical big-man props need clearer role/rebound-chance confirmation. |
+| Donovan Mitchell 3+ made threes | did not clear 3 | Miss | Do not pair Mitchell points with threes unless the threes price is clearly mispriced; the scoring path can come inside the arc/FT line. |
+
 ## Model adjustment after May 7
 
 - The playoff tuning layer over-weighted one-game series confirmation for several legs. Series data should be capped until at least two games exist.
@@ -134,4 +146,7 @@ Final: Pistons 107, Cavaliers 97.
   - Reaves R+A missed.
 - Big-man assists should remain expander-only. Duren missed while Mobley hit, showing this market is highly role-specific.
 - Rebounds are not automatically safer if the player can be schemed away or pulled from the primary board path; Mobley 9+ rebounds was a major miss.
+- Primary scorer points can still work in a loss. Mitchell 25+ hit even while the Cavs lost by 10.
+- Avoid same-player scorer + threes correlation unless both legs are independently mispriced. Mitchell points hit while Mitchell threes missed.
+- Harden assists should be downgraded from "strong add" to "price-sensitive only" until a second series game confirms 7+ facilitation.
 
