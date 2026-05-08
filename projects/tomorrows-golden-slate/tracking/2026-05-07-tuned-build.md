@@ -1,6 +1,6 @@
 # 2026-05-07 Tuned Slip Build
 
-Status: tuned model build
+Status: results review started
 
 ## Tuning applied
 
@@ -90,4 +90,48 @@ Approximate odds: +21814.
   much better reason than the current Game 1 trend.
 - Avoid adding more Lakers underdog role-player points; blowout risk is still
   the main slate risk.
+
+## Results captured from screenshots
+
+### Lakers at Thunder
+
+Final: Thunder 125, Lakers 107.
+
+| Leg | Result seen | Outcome | Lesson |
+| --- | ---: | --- | --- |
+| Lakers +15.5 | Lakers lost by 18 | Miss | The spread protection did not survive the final margin; blowout risk was real. |
+| Rui Hachimura 13+ points | did not clear 12.5 | Miss | Lakers secondary scoring read failed; avoid over-trusting role scoring in huge underdog spots. |
+| LeBron James 21+ points | did not clear 20.5 | Miss | Star usage anchor failed under OKC defensive pressure/game script. |
+| Luguentz Dort 2+ made threes | did not clear 1.5 | Miss | Role-player spacing can still disappear; do not stack too many scoring/shooting legs in one SGP. |
+| Austin Reaves 10+ rebounds + assists | did not clear 9.5 | Miss | Safer multi-category Lakers role leg still failed in the blowout environment. |
+| Chet Holmgren 2+ blocks | 2 blocks | Hit | Defensive category edge translated cleanly. |
+| Chet Holmgren 2+ threes | 3 made threes | Hit | Big-man spacing expander hit; this was the best moonshot add. |
+| Chet Holmgren 12+ points | hit in shared 10-leg screenshot | Hit | Lower Chet points alt was viable in OKC-control script. |
+| Shai Gilgeous-Alexander 30+ points | hit in shared 10-leg screenshot | Hit | OKC scoring engine worked; SGA was better than Lakers-side scoring legs. |
+
+### Cavaliers at Pistons
+
+Final: Pistons 107, Cavaliers 97.
+
+| Leg | Result seen | Outcome | Lesson |
+| --- | ---: | --- | --- |
+| Evan Mobley 9+ rebounds | 1 rebound | Miss | Biggest model miss; series weighting overreacted to the prior path and ignored role/game-flow risk. |
+| Jalen Duren 3+ assists | 1 assist | Miss | Big-man passing expander was too fragile; teammate conversion/touch role did not hold. |
+| Evan Mobley 4+ assists | 4 assists | Hit | Mobley connector role did show up even while rebounds collapsed. |
+
+## Model adjustment after May 7
+
+- The playoff tuning layer over-weighted one-game series confirmation for several legs. Series data should be capped until at least two games exist.
+- In large-spread games, underdog scoring and secondary usage should be penalized harder than the current model did.
+- Defensive/big-man spacing legs were better than Lakers scoring legs:
+  - Chet blocks hit.
+  - Chet threes hit.
+  - SGA points hit.
+- Role-player or secondary-scorer points in the large-underdog game were poor:
+  - Rui points missed.
+  - LeBron points missed.
+  - Dort threes missed.
+  - Reaves R+A missed.
+- Big-man assists should remain expander-only. Duren missed while Mobley hit, showing this market is highly role-specific.
+- Rebounds are not automatically safer if the player can be schemed away or pulled from the primary board path; Mobley 9+ rebounds was a major miss.
 
