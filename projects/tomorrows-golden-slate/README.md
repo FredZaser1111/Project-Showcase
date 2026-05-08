@@ -48,6 +48,19 @@ Use these measures before adding any leg to the slate:
 candidate 3PM prop legs, scores each player, and prints only legs that pass the
 +EV filters.
 
+## Model profiles
+
+The workspace supports multiple slate types:
+
+| Slate type | Profile | Utility |
+| --- | --- | --- |
+| NBA playoffs | `capper_profiles/golden_ticket_style.md` and `capper_profiles/playoff_tuning.md` | `playoff_tuning.py` |
+| WNBA opener regular season | `capper_profiles/wnba_opener_regular_season.md` | `wnba_tuning.py` |
+
+Use the NBA playoff model for series-based adjustments, rotation tightening, and
+defensive intensity. Use the WNBA opener model for roster continuity, offseason
+role changes, market lag, and early-season shooting volatility.
+
 ## Use it ASAP in your browser
 
 This project now includes a no-install local web app. From this folder, run:
@@ -177,6 +190,7 @@ inputs. More filled columns produce better rankings.
 
 - `app.py` - local browser app for screening pasted or uploaded CSV slates.
 - `playoff_tuning.py` - reusable playoff projection adjustment calculator.
+- `wnba_tuning.py` - WNBA opener regular-season projection adjustment calculator.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
 - `example_candidates.csv` - example slate input format.
 - `slate_template.csv` - fillable CSV for real slates.
