@@ -86,6 +86,31 @@ Fastest workflow:
 Use `example_candidates.csv` if you want to test the app before entering a real slate.
 Use `slate_template.csv` as the fillable sheet for tomorrow's real slate.
 
+## Live prop sweat tracker
+
+Use `live_prop_tracker.py` when a leg is live and you want a quick read on pace,
+needed stats, and cash-out quality.
+
+Example for Gabby Williams over 8.5 rebounds + assists:
+
+```bash
+python3 live_prop_tracker.py \
+  --player "Gabby Williams" \
+  --target 8.5 \
+  --rebounds 4 \
+  --assists 3 \
+  --quarter 3 \
+  --clock 4:12 \
+  --payout 282.38 \
+  --cashout-offer 50 \
+  --remaining-leg-odds 129
+```
+
+Update `--rebounds`, `--assists`, `--quarter`, and `--clock` as the game moves.
+If Gabby clears and Aliyah Boston is the only remaining leg, use Aliyah's
+American odds in `--remaining-leg-odds` to compare the cash-out offer to a fair
+value estimate.
+
 Run the included example:
 
 ```bash
@@ -189,6 +214,7 @@ inputs. More filled columns produce better rankings.
 ## Files
 
 - `app.py` - local browser app for screening pasted or uploaded CSV slates.
+- `live_prop_tracker.py` - manual live prop tracker for in-game sweat decisions.
 - `playoff_tuning.py` - reusable playoff projection adjustment calculator.
 - `wnba_tuning.py` - WNBA opener regular-season projection adjustment calculator.
 - `screen_three_point_legs.py` - +EV three-point prop screener.
