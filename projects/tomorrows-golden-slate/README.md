@@ -91,6 +91,11 @@ Use `slate_template.csv` as the fillable sheet for tomorrow's real slate.
 Use `live_prop_tracker.py` when a leg is live and you want a quick read on pace,
 needed stats, and cash-out quality.
 
+In the browser app, click **Live Tracker** in the bottom-right corner to open a
+pop-out tracker. Select Gabby's rebounds, assists, quarter, and clock, then
+click **Submit tracker**. Use **Copy for Cursor** to copy a summary you can paste
+back here for live feedback.
+
 Example for Gabby Williams over 8.5 rebounds + assists:
 
 ```bash

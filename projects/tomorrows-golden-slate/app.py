@@ -18,6 +18,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 from urllib.parse import urlparse
 
+from live_prop_tracker import TrackerInput, parse_clock, read_tracker
 from screen_three_point_legs import (
     Candidate,
     american_to_decimal,
@@ -109,6 +110,36 @@ def screen_payload(payload: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def live_tracker_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    inputs = TrackerInput(
+        player=str(payload.get("player", "Gabby Williams")),
+        target=float(payload.get("target", 8.5)),
+        rebounds=int(payload.get("rebounds", 0)),
+        assists=int(payload.get("assists", 0)),
+        quarter=int(payload.get("quarter", 1)),
+        seconds_left_in_quarter=parse_clock(str(payload.get("clock", "10:00"))),
+        payout=float(payload["payout"]) if str(payload.get("payout", "")).strip() else None,
+        cashout_offer=float(payload["cashout_offer"]) if str(payload.get("cashout_offer", "")).strip() else None,
+        remaining_leg_american_odds=(
+            int(payload["remaining_leg_odds"]) if str(payload.get("remaining_leg_odds", "")).strip() else None
+        ),
+    )
+    current_total = inputs.rebounds + inputs.assists
+    needed = max(0, int(inputs.target) + 1 - current_total)
+    return {
+        "readout": read_tracker(inputs),
+        "summary": (
+            f"{inputs.player} live tracker: {inputs.rebounds} REB + {inputs.assists} AST = "
+            f"{current_total} R+A, needs {needed} for over {inputs.target:g}. "
+            f"Q{inputs.quarter} {inputs.seconds_left_in_quarter // 60}:"
+            f"{inputs.seconds_left_in_quarter % 60:02d} left. "
+            f"Cashout offer: {payload.get('cashout_offer', 'n/a')}. "
+            f"Full payout: {payload.get('payout', 'n/a')}. "
+            f"Remaining-leg odds: {payload.get('remaining_leg_odds', 'n/a')}."
+        ),
+    }
+
+
 INDEX_HTML = """<!doctype html>
 <html lang="en">
 <head>
@@ -190,6 +221,47 @@ INDEX_HTML = """<!doctype html>
     .parlay strong { color: var(--gold); }
     .small { font-size: 12px; color: var(--muted); line-height: 1.5; }
     code { color: var(--gold); }
+    .tracker-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 10;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    }
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.68);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 20;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      width: min(760px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 20px 90px rgba(0, 0, 0, 0.45);
+    }
+    .modal-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .modal-head h2 { margin: 0; }
+    .tracker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    @media (min-width: 720px) { .tracker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    pre.readout {
+      white-space: pre-wrap;
+      background: #101820;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      color: var(--text);
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -245,6 +317,35 @@ INDEX_HTML = """<!doctype html>
         <div id="parlays"><p class="muted">Run the screener to rank combinations.</p></div>
       </section>
     </div>
+  </div>
+  <button class="tracker-fab" id="openTrackerBtn" type="button">Live Tracker</button>
+  <div class="modal-backdrop" id="trackerModal" aria-hidden="true">
+    <section class="modal">
+      <div class="modal-head">
+        <div>
+          <h2>Live Prop Tracker</h2>
+          <p class="small">Update the stat line, submit, then copy the summary back to Cursor for feedback.</p>
+        </div>
+        <button class="secondary" id="closeTrackerBtn" type="button">Close</button>
+      </div>
+      <div class="tracker-grid">
+        <div><label>Player</label><input id="trackerPlayer" value="Gabby Williams"></div>
+        <div><label>Target</label><select id="trackerTarget"><option value="8.5">Over 8.5 R+A</option><option value="7.5">Over 7.5 R+A</option><option value="9.5">Over 9.5 R+A</option></select></div>
+        <div><label>Rebounds</label><select id="trackerRebounds"></select></div>
+        <div><label>Assists</label><select id="trackerAssists"></select></div>
+        <div><label>Quarter</label><select id="trackerQuarter"><option>1</option><option>2</option><option selected>3</option><option>4</option></select></div>
+        <div><label>Clock left</label><input id="trackerClock" value="4:12" placeholder="4:12"></div>
+        <div><label>Full payout</label><input id="trackerPayout" type="number" step="0.01" value="282.38"></div>
+        <div><label>Cashout offer</label><input id="trackerCashout" type="number" step="0.01" value="50"></div>
+        <div><label>Remaining leg odds</label><input id="trackerRemainingOdds" type="number" value="129"></div>
+      </div>
+      <div class="actions" style="margin-top:14px;">
+        <button id="runTrackerBtn" type="button">Submit tracker</button>
+        <button class="secondary" id="copyTrackerBtn" type="button">Copy for Cursor</button>
+      </div>
+      <pre class="readout" id="trackerReadout">No tracker update yet.</pre>
+      <textarea id="trackerSummary" style="min-height:92px;" readonly></textarea>
+    </section>
   </div>
   <script>
     const sampleCsv = SAMPLE_CSV_JSON;
@@ -308,6 +409,51 @@ INDEX_HTML = """<!doctype html>
       }[char]));
     }
 
+    function fillTrackerSelects() {
+      for (const id of ["trackerRebounds", "trackerAssists"]) {
+        const select = $(id);
+        select.innerHTML = "";
+        for (let value = 0; value <= 20; value++) {
+          const option = document.createElement("option");
+          option.value = String(value);
+          option.textContent = String(value);
+          if ((id === "trackerRebounds" && value === 4) || (id === "trackerAssists" && value === 3)) {
+            option.selected = true;
+          }
+          select.appendChild(option);
+        }
+      }
+    }
+
+    function trackerPayload() {
+      return {
+        player: $("trackerPlayer").value,
+        target: Number($("trackerTarget").value),
+        rebounds: Number($("trackerRebounds").value),
+        assists: Number($("trackerAssists").value),
+        quarter: Number($("trackerQuarter").value),
+        clock: $("trackerClock").value,
+        payout: $("trackerPayout").value,
+        cashout_offer: $("trackerCashout").value,
+        remaining_leg_odds: $("trackerRemainingOdds").value
+      };
+    }
+
+    async function runTracker() {
+      const response = await fetch("/api/live-track", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(trackerPayload())
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        $("trackerReadout").textContent = data.error || "Could not run tracker.";
+        return;
+      }
+      $("trackerReadout").textContent = data.readout;
+      $("trackerSummary").value = data.summary;
+    }
+
     async function screenSlate() {
       setError("");
       const response = await fetch("/api/screen", {
@@ -325,12 +471,37 @@ INDEX_HTML = """<!doctype html>
 
     $("screenBtn").addEventListener("click", () => screenSlate().catch((error) => setError(escapeHtml(error.message))));
     $("sampleBtn").addEventListener("click", () => { $("csvInput").value = sampleCsv; screenSlate(); });
+    $("openTrackerBtn").addEventListener("click", () => {
+      $("trackerModal").classList.add("open");
+      $("trackerModal").setAttribute("aria-hidden", "false");
+    });
+    $("closeTrackerBtn").addEventListener("click", () => {
+      $("trackerModal").classList.remove("open");
+      $("trackerModal").setAttribute("aria-hidden", "true");
+    });
+    $("runTrackerBtn").addEventListener("click", () => runTracker().catch((error) => {
+      $("trackerReadout").textContent = error.message;
+    }));
+    $("copyTrackerBtn").addEventListener("click", async () => {
+      if (!$("trackerSummary").value) {
+        await runTracker();
+      }
+      $("trackerSummary").select();
+      try {
+        await navigator.clipboard.writeText($("trackerSummary").value);
+        $("copyTrackerBtn").textContent = "Copied";
+        setTimeout(() => { $("copyTrackerBtn").textContent = "Copy for Cursor"; }, 1200);
+      } catch {
+        document.execCommand("copy");
+      }
+    });
     $("csvFile").addEventListener("change", async (event) => {
       const file = event.target.files && event.target.files[0];
       if (!file) return;
       $("csvInput").value = await file.text();
       screenSlate().catch((error) => setError(escapeHtml(error.message)));
     });
+    fillTrackerSelects();
     $("csvInput").value = sampleCsv;
     screenSlate().catch(() => {});
   </script>
@@ -359,7 +530,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = urlparse(self.path).path
-        if path != "/api/screen":
+        if path not in {"/api/screen", "/api/live-track"}:
             self.send_error(HTTPStatus.NOT_FOUND)
             return
 
@@ -367,7 +538,7 @@ class Handler(BaseHTTPRequestHandler):
             length = int(self.headers.get("Content-Length", "0"))
             body = self.rfile.read(length).decode("utf-8")
             payload = json.loads(body) if body else {}
-            result = screen_payload(payload)
+            result = live_tracker_payload(payload) if path == "/api/live-track" else screen_payload(payload)
         except Exception as exc:  # noqa: BLE001 - local tool should return readable errors.
             self.send_json({"error": str(exc)}, status=HTTPStatus.BAD_REQUEST)
             return
