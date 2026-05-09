@@ -68,6 +68,38 @@ efficiency declines:
 6. Treat series Game 1/2 data as live evidence, but confirm it with role and
    minutes before chasing.
 
+## Near-miss SGP lessons (observed)
+
+Same-game parlays can look “almost there” while failing on **thin-margin** legs.
+Documented pattern from settled/live tickets:
+
+| Result | Leg type | Insight |
+| --- | --- | --- |
+| Hit | Star big rebounds (e.g. Wembanyama O12.5 REB) | Star rebound anchors **survived** defensive intensity; keep as core legs when minutes and matchup path are sound. |
+| Hit | Wing/guard assists (e.g. Vassell O2.5 AST) | Connector stats **cleared** alongside star production; assists remain a preferred playoff shape vs fragile scoring ladders. |
+| Hit | Star assists (e.g. Towns O5.5 AST) | Star **non-points** paths remain reliable payout drivers when role is primary hub or connector. |
+| Miss by ~1 combined stat | Low combined activity (e.g. Grimes O4.5 REB+AST → 4) | **Half-line sensitivity**: one fewer rebound or assist fails the whole leg; require extra touch/minutes confidence or prefer a **slightly softer alt** if priced fairly. |
+| Miss by ~2–3 points | Rookie/volatile primary scorer (e.g. Castle O15.5 → 13; Edgecombe O12.5 → 11) | **Rhythm legs**: playoff defense + foul trouble + cold stretches hit **modest points overs** harder than rebounds/assists; downgrade unless FGA/FT volume story is strong or the line is clearly soft. |
+
+**Process tweaks**
+
+- Treat **O5.5 or lower combined REB+AST** (and similar low thresholds) as **high variance** unless the player’s playoff touch profile is overwhelming.
+- Limit **one** rookie or volatile primary-scorer **points** leg per same-game cluster; pair with **star rebound or assist** anchors, not three correlated scorers.
+- When two legs **hit** and one **points** leg misses late, the lesson is usually **line placement**, not “bad read” on the whole game — tighten **points** thresholds or add **price** requirement before locking.
+
+## Prop-shape multipliers (code)
+
+`playoff_tuning.py` can apply optional discounts so modeled probability matches
+the above skepticism:
+
+| Flag | Factor | When to use |
+| --- | ---: | --- |
+| `--low-margin-activity-combo` | ×0.93 | Combined REB+AST (or similar) with a **low** book total (e.g. O4.5). |
+| `--rookie-primary-scorer-points` | ×0.94 | Points overs on **rookies** or other **high-variance** playoff primary scorers. |
+
+Both can be combined; the product is reported as `prop_archetype_factor` in the
+JSON output.
+
 ## Utility
 
 `playoff_tuning.py` provides a small standard-library calculator for these
@@ -81,6 +113,19 @@ python3 playoff_tuning.py \
   --base-minutes 34 \
   --rotation-rank 4 \
   --shot-quality 0.02
+```
+
+Example with prop-shape discounts (Grimes-style + Castle-style legs):
+
+```bash
+python3 playoff_tuning.py \
+  --season-rate 0.52 \
+  --last10-rate 0.55 \
+  --series-rate 0.56 \
+  --base-minutes 32 \
+  --rotation-rank 6 \
+  --low-margin-activity-combo \
+  --rookie-primary-scorer-points
 ```
 
 Use the output `adjusted_probability` as the modeled probability to compare

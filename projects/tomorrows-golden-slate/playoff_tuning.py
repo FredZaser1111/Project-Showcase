@@ -19,6 +19,12 @@ PLAYOFF_PACE_PENALTY = 0.95
 TRUE_SHOOTING_DROP = 0.023
 OFFENSIVE_RATING_DROP = 4.3
 
+# Prop-shape penalties (multiply into adjusted probability). Derived from SGP
+# near-misses: low combined activity lines miss by one counting stat; rookie or
+# volatile primary scorers can finish just short on modest points ladders.
+LOW_MARGIN_ACTIVITY_COMBO_FACTOR = 0.93
+ROOKIE_PRIMARY_SCORER_POINTS_FACTOR = 0.94
+
 
 @dataclass(frozen=True)
 class PlayoffInputs:
@@ -34,6 +40,10 @@ class PlayoffInputs:
     veteran_poise: float = 0.0
     floor_spacing: float = 0.0
     shot_quality: float = 0.0
+    # True for combined props with a low book threshold (e.g. O4.5 REB+AST).
+    low_margin_activity_combo: bool = False
+    # True for first-year or similarly volatile playoff primary scorers on points.
+    rookie_primary_scorer_points: bool = False
 
 
 @dataclass(frozen=True)
@@ -45,6 +55,7 @@ class PlayoffProjection:
     series_weight: float
     clutch_weight: float
     urgency_multiplier: float
+    prop_archetype_factor: float
 
 
 def clamp(value: float, low: float, high: float) -> float:
@@ -104,6 +115,17 @@ def blend_rate(inputs: PlayoffInputs) -> tuple[float, float, float]:
     return blended, series_weight, clutch_weight
 
 
+def prop_archetype_factor(inputs: PlayoffInputs) -> float:
+    """Discount fragile prop shapes while leaving stars/rebounds/assists untouched."""
+
+    factor = 1.0
+    if inputs.low_margin_activity_combo:
+        factor *= LOW_MARGIN_ACTIVITY_COMBO_FACTOR
+    if inputs.rookie_primary_scorer_points:
+        factor *= ROOKIE_PRIMARY_SCORER_POINTS_FACTOR
+    return clamp(factor, 0.75, 1.0)
+
+
 def urgency_multiplier(inputs: PlayoffInputs) -> float:
     """Boost stable veteran/floor-spacing profiles in Game 6/7 or elimination spots."""
 
@@ -121,8 +143,9 @@ def adjusted_probability(inputs: PlayoffInputs) -> PlayoffProjection:
     pace = pace_factor(series_involves_denver=inputs.series_involves_denver)
     efficiency = efficiency_factor(shot_quality=inputs.shot_quality)
     urgency = urgency_multiplier(inputs)
+    shape = prop_archetype_factor(inputs)
 
-    probability = base_rate * minutes_factor * pace * efficiency * urgency
+    probability = base_rate * minutes_factor * pace * efficiency * urgency * shape
     probability = clamp(probability, 0.01, 0.95)
 
     return PlayoffProjection(
@@ -133,6 +156,7 @@ def adjusted_probability(inputs: PlayoffInputs) -> PlayoffProjection:
         series_weight=series_weight,
         clutch_weight=clutch_weight,
         urgency_multiplier=urgency,
+        prop_archetype_factor=shape,
     )
 
 
@@ -150,6 +174,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--veteran-poise", type=float, default=0.0)
     parser.add_argument("--floor-spacing", type=float, default=0.0)
     parser.add_argument("--shot-quality", type=float, default=0.0)
+    parser.add_argument(
+        "--low-margin-activity-combo",
+        action="store_true",
+        help="Combined REB+AST / similar props with a low threshold (e.g. O4.5).",
+    )
+    parser.add_argument(
+        "--rookie-primary-scorer-points",
+        action="store_true",
+        help="Points leg on a rookie or volatile playoff primary scorer.",
+    )
     return parser.parse_args()
 
 

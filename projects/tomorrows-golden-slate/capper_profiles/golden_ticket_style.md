@@ -161,3 +161,10 @@ Before finalizing a Golden Ticket, apply `playoff_tuning.md` and
 This overlay should make the model more skeptical of fragile role-player points
 while preserving edges in star multi-category anchors, rebounding, defense, and
 trusted rotation activity.
+
+**Addendum (near-miss SGPs):** When a ticket clears **star rebound + assists**
+but misses **by one combined counting stat** on a low **REB+AST** line, or **by
+2–3 points** on a **rookie/volatile scorer** ladder, apply `playoff_tuning.md`
+“Near-miss” rules and optional `--low-margin-activity-combo` /
+`--rookie-primary-scorer-points` flags in `playoff_tuning.py` before trusting the
+same structure on the next slate.
