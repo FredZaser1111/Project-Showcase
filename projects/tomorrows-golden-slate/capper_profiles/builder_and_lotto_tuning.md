@@ -159,6 +159,6 @@ Log outcomes in `tracking/` with slip type tags so regressions distinguish **bui
 
 - **Separate stake budgets:** builders (larger tolerated) vs **lotto capped small** —
   treating them as **different experiments** avoids over-betting correlated moonshots.
-- **Fixed lotto ceiling:** operational cap of **\$5 gross stake per single lotto SGP**
+- **Fixed lotto ceiling:** operational cap of **$5 gross stake per single lotto SGP**
   preserves roll while preserving **+log** learning — note exact stake inclusive of bonus
   bet / Protect+ fee in each `tracking/` entry.
