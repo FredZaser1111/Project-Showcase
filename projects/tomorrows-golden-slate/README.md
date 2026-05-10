@@ -55,6 +55,7 @@ The workspace supports multiple slate types:
 | Slate type | Profile | Utility |
 | --- | --- | --- |
 | NBA playoffs | `capper_profiles/golden_ticket_style.md` and `capper_profiles/playoff_tuning.md` | `playoff_tuning.py` |
+| Builders vs lottos (SGP / SGP+) | `capper_profiles/builder_and_lotto_tuning.md` | Same; tags slip type before tuning allocation |
 | WNBA opener regular season | `capper_profiles/wnba_opener_regular_season.md` | `wnba_tuning.py` |
 
 Use the NBA playoff model for series-based adjustments, rotation tightening, and

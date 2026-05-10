@@ -168,3 +168,14 @@ but misses **by one combined counting stat** on a low **REB+AST** line, or **by
 “Near-miss” rules and optional `--low-margin-activity-combo` /
 `--rookie-primary-scorer-points` flags in `playoff_tuning.py` before trusting the
 same structure on the next slate.
+
+## Builder versus lotto split
+
+Higher-strike-rate **same-game PTS builders**, **assist + glass lottos**,
+quarter-micro stacks, and **SGP+** peg legs are centralized in:
+
+`builder_and_lotto_tuning.md`
+
+Assign each slip **Builder**, **Lotto**, or **Hybrid** before allocating
+`playoff_tuning.py` inputs so regressions separate **grind hit rate** from
+**moonshot EV**.
