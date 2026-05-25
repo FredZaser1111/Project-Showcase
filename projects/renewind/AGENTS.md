@@ -35,5 +35,5 @@ jupyter nbconvert --to html ReneWind_Neural_Network_Solution.ipynb --output Rene
 
 - Target: `1` = failure, `0` = no failure
 - Costs: repair $15k, replacement $40k, inspection $5k
-- Prefer **recall** on validation; tie-break with **cost efficiency**
+- Select on **validation cost efficiency** (max), then **maintenance cost** (min), then recall; tune threshold on validation for dollars
 - Comment code and markdown observations in business language (PGP style)

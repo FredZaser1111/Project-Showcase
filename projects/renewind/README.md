@@ -25,7 +25,7 @@ jupyter nbconvert --to html ReneWind_Neural_Network_Solution_executed.ipynb --ou
 - EDA: overview, univariate (V1–V40), bivariate correlations vs. `Target`
 - Preprocessing: stratified split, median imputation, standardization (no leakage)
 - Models: baseline **SGD** NN + six tuned variants (depth, Adam, dropout, class weights)
-- Selection: validation recall + maintenance cost efficiency; single test evaluation
+- Selection: validation **cost efficiency** + **maintenance cost**; threshold tuned on validation; single test evaluation
 - Business insights and recommendations in markdown
 
 ## Cursor agents
