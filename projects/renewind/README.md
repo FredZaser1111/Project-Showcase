@@ -2,13 +2,15 @@
 
 Full-code capstone (UT Austin PGP style): classify wind-turbine **generator failure** from 40 ciphered sensor features and minimize maintenance cost.
 
-## Submission artifact
+## Submission artifact (official INN template)
 
 | File | Purpose |
 | --- | --- |
-| `ReneWind_Neural_Network_Solution.html` | **Submit this** (nbconvert from executed notebook) |
-| `ReneWind_Neural_Network_Solution.ipynb` | Source notebook (regenerate with `build_notebook.py`) |
+| `INN_ReneWind_Main_Project_FullCode_Notebook.html` | **Submit this** — matches course notebook structure |
+| `INN_ReneWind_Main_Project_FullCode_Notebook.ipynb` | Patched from learner template (`patch_inn_notebook.py`) |
 | `data/Train.csv`, `data/Test.csv` | Training and held-out test data |
+
+Legacy alternate build: `ReneWind_Neural_Network_Solution.html` (custom layout).
 
 ## Setup
 

@@ -24,11 +24,49 @@ def code(text: str) -> dict:
 
 cells: list[dict] = []
 
-cells.append(md("# ReneWind — Wind Turbine Generator Failure Prediction (Full Code)\n\n**UT Austin PGP-style neural network project** | Predictive maintenance using sensor data"))
+cells.append(md("# **Problem Statement**"))
 
-cells.append(md("## Problem Statement\n\n### Business Context\n\nRenewable energy sources play an increasingly important role in the global energy mix, as efforts to reduce the environmental impact of energy production increase.\n\nWind energy is among the most mature renewable technologies worldwide. The U.S. Department of Energy recommends **predictive maintenance**: using sensor data and analytics to predict degradation before catastrophic failure, lowering operations and maintenance (O&M) cost.\n\nSensors on wind turbines capture environmental readings (temperature, humidity, wind speed, etc.) and mechanical signals from components (gearbox, tower, blades, brake, etc.).\n\n### Objective\n\n**ReneWind** collects confidential, ciphered sensor data to predict **generator failure** (`Target = 1`). The training set has **20,000** rows and the held-out test set has **5,000** rows across **40** predictors.\n\nWe build and tune **neural network classifiers** so failures are caught early (repair) instead of missed (replacement).\n\n| Outcome | Business impact |\n| --- | --- |\n| **TP** — failure predicted correctly | Repair cost (preferred) |\n| **FN** — failure missed | Replacement cost (highest) |\n| **FP** — false alarm | Inspection cost (lowest) |\n\n**Cost hierarchy:** Replacement > Repair > Inspection. Minimizing **false negatives** is the top priority.\n\n### Data Description\n\n- `Train.csv` — training and hyperparameter tuning only\n- `Test.csv` — **final** evaluation only (no tuning on test data)\n\nBoth files contain 40 predictors (`V1`–`V40`) and binary `Target` (1 = failure, 0 = no failure)."))
+cells.append(md("## Business Context"))
 
-cells.append(md("## 1 — Import Libraries"))
+cells.append(md(
+"""Renewable energy sources play an increasingly important role in the global energy mix, as the effort to reduce the environmental impact of energy production increases.
+
+Out of all the renewable energy alternatives, wind energy is one of the most developed technologies worldwide. The U.S Department of Energy has put together a guide to achieving operational efficiency using predictive maintenance practices.
+
+Predictive maintenance uses sensor information and analysis methods to measure and predict degradation and future component capability. The idea behind predictive maintenance is that failure patterns are predictable and if component failure can be predicted accurately and the component is replaced before it fails, the costs of operation and maintenance will be much lower.
+
+The sensors fitted across different machines involved in the process of energy generation collect data related to various environmental factors (temperature, humidity, wind speed, etc.) and additional features related to various parts of the wind turbine (gearbox, tower, blades, break, etc.)."""
+))
+
+cells.append(md("## Objective"))
+
+cells.append(md(
+"""“ReneWind” is a company working on improving the machinery/processes involved in the production of wind energy using machine learning and has collected data of generator failure of wind turbines using sensors. They have shared a ciphered version of the data, as the data collected through sensors is confidential (the type of data collected varies with companies). Data has 40 predictors, 20000 observations in the training set and 5000 in the test set.
+
+The objective is to build various classification models, tune them, and find the best one that will help identify failures so that the generators could be repaired before failing/breaking to reduce the overall maintenance cost.
+The nature of predictions made by the classification model will translate as follows:
+
+- True positives (TP) are failures correctly predicted by the model. These will result in repairing costs.
+- False negatives (FN) are real failures where there is no detection by the model. These will result in replacement costs.
+- False positives (FP) are detections where there is no failure. These will result in inspection costs.
+
+It is given that the cost of repairing a generator is much less than the cost of replacing it, and the cost of inspection is less than the cost of repair.
+
+“1” in the target variables should be considered as “failure” and “0” represents “No failure”."""
+))
+
+cells.append(md("## Data Description"))
+
+cells.append(md(
+"""The data provided is a transformed version of the original data which was collected using sensors.
+
+- Train.csv - To be used for training and tuning of models.
+- Test.csv - To be used only for testing the performance of the final best model.
+
+Both the datasets consist of 40 predictor variables and 1 target variable."""
+))
+
+cells.append(md("# 1 - Installing and Importing the necessary libraries"))
 
 cells.append(code(
 """# Standard library
@@ -75,7 +113,7 @@ sns.set_style("whitegrid")
 """
 ))
 
-cells.append(md("## 2 — Load Data"))
+cells.append(md("# 2 - Import Dataset"))
 
 cells.append(code(
 """DATA_DIR = "data"
@@ -90,7 +128,7 @@ test_copy = test_data.copy()
 """
 ))
 
-cells.append(md("## 3 — Exploratory Data Analysis\n\n### 3.1 Data Overview"))
+cells.append(md("# 3 - Data Overview"))
 
 cells.append(code("data.head()"))
 cells.append(code("test_data.head()"))
@@ -107,10 +145,13 @@ print('Missing % (test):\\n', missing_test[missing_test > 0])
 ))
 
 cells.append(md(
-"""**Observation:** Training data has 20,000 rows × 41 columns; test has 5,000 rows. Only **V1** and **V2** show small missingness (<1%). No duplicate rows. All predictors are numeric (ciphered sensor channels)."""
+"""<span style="color: blue;"> **Observation**</span>
+* Training data has 20,000 rows and 41 columns; test data has 5,000 rows.
+* Only V1 and V2 have missing values (<1%).
+* There are no duplicate rows."""
 ))
 
-cells.append(md("### 3.2 Univariate Analysis"))
+cells.append(md("# 4 - Exploratory Data Analysis (EDA)\n\n## 4.2 - Univariate analysis"))
 
 cells.append(code(
 """def histogram_boxplot(df, feature, figsize=(10, 5)):
@@ -149,10 +190,12 @@ for feature in predictor_cols:
 ))
 
 cells.append(md(
-"""**Observation:** Failures (`Target = 1`) are the **minority class** in both train and test, with similar proportions. Most sensor channels are roughly symmetric but some show skew and outliers (expected for environmental and mechanical signals)."""
+"""<span style="color: blue;"> **Observation**</span>
+* Failures (Target = 1) are the minority class in train and test sets.
+* Class proportions are similar across train and test."""
 ))
 
-cells.append(md("### 3.3 Bivariate Analysis"))
+cells.append(md("## 4.3 - Bivariate Analysis\n\n### 4.3.1 - Correlation Check"))
 
 cells.append(code(
 """predictor_cols = [c for c in data.columns if c != 'Target']
@@ -189,10 +232,12 @@ plt.show()
 ))
 
 cells.append(md(
-"""**Observation:** Several sensors (e.g., among the top correlated features) separate failure vs. non-failure distributions, supporting a nonlinear classifier. No target leakage is present in the feature set."""
+"""<span style="color: blue;"> **Observation**</span>
+* Several predictors show correlation with the target variable.
+* Distributions differ between failure and non-failure classes for top correlated sensors."""
 ))
 
-cells.append(md("## 4 — Data Preprocessing\n\n> Imputation and scaling are fit **only on the training split** after `train_test_split` to prevent **data leakage**."))
+cells.append(md("# 5 - Data Preprocessing\n\n## 5.1 - Data Preparation for Modeling"))
 
 cells.append(code(
 """X = data.drop(columns=['Target'])
@@ -209,6 +254,8 @@ print('Train / val / test shapes:', X_train.shape, X_val.shape, X_test.shape)
 print('Class balance (train):', y_train.value_counts(normalize=True).round(4).to_dict())
 """
 ))
+
+cells.append(md("## 5.2 - Missing Value Imputation and Scaling"))
 
 cells.append(code(
 """imputer = SimpleImputer(strategy='median')
@@ -230,43 +277,42 @@ print('Missing after imputation (train):', np.isnan(X_train).sum())
 ))
 
 cells.append(md(
-"""**Observation:** V1/V2 missing values are imputed with training-set medians. Features are standardized using training statistics only. Class imbalance persists (~11% failures) and will be handled with **class weights** in most models."""
+"""<span style="color: blue;"> **Observation**</span>
+* Missing values in V1 and V2 are imputed using the training set median.
+* Features are standardized using training data statistics.
+* Imputation and scaling are performed after the train-validation split to avoid data leakage.
+* The target variable is imbalanced; class weights will be used during model training."""
 ))
+
+cells.append(md("# 6 - Model Building and Performance Improvement"))
 
 cells.append(md(
-"""## 5 — Model Building
+"""## 6.1 - Model Evaluation Criterion
 
-### 5.1 Evaluation metric (rationale)
+In this problem, we aim to predict generator failures, where:
 
-ReneWind's objective is to **minimize total maintenance spend**, not to maximize accuracy in isolation. Predictions map to dollars as follows:
+- **Class 1** represents "Failure"
+- **Class 0** represents "No failure"
 
-| Outcome | Cost |
-| --- | --- |
-| TP (failure caught) | $15,000 repair |
-| FN (failure missed) | $40,000 replacement |
-| FP (false alarm) | $5,000 inspection |
+When evaluating a classification model, we consider the following outcomes:
 
-**Maintenance cost** (validation / test):
+- **True Positives (TP)**: The model correctly predicts a "Failure" (Class 1) when the actual class is "Failure" (Class 1). These result in repair costs.
+- **True Negatives (TN)**: The model correctly predicts "No failure" (Class 0) when the actual class is "No failure" (Class 0).
+- **False Negatives (FN)**: The model incorrectly predicts "No failure" (Class 0) when the actual class is "Failure" (Class 1). These are costly as they lead to generator replacement.
+- **False Positives (FP)**: The model incorrectly predicts "Failure" (Class 1) when the actual class is "No failure" (Class 0). These result in inspection costs.
 
-`Maintenance cost = TP × $15,000 + FN × $40,000 + FP × $5,000`
+Based on the problem description, the cost of a False Negative (replacement cost) is significantly higher than the cost of a False Positive (inspection cost), and the cost of a True Positive (repair cost) is less than the replacement cost.
 
-**Cost efficiency ratio** (primary selection metric on validation):
+For final model selection, we use a maintenance cost function on the validation set:
 
-`Cost efficiency = (TP + FN) × $15,000 ÷ Maintenance cost`
+**Maintenance cost** = TP × $15,000 + FN × $40,000 + FP × $5,000
 
-- Numerator = theoretical minimum spend if every true failure were only repaired (no replacements, no extra inspections).
-- Denominator = actual spend implied by the confusion matrix.
-- Range **0–1**; **higher is better** (1.0 = perfectly cost-efficient).
+**Cost efficiency** = (TP + FN) × $15,000 ÷ Maintenance cost
 
-| Metric | Role |
-| --- | --- |
-| **Cost efficiency** | **Primary** — select the model/threshold that maximizes this on the **validation** set |
-| **Maintenance cost ($)** | **Primary tie-breaker** — prefer lower dollar total when efficiency is similar |
-| **Recall (failure class)** | **Secondary** — diagnostic for missed failures (FN); reported for operations |
-| **Precision / F1** | Supporting — explains false-alarm (inspection) tradeoffs |
-
-During training we still log **recall** (Keras metric) and use **class weights** so the network learns the rare failure class; **final champion selection uses validation dollars**, then a **probability threshold** is tuned on validation to further reduce maintenance cost."""
+The best model maximizes **cost efficiency** on the validation set (and minimizes maintenance cost as a tie-breaker). Recall is tracked during training and reported as a supporting metric."""
 ))
+
+cells.append(md("## 6.2 - Define utility Functions"))
 
 cells.append(code(
 """REPAIR_COST = 15_000
@@ -329,7 +375,7 @@ cw_dict
 """
 ))
 
-cells.append(md("### 5.2 Helper to train and evaluate each architecture"))
+cells.append(md("**Since the class is heavily imbalanced in the data, we'll use class weights in all the models except Model 5.**"))
 
 cells.append(code(
 """EPOCHS = 25
@@ -378,7 +424,7 @@ def train_and_evaluate(name, model, use_class_weight=True, config_note=''):
 """
 ))
 
-cells.append(md("### 5.3 Model 0 — Baseline neural network (SGD + class weights)\n\nSingle hidden layer (7 units, ReLU), sigmoid output, **SGD** optimizer — per project requirements."))
+cells.append(md("## 6.3 - Model 0 - Baseline Model"))
 
 cells.append(code(
 """model_0 = Sequential([
@@ -395,9 +441,13 @@ model_0, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 0):** Baseline **SGD** network. Compare **validation maintenance cost** and **cost efficiency** against later models — this is the dollar-based benchmark required by the project."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 0 establishes baseline performance with SGD and one hidden layer (7 neurons).
+* Compare validation maintenance cost and cost efficiency with subsequent models."""
+))
 
-cells.append(md("### 5.4 Model 1 — More hidden layers (2 layers)\n\n**Technique:** additional hidden layer (14 → 7 neurons)."))
+cells.append(md("## 6.4 - Model 1 - Add additional hidden layer"))
 
 cells.append(code(
 """model_1 = Sequential([
@@ -415,9 +465,13 @@ model_1, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 1):** Two hidden layers increase capacity. If validation **cost efficiency** improves vs. Model 0, depth is helping the business KPI, not just training recall."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 1 adds a second hidden layer (14 and 7 neurons).
+* Review validation cost efficiency relative to Model 0."""
+))
 
-cells.append(md("### 5.5 Model 2 — More hidden layers (3 layers)\n\n**Technique:** third hidden layer for additional nonlinearity."))
+cells.append(md("## 6.5 - Model 2 - Add third hidden layer"))
 
 cells.append(code(
 """model_2 = Sequential([
@@ -436,9 +490,13 @@ model_2, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 2):** Three hidden layers — check whether extra depth lowers validation **maintenance cost** or hurts generalization (efficiency drops vs. Model 1)."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 2 uses three hidden layers (21, 14, and 7 neurons).
+* Check whether validation maintenance cost improves versus Models 0 and 1."""
+))
 
-cells.append(md("### 5.6 Model 3 — Adam optimizer\n\n**Technique:** replace SGD with **Adam** (baseline depth)."))
+cells.append(md("## 6.6 - Model 3 - Change the optimizer to Adam"))
 
 cells.append(code(
 """model_3 = Sequential([
@@ -455,9 +513,13 @@ model_3, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 3):** **Adam** optimizer variant. Compare validation **cost efficiency** to SGD models — faster convergence only matters if dollars on validation improve."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 3 uses the Adam optimizer with the same architecture as Model 0.
+* Compare validation maintenance cost and cost efficiency with SGD models."""
+))
 
-cells.append(md("### 5.7 Model 4 — Dropout regularization\n\n**Technique:** **Dropout** (0.3) after hidden layers with 2-layer architecture."))
+cells.append(md("## 6.7 - Model 4 - Add dropout layer"))
 
 cells.append(code(
 """model_4 = Sequential([
@@ -477,9 +539,13 @@ model_4, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 4):** **Dropout** regularization. Prefer this model if validation **maintenance cost** falls while recall stays acceptable (fewer costly FN replacements)."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 4 adds dropout (0.3) to the two-hidden-layer architecture.
+* Dropout may reduce overfitting; compare validation cost metrics with Model 1."""
+))
 
-cells.append(md("### 5.8 Model 5 — Without class weights\n\n**Technique:** remove **class weights** to measure impact on minority (failure) class."))
+cells.append(md("## 6.8 - Model 5 - Train without class weights"))
 
 cells.append(code(
 """model_5 = Sequential([
@@ -497,9 +563,13 @@ model_5, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 5):** No **class weights** — expect higher validation **maintenance cost** (more FN → replacements). Confirms weighted training is required for dollar-optimal maintenance."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 5 is the baseline architecture trained without class weights.
+* Maintenance cost on validation typically increases when failures are under-detected."""
+))
 
-cells.append(md("### 5.9 Model 6 — Combined best practices (Adam + depth + dropout + class weights)\n\n**Technique:** combine **Adam**, **extra hidden layer**, **dropout**, and **class weights**."))
+cells.append(md("## 6.9 - Model 6 - Adam with dropout and two hidden layers"))
 
 cells.append(code(
 """model_6 = Sequential([
@@ -519,9 +589,13 @@ model_6, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 6):** Combined **Adam + dropout + depth**. Strong candidate if it achieves the best validation **cost efficiency** among tunable architectures."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 6 combines Adam, dropout, and two hidden layers with class weights.
+* Compare validation cost efficiency with Models 3 and 4."""
+))
 
-cells.append(md("### 5.10 Model 7 — Adam + three hidden layers + dropout\n\n**Technique:** deeper **Adam** network with dropout (sixth+ architecture variant)."))
+cells.append(md("## 6.10 - Model 7 - Deep network with Adam and dropout"))
 
 cells.append(code(
 """model_7 = Sequential([
@@ -542,9 +616,13 @@ model_7, _ = train_and_evaluate(
 """
 ))
 
-cells.append(md("**Observation (Model 7):** Deepest **Adam + dropout** stack. Select only if validation **maintenance cost** is lowest or efficiency is highest vs. simpler models (avoid overfit that increases FN/FP dollars)."))
+cells.append(md(
+"""<span style="color: blue;"> **Observation**</span>
+* Model 7 uses three hidden layers with Adam and dropout.
+* Compare validation maintenance cost and cost efficiency across all models."""
+))
 
-cells.append(md("## 6 — Model Comparison and Final Selection (dollar-based)"))
+cells.append(md("# 7 - Model Performance Comparison and Final Model Selection"))
 
 cells.append(code(
 """train_df = pd.concat(results_train.values(), axis=0)
@@ -554,7 +632,7 @@ test_df = pd.concat(results_test.values(), axis=0)
 print('=== Training metrics ===')
 display(train_df)
 
-print('=== Validation metrics — sorted by cost efficiency (primary KPI) ===')
+print('=== Validation metrics (sorted by cost efficiency) ===')
 val_sorted = val_df.sort_values(
     ['Cost_Efficiency', 'Maintenance_Cost'],
     ascending=[False, True],
@@ -599,11 +677,7 @@ best_model = model_lookup[best_name]
 """
 ))
 
-cells.append(md(
-"""### 6.1 Threshold tuning on validation (maintenance cost)
-
-Default probability cutoff is 0.5. For O&M, we tune the cutoff on the **validation set only** so predicted maintenance **dollars** are minimized (equivalently, cost efficiency is maximized)."""
-))
+cells.append(md("## 7.1 - Tune classification threshold on validation data"))
 
 cells.append(code(
 """threshold_grid = np.round(np.arange(0.10, 0.91, 0.05), 2)
@@ -667,42 +741,28 @@ print('Test cost efficiency:', round(final_test_perf['Cost_Efficiency'].iloc[0],
 ))
 
 cells.append(md(
-"""**Final model reasoning:**
-
-1. **Architecture** — chosen by highest **validation cost efficiency**, then lowest **validation maintenance cost**, then recall as a tie-breaker.
-2. **Threshold** — tuned on validation only to minimize maintenance dollars (same cost function as the business brief).
-3. **Test set** — scored **once** at the tuned threshold; no test-set tuning (no leakage).
-
-This aligns model selection with ReneWind's stated goal: **reduce O&M spend**, not optimize a surrogate metric in isolation."""
+"""<span style="color: blue;"> **Observation**</span>
+* The final model is selected using validation cost efficiency and maintenance cost.
+* The probability threshold is tuned on the validation set.
+* The test set is used once for final evaluation at the selected threshold."""
 ))
 
+cells.append(md("# 8 - Actionable Insights and Recommendations"))
+
 cells.append(md(
-"""## 7 — Actionable Insights and Business Recommendations
+"""**Actionable insights**
 
-### Key takeaways
+1. Predictive maintenance models should be compared using maintenance cost and cost efficiency on validation data, in addition to recall.
+2. Class weights help detect rare failures and reduce replacement costs from false negatives.
+3. Model depth, dropout, and the Adam optimizer can improve validation cost efficiency; the final architecture should be chosen based on validation metrics.
+4. Tuning the classification threshold on validation data can further reduce maintenance cost before deployment.
 
-1. **Dollar-based selection:** The production model is the architecture with the best **validation cost efficiency**, with decision threshold tuned to minimize **validation maintenance cost** — directly aligned with the project objective.
-2. **Class weights are economically necessary:** Removing weights (Model 5) increases FN-driven **replacement** spend; weighted training is required for cost-optimal predictions.
-3. **Recall is a diagnostic, not the KPI:** High recall helps, but the right threshold balances **$40k replacements** vs. **$5k inspections**; report both recall and maintenance cost to operations.
-4. **Depth, Adam, and dropout:** Architectures that improve **validation cost efficiency** (not just training recall) should be favored for deployment.
+**Business recommendations**
 
-### Business recommendations
-
-1. **Deploy with the tuned probability cutoff** — use the validation-derived threshold in SCADA alerting so dispatch triggers inspections/repairs when expected cost is minimized.
-2. **Executive dashboard in dollars** — monthly TP/FN/FP counts translated to maintenance cost and cost efficiency vs. a "repair-only" baseline.
-3. **Retrain quarterly** — refresh weights and **re-tune threshold** on recent validation folds; sensor drift changes both predictions and optimal cutoff.
-4. **Pilot on high-correlation turbines** — prioritize sites where top EDA sensors are stable and failure labels are well-logged.
-
-### Expected benefits
-
-- Lower total generator O&M cost (fewer replacements, right-sized inspections)
-- Planned repairs instead of emergency replacements
-- Clear ROI narrative for ReneWind leadership (cost efficiency trending toward 1.0)
-
----
-
-*End of notebook — export to HTML for submission.*
-"""
+1. Deploy the selected model with the tuned probability threshold in maintenance workflows.
+2. Monitor TP, FN, and FP counts and translate them into maintenance cost for management reporting.
+3. Retrain the model periodically as new sensor data and failure labels become available.
+4. Focus instrumentation quality on sensors most correlated with failures identified during EDA."""
 ))
 
 nb = {
