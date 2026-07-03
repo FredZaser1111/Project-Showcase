@@ -5,6 +5,6 @@
 | `seo-optimizer/` | SEO Optimizer |
 | `nba-z-lock/` | NBA Z Lock |
 
-Copy **the entire project folder** for each app into its directory here—including the **`README.md`** that already exists from when you created that project. You should end up with **one** `README.md` per project at `projects/seo-optimizer/README.md` and `projects/nba-z-lock/README.md` (not a second stub file).
+Copy **the entire project folder** for each app into its directory here—including the **`README.md`** that already exists from when you created that project. You should end up with **one** `README.md` at the project folder root level.
 
-Push from the repository root; everything goes up together. Large local-only artifacts (`venv/`, `_internal/`, `.exe`, datasets under `data/`, trained `models/`) are excluded via `.gitignore` files.
+Push from the repository root; everything goes up together. Large local-only artifacts (`venv/`, `_internal/`, `.exe`, datasets under `data/`, trained `models/`) are excluded via `.gitignore` file pattern rules.
