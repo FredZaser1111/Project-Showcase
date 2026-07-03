@@ -15,6 +15,7 @@ One GitHub repository for the landing page **and** both projects. Push from this
 | `index.html` | Landing page for GitHub Pages |
 | `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
+| `projects/renewind/` | ReneWind — PGP neural network predictive maintenance (`ReneWind_Neural_Network_Solution.html`) |
 
 Update and push from the repo root:
 
