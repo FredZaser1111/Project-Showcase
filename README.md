@@ -1,6 +1,6 @@
 # Project Showcase (monorepo)
 
-One GitHub repository for the landing page **and** both projects. Push from this folder only.
+One GitHub repository for the landing page, shipped projects, and McCombs capstone work. Push from this folder only.
 
 **Repository:** [github.com/FredZaser1111/Project-Showcase](https://github.com/FredZaser1111/Project-Showcase)
 
@@ -15,6 +15,7 @@ One GitHub repository for the landing page **and** both projects. Push from this
 | `index.html` | Landing page for GitHub Pages |
 | `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
+| `projects/capstones/` | UT Austin McCombs AI/ML capstone projects (in progress) |
 
 Update and push from the repo root:
 
@@ -47,6 +48,21 @@ git push
 | Live demo | Add your URL here when you have one |
 
 **Highlights:** NBA game data, predictions, injuries, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
+
+---
+
+## McCombs Capstones (in progress)
+
+Coursework from the **UT Austin McCombs Post Graduate Program in AI & Machine Learning** (Great Learning), graduating August 2026.
+
+Capstone projects in **RAG/NLP**, **agentic AI workflows**, and **prompt engineering** will be published under [`projects/capstones/`](projects/capstones/) as they are completed.
+
+| | Link |
+| --- | --- |
+| Capstone index | [projects/capstones](projects/capstones) |
+| Browse on GitHub | [tree/main/projects/capstones](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/capstones) |
+
+**Planned:** Clinical RAG assistant, agentic automation capstones — each with README, stack, and architecture notes.
 
 ---
 
