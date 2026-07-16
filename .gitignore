@@ -27,3 +27,6 @@ error_output.txt
 uploads/
 **/uploads/
 *.db
+
+# Jupyter execution artifacts (keep source .ipynb + submission .html)
+**/*_executed.ipynb

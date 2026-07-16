@@ -1,10 +1,10 @@
-# Project Showcase (monorepo)
+# Project Showcase
 
-One GitHub repository for the landing page, shipped projects, and McCombs capstone work. Push from this folder only.
+Portfolio monorepo for **agentic engineering** and **business technology solutions** roles: shipped LLM automation, productized ML, and UT Austin McCombs AI/ML coursework.
 
 **Repository:** [github.com/FredZaser1111/Project-Showcase](https://github.com/FredZaser1111/Project-Showcase)
 
-**Resume-friendly site (after GitHub Pages is enabled):** [fredzaser1111.github.io/Project-Showcase](https://fredzaser1111.github.io/Project-Showcase/)
+**Site (GitHub Pages):** [fredzaser1111.github.io/Project-Showcase](https://fredzaser1111.github.io/Project-Showcase/)
 
 ---
 
@@ -13,11 +13,10 @@ One GitHub repository for the landing page, shipped projects, and McCombs capsto
 | Path | Contents |
 | --- | --- |
 | `index.html` | Landing page for GitHub Pages |
-| `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
-| `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
-| `projects/capstones/` | UT Austin McCombs AI/ML capstone projects (in progress) |
-
-Update and push from the repo root:
+| `projects/seo-optimizer/` | SEO Optimizer — LLM content workflow (business ops) |
+| `projects/nba-z-lock/` | NBA Z Lock — end-to-end ML web app |
+| `projects/renewind/` | ReneWind — McCombs neural net predictive maintenance |
+| `projects/capstones/` | UT Austin AI/ML index + upcoming RAG/agentic work |
 
 ```bash
 git add .
@@ -27,48 +26,49 @@ git push
 
 ---
 
-## SEO Optimizer
+## Applied AI & business solutions
+
+### SEO Optimizer
 
 | | Link |
 | --- | --- |
-| Code in this repo | [projects/seo-optimizer](projects/seo-optimizer) |
-| Browse on GitHub | [tree/main/projects/seo-optimizer](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/seo-optimizer) |
-| Live demo | Add your URL here when you have one |
+| Code | [projects/seo-optimizer](projects/seo-optimizer) |
+| GitHub | [tree/main/projects/seo-optimizer](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/seo-optimizer) |
 
-**Highlights:** Article ingest, URL scrape, AI Q&A generation, export — content and SEO-oriented workflow (Engineering Content Generator v1.1).
+**Highlights:** Article ingest, URL scrape, AI Q&A generation, export — Engineering Content Generator v1.1 for a Herndon, VA engineering firm.
 
----
-
-## NBA Z Lock
+### NBA Z Lock
 
 | | Link |
 | --- | --- |
-| Code in this repo | [projects/nba-z-lock](projects/nba-z-lock) |
-| Browse on GitHub | [tree/main/projects/nba-z-lock](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/nba-z-lock) |
-| Live demo | Add your URL here when you have one |
+| Code | [projects/nba-z-lock](projects/nba-z-lock) |
+| GitHub | [tree/main/projects/nba-z-lock](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/nba-z-lock) |
 
-**Highlights:** NBA game data, predictions, injuries, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
+**Highlights:** NBA game data, injury-aware predictions, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
 
 ---
 
-## McCombs Capstones (in progress)
+## UT Austin McCombs · AI / ML
 
 Coursework from the **UT Austin McCombs Post Graduate Program in AI & Machine Learning** (Great Learning), graduating August 2026.
 
-Capstone projects in **RAG/NLP**, **agentic AI workflows**, and **prompt engineering** will be published under [`projects/capstones/`](projects/capstones/) as they are completed.
+### ReneWind (published)
 
 | | Link |
 | --- | --- |
-| Capstone index | [projects/capstones](projects/capstones) |
-| Browse on GitHub | [tree/main/projects/capstones](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/capstones) |
+| Code | [projects/renewind](projects/renewind) |
+| HTML notebook | [INN_ReneWind_Main_Project_FullCode_Notebook.html](projects/renewind/INN_ReneWind_Main_Project_FullCode_Notebook.html) |
+| Section index | [projects/capstones](projects/capstones) |
 
-**Planned:** Clinical RAG assistant, agentic automation capstones — each with README, stack, and architecture notes.
+**Highlights:** Generator-failure classification with leakage-safe preprocessing, SGD baseline + six NN variants, and **dollar-based** model selection (cost efficiency / maintenance cost).
+
+**Planned next:** RAG/NLP assistant and agentic automation capstones — tracked under [`projects/capstones/`](projects/capstones/).
 
 ---
 
 ## Adding more projects
 
-Create `projects/<short-name>/`, add a README, and add a card to `index.html` plus a section here.
+Create `projects/<short-name>/`, add a README, and add a card to `index.html` plus a section here. For McCombs work, also update [`projects/capstones/README.md`](projects/capstones/README.md).
 
 ---
 

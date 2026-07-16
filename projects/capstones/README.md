@@ -1,28 +1,27 @@
-# McCombs Capstones — Agentic AI & ML
+# UT Austin McCombs — AI & Machine Learning
 
 Coursework from the **UT Austin McCombs Post Graduate Program in Artificial Intelligence and Machine Learning** (Great Learning), graduating August 2026.
 
-Capstone projects will be added here as they are completed. Each folder includes a README with problem statement, agentic/LLM architecture, stack, and outcomes.
+This section highlights semester projects that map to **agentic engineering** and **business technology solutions** work: cost-aware ML, applied neural networks, and (upcoming) RAG / multi-agent workflows.
 
-## Planned focus areas
+## Published projects
+
+| Project | Folder | Focus | Why it matters |
+| --- | --- | --- | --- |
+| **ReneWind** | [`../renewind/`](../renewind/) | Neural nets, class imbalance, dollar-based model selection | Predictive maintenance framed as a **business cost** problem—not just accuracy |
+| SEO Optimizer *(applied LLM, shipped)* | [`../seo-optimizer/`](../seo-optimizer/) | LLM content workflow, ingest → generate → export | Business process automation with measurable ops impact |
+| NBA Z Lock *(applied ML product)* | [`../nba-z-lock/`](../nba-z-lock/) | End-to-end ML app, Flask UI, injury-aware features | Productized ML: data → features → model → UI |
+
+## In progress
 
 | Topic | Status |
 | --- | --- |
-| RAG & NLP (retrieval-augmented generation) | In progress |
-| Agentic AI (single- and multi-agent workflows) | In progress |
-| Prompt engineering & LLM evaluation | In progress |
+| RAG & NLP (retrieval-augmented generation) | Planned — clinical / grounded Q&A assistant |
+| Agentic AI (single- and multi-agent workflows) | Planned |
+| Prompt engineering & LLM evaluation | Planned |
 
-## Projects
+## Adding another semester project
 
-_Add rows here as you publish each capstone:_
-
-| Project | Folder | Focus |
-| --- | --- | --- |
-| _Coming soon_ | `clinical-rag-assistant/` | RAG, embeddings, grounded Q&A |
-| _Coming soon_ | _TBD_ | Agentic automation |
-
-## Adding a capstone
-
-1. Create `projects/capstones/<short-name>/`
-2. Add a README (problem, approach, stack, links)
+1. Create `projects/<short-name>/` (or nest under `projects/capstones/<short-name>/`)
+2. Add a recruiter-friendly README (problem, approach, stack, outcomes)
 3. Update this index, root `README.md`, and `index.html`

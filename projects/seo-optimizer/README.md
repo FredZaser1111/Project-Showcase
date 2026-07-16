@@ -1,6 +1,8 @@
 # SEO Optimizer — Engineering Content Generator
 
-Windows desktop build for **content ingestion, Q&A generation, and publishing workflows** (articles, scraping, AI-assisted posts). Shipped here as the distributable launcher scripts plus this README; the runnable `.exe` and `_internal/` bundle stay **local**—they are not committed (see repo root `.gitignore`).
+LLM-powered **content ingestion, Q&A generation, and publishing workflow** for a Herndon, VA engineering firm — useful portfolio signal for **business technology solutions** and applied AI automation roles.
+
+Windows desktop build: articles, scraping, AI-assisted posts. Shipped here as launcher scripts plus this README; the runnable `.exe` and `_internal/` bundle stay **local** (see repo root `.gitignore`).
 
 ## Quick start (local machine)
 
