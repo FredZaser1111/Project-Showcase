@@ -1,0 +1,32 @@
+{
+  "project": "clinical-ai-assistant",
+  "submission_type": "full-code",
+  "deliverable": "Full_Code_NLP_RAG_Project_Notebook.html",
+  "runtime": {
+    "platform": "google-colab",
+    "accelerator": "GPU",
+    "preferred_gpu": "T4"
+  },
+  "required_files": [
+    "Full_Code_NLP_RAG_Project_Notebook.ipynb",
+    "medical_diagnosis_manual.pdf"
+  ],
+  "phases": [
+    "preflight",
+    "install_gpu_llama",
+    "restart_1",
+    "install_dependencies",
+    "restart_2",
+    "imports_and_model",
+    "llm_baseline",
+    "prompt_engineering",
+    "rag_setup",
+    "rag_qa",
+    "rag_finetune",
+    "evaluation",
+    "observations",
+    "business_section",
+    "export_html",
+    "rubric_qa"
+  ]
+}

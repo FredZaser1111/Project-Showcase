@@ -51,18 +51,20 @@ git push
 
 ---
 
-## McCombs Capstones (in progress)
+## McCombs Capstones
 
 Coursework from the **UT Austin McCombs Post Graduate Program in AI & Machine Learning** (Great Learning), graduating August 2026.
 
-Capstone projects in **RAG/NLP**, **agentic AI workflows**, and **prompt engineering** will be published under [`projects/capstones/`](projects/capstones/) as they are completed.
+| Project | Folder | Focus |
+| --- | --- | --- |
+| Clinical AI Assistant | [projects/capstones/clinical-ai-assistant](projects/capstones/clinical-ai-assistant) | RAG / NLP over Merck Manuals |
+| EasyVisa | [projects/capstones/easyvisa](projects/capstones/easyvisa) | Classification — visa outcomes |
+| ReneWind | [projects/capstones/renewind](projects/capstones/renewind) | Neural nets — turbine failure |
 
 | | Link |
 | --- | --- |
 | Capstone index | [projects/capstones](projects/capstones) |
 | Browse on GitHub | [tree/main/projects/capstones](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/capstones) |
-
-**Planned:** Clinical RAG assistant, agentic automation capstones — each with README, stack, and architecture notes.
 
 ---
 
