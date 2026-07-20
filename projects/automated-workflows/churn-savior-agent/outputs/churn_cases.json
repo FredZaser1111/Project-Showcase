@@ -1,0 +1,298 @@
+[
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00477",
+    "score": 0.9952,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 477 (SaaS, Enterprise): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 0.0,
+        "support_tickets_90d": 9.0,
+        "usage_drop_pct": 68.4,
+        "payment_late_count": 3.0,
+        "nps_score": 1.0,
+        "tenure_months": 15.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00477",
+    "churn_probability": 0.9952,
+    "crm_profile": {
+      "customer_id": "CUS-00477",
+      "company_name": "Acme Corp 477",
+      "industry": "SaaS",
+      "company_size": "Enterprise",
+      "account_manager": "AM-6",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 477 (SaaS, Enterprise): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-6\nSubject: High churn risk \u2014 Acme Corp 477 (100%)\n\nCustomer shows 100% churn probability. Suggested dynamic offer: 10% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 477 (SaaS, Enterprise): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00539",
+    "score": 0.9965,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 539 (Retail, SMB): \"Onboarding incomplete; champion left the company.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 0.0,
+        "support_tickets_90d": 11.0,
+        "usage_drop_pct": 77.9,
+        "payment_late_count": 2.0,
+        "nps_score": 2.0,
+        "tenure_months": 11.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00539",
+    "churn_probability": 0.9965,
+    "crm_profile": {
+      "customer_id": "CUS-00539",
+      "company_name": "Acme Corp 539",
+      "industry": "Retail",
+      "company_size": "SMB",
+      "account_manager": "AM-4",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 539 (Retail, SMB): \"Onboarding incomplete; champion left the company.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-4\nSubject: High churn risk \u2014 Acme Corp 539 (100%)\n\nCustomer shows 100% churn probability. Suggested dynamic offer: 15% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 539 (Retail, SMB): \"Onboarding incomplete; champion left the company.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00658",
+    "score": 0.9943,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 658 (Finance, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 2.0,
+        "support_tickets_90d": 11.0,
+        "usage_drop_pct": 47.9,
+        "payment_late_count": 3.0,
+        "nps_score": 1.0,
+        "tenure_months": 38.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00658",
+    "churn_probability": 0.9943,
+    "crm_profile": {
+      "customer_id": "CUS-00658",
+      "company_name": "Acme Corp 658",
+      "industry": "Finance",
+      "company_size": "SMB",
+      "account_manager": "AM-3",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 658 (Finance, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-3\nSubject: High churn risk \u2014 Acme Corp 658 (99%)\n\nCustomer shows 99% churn probability. Suggested dynamic offer: 15% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 658 (Finance, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00384",
+    "score": 0.9903,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 384 (Retail, Mid-Market): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 1.0,
+        "support_tickets_90d": 4.0,
+        "usage_drop_pct": 73.4,
+        "payment_late_count": 4.0,
+        "nps_score": 0.0,
+        "tenure_months": 34.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00384",
+    "churn_probability": 0.9903,
+    "crm_profile": {
+      "customer_id": "CUS-00384",
+      "company_name": "Acme Corp 384",
+      "industry": "Retail",
+      "company_size": "Mid-Market",
+      "account_manager": "AM-1",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 384 (Retail, Mid-Market): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-1\nSubject: High churn risk \u2014 Acme Corp 384 (99%)\n\nCustomer shows 99% churn probability. Suggested dynamic offer: 12% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 384 (Retail, Mid-Market): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00302",
+    "score": 0.9957,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 302 (Retail, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 0.0,
+        "support_tickets_90d": 11.0,
+        "usage_drop_pct": 64.6,
+        "payment_late_count": 2.0,
+        "nps_score": 2.0,
+        "tenure_months": 17.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00302",
+    "churn_probability": 0.9957,
+    "crm_profile": {
+      "customer_id": "CUS-00302",
+      "company_name": "Acme Corp 302",
+      "industry": "Retail",
+      "company_size": "SMB",
+      "account_manager": "AM-7",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 302 (Retail, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-7\nSubject: High churn risk \u2014 Acme Corp 302 (100%)\n\nCustomer shows 100% churn probability. Suggested dynamic offer: 15% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 302 (Retail, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00694",
+    "score": 0.9934,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 694 (SaaS, SMB): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 3.0,
+        "support_tickets_90d": 8.0,
+        "usage_drop_pct": 65.1,
+        "payment_late_count": 4.0,
+        "nps_score": 4.0,
+        "tenure_months": 19.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00694",
+    "churn_probability": 0.9934,
+    "crm_profile": {
+      "customer_id": "CUS-00694",
+      "company_name": "Acme Corp 694",
+      "industry": "SaaS",
+      "company_size": "SMB",
+      "account_manager": "AM-7",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 694 (SaaS, SMB): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-7\nSubject: High churn risk \u2014 Acme Corp 694 (99%)\n\nCustomer shows 99% churn probability. Suggested dynamic offer: 15% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 694 (SaaS, SMB): \"Feature gap vs roadmap promises; escalation requested.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00147",
+    "score": 0.9979,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 147 (Healthcare, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 9.0,
+        "support_tickets_90d": 7.0,
+        "usage_drop_pct": 60.0,
+        "payment_late_count": 4.0,
+        "nps_score": 0.0,
+        "tenure_months": 3.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00147",
+    "churn_probability": 0.9979,
+    "crm_profile": {
+      "customer_id": "CUS-00147",
+      "company_name": "Acme Corp 147",
+      "industry": "Healthcare",
+      "company_size": "SMB",
+      "account_manager": "AM-4",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 147 (Healthcare, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-4\nSubject: High churn risk \u2014 Acme Corp 147 (100%)\n\nCustomer shows 100% churn probability. Suggested dynamic offer: 15% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 147 (Healthcare, SMB): \"Billing confusion after plan change; waiting on refund.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  },
+  {
+    "project": "churn-savior-agent",
+    "case_id": "CUS-00830",
+    "score": 0.9874,
+    "decision": "retention_outreach",
+    "summary": "Ticket themes for Acme Corp 830 (SaaS, Enterprise): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "actions": [
+      "scored_churn",
+      "crm_lookup",
+      "analyzed_tickets",
+      "drafted_offer_or_escalation"
+    ],
+    "artifacts": {
+      "features": {
+        "login_frequency_30d": 9.0,
+        "support_tickets_90d": 9.0,
+        "usage_drop_pct": 75.1,
+        "payment_late_count": 4.0,
+        "nps_score": 6.0,
+        "tenure_months": 29.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "customer_id": "CUS-00830",
+    "churn_probability": 0.9874,
+    "crm_profile": {
+      "customer_id": "CUS-00830",
+      "company_name": "Acme Corp 830",
+      "industry": "SaaS",
+      "company_size": "Enterprise",
+      "account_manager": "AM-7",
+      "source": "salesforce_mock_api"
+    },
+    "ticket_analysis": "Ticket themes for Acme Corp 830 (SaaS, Enterprise): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach.",
+    "offer_or_escalation": "To: AM-7\nSubject: High churn risk \u2014 Acme Corp 830 (99%)\n\nCustomer shows 99% churn probability. Suggested dynamic offer: 10% loyalty credit for 2 billing cycles + success review. If Enterprise, escalate to dedicated QBR within 5 business days.\n\nTicket insight: Ticket themes for Acme Corp 830 (SaaS, Enterprise): \"Competitor demo scheduled; pricing feels high.\" \u2014 primary driver appears retention-threatening; recommend proactive outreach."
+  }
+]

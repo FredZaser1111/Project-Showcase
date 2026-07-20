@@ -1,0 +1,224 @@
+[
+  {
+    "project": "predictive-maintenance-agent",
+    "case_id": "PM-ASSET-0613",
+    "score": 8.52,
+    "decision": "monitor_only",
+    "summary": "Asset healthy enough (8.52 days > 7). No PO.",
+    "actions": [
+      "scored_days_to_failure"
+    ],
+    "artifacts": {
+      "features": {
+        "vibration_rms": 7.884,
+        "temperature_c": 106.04,
+        "hours_run": 9699.3,
+        "oil_pressure_psi": 61.89,
+        "motor_amps": 7.46
+      }
+    },
+    "hitl_required": false,
+    "llm_mode": "mock",
+    "asset_id": "ASSET-0613",
+    "days_to_failure": 8.52,
+    "parts_in_stock": true,
+    "purchase_order": null,
+    "approval_queue_id": null
+  },
+  {
+    "project": "predictive-maintenance-agent",
+    "case_id": "PM-ASSET-0387",
+    "score": 1.84,
+    "decision": "expedite_po_pending_approval",
+    "summary": "Purchase Order DRAFT for ASSET-0387\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 1.84 days (threshold 7). Vibration RMS=7.634.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference pre",
+    "actions": [
+      "scored_days_to_failure",
+      "checked_inventory",
+      "drafted_purchase_order",
+      "enqueued_manager_approval"
+    ],
+    "artifacts": {
+      "inventory": {
+        "part_key": "vfd-module",
+        "found": true,
+        "sku": "VFD-900",
+        "qty": 0,
+        "unit_cost": 2400.0,
+        "supplier": "Helix Parts Co",
+        "in_stock": false
+      },
+      "features": {
+        "vibration_rms": 7.634,
+        "temperature_c": 109.33,
+        "hours_run": 13889.2,
+        "oil_pressure_psi": 52.35,
+        "motor_amps": 24.37
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "asset_id": "ASSET-0387",
+    "days_to_failure": 1.84,
+    "parts_in_stock": false,
+    "purchase_order": {
+      "asset_id": "ASSET-0387",
+      "part_key": "vfd-module",
+      "sku": "VFD-900",
+      "supplier": "Helix Parts Co",
+      "qty": 1,
+      "unit_cost": 2400.0,
+      "in_stock_at_draft": false,
+      "narrative": "Purchase Order DRAFT for ASSET-0387\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 1.84 days (threshold 7). Vibration RMS=7.634.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
+      "approval_queue_id": "APPR-1001",
+      "status": "pending_manager_approval"
+    },
+    "approval_queue_id": "APPR-1001"
+  },
+  {
+    "project": "predictive-maintenance-agent",
+    "case_id": "PM-ASSET-0136",
+    "score": 0.0,
+    "decision": "expedite_po_pending_approval",
+    "summary": "Purchase Order DRAFT for ASSET-0136\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.689.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference pred",
+    "actions": [
+      "scored_days_to_failure",
+      "checked_inventory",
+      "drafted_purchase_order",
+      "enqueued_manager_approval"
+    ],
+    "artifacts": {
+      "inventory": {
+        "part_key": "vfd-module",
+        "found": true,
+        "sku": "VFD-900",
+        "qty": 0,
+        "unit_cost": 2400.0,
+        "supplier": "Helix Parts Co",
+        "in_stock": false
+      },
+      "features": {
+        "vibration_rms": 7.689,
+        "temperature_c": 105.91,
+        "hours_run": 17725.5,
+        "oil_pressure_psi": 66.89,
+        "motor_amps": 25.99
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "asset_id": "ASSET-0136",
+    "days_to_failure": 0.0,
+    "parts_in_stock": false,
+    "purchase_order": {
+      "asset_id": "ASSET-0136",
+      "part_key": "vfd-module",
+      "sku": "VFD-900",
+      "supplier": "Helix Parts Co",
+      "qty": 1,
+      "unit_cost": 2400.0,
+      "in_stock_at_draft": false,
+      "narrative": "Purchase Order DRAFT for ASSET-0136\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.689.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
+      "approval_queue_id": "APPR-1002",
+      "status": "pending_manager_approval"
+    },
+    "approval_queue_id": "APPR-1002"
+  },
+  {
+    "project": "predictive-maintenance-agent",
+    "case_id": "PM-ASSET-0467",
+    "score": 0.23,
+    "decision": "expedite_po_pending_approval",
+    "summary": "Purchase Order DRAFT for ASSET-0467\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.23 days (threshold 7). Vibration RMS=7.554.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference pre",
+    "actions": [
+      "scored_days_to_failure",
+      "checked_inventory",
+      "drafted_purchase_order",
+      "enqueued_manager_approval"
+    ],
+    "artifacts": {
+      "inventory": {
+        "part_key": "vfd-module",
+        "found": true,
+        "sku": "VFD-900",
+        "qty": 0,
+        "unit_cost": 2400.0,
+        "supplier": "Helix Parts Co",
+        "in_stock": false
+      },
+      "features": {
+        "vibration_rms": 7.554,
+        "temperature_c": 108.5,
+        "hours_run": 19425.6,
+        "oil_pressure_psi": 53.42,
+        "motor_amps": 10.14
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "asset_id": "ASSET-0467",
+    "days_to_failure": 0.23,
+    "parts_in_stock": false,
+    "purchase_order": {
+      "asset_id": "ASSET-0467",
+      "part_key": "vfd-module",
+      "sku": "VFD-900",
+      "supplier": "Helix Parts Co",
+      "qty": 1,
+      "unit_cost": 2400.0,
+      "in_stock_at_draft": false,
+      "narrative": "Purchase Order DRAFT for ASSET-0467\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.23 days (threshold 7). Vibration RMS=7.554.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
+      "approval_queue_id": "APPR-1003",
+      "status": "pending_manager_approval"
+    },
+    "approval_queue_id": "APPR-1003"
+  },
+  {
+    "project": "predictive-maintenance-agent",
+    "case_id": "PM-ASSET-0385",
+    "score": 0.0,
+    "decision": "expedite_po_pending_approval",
+    "summary": "Purchase Order DRAFT for ASSET-0385\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.9.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predic",
+    "actions": [
+      "scored_days_to_failure",
+      "checked_inventory",
+      "drafted_purchase_order",
+      "enqueued_manager_approval"
+    ],
+    "artifacts": {
+      "inventory": {
+        "part_key": "vfd-module",
+        "found": true,
+        "sku": "VFD-900",
+        "qty": 0,
+        "unit_cost": 2400.0,
+        "supplier": "Helix Parts Co",
+        "in_stock": false
+      },
+      "features": {
+        "vibration_rms": 7.9,
+        "temperature_c": 97.62,
+        "hours_run": 18540.7,
+        "oil_pressure_psi": 61.51,
+        "motor_amps": 37.03
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "asset_id": "ASSET-0385",
+    "days_to_failure": 0.0,
+    "parts_in_stock": false,
+    "purchase_order": {
+      "asset_id": "ASSET-0385",
+      "part_key": "vfd-module",
+      "sku": "VFD-900",
+      "supplier": "Helix Parts Co",
+      "qty": 1,
+      "unit_cost": 2400.0,
+      "in_stock_at_draft": false,
+      "narrative": "Purchase Order DRAFT for ASSET-0385\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.9.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
+      "approval_queue_id": "APPR-1004",
+      "status": "pending_manager_approval"
+    },
+    "approval_queue_id": "APPR-1004"
+  }
+]

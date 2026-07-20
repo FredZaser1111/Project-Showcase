@@ -1,0 +1,13 @@
+{
+  "mae": 2.624819490015507,
+  "r2": 0.8980385074965734,
+  "n_train": 640,
+  "n_test": 160,
+  "features": [
+    "vibration_rms",
+    "temperature_c",
+    "hours_run",
+    "oil_pressure_psi",
+    "motor_amps"
+  ]
+}

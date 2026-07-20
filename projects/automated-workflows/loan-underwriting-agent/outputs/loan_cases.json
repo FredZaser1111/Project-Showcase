@@ -1,0 +1,327 @@
+[
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00682",
+    "score": 0.0069,
+    "decision": "approve_automated",
+    "summary": "Routed as auto_approve at risk 0.7%",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "midwest",
+      "features": {
+        "credit_score": 807.0,
+        "debt_to_income": 0.129,
+        "employment_years": 21.0,
+        "loan_amount": 61524.01,
+        "loan_term_months": 60.0,
+        "prior_delinquencies": 0.0
+      }
+    },
+    "hitl_required": false,
+    "llm_mode": "mock",
+    "application_id": "LN-00682",
+    "default_risk": 0.0069,
+    "route": "auto_approve",
+    "compliance_report": null,
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00682",
+      "default_risk": 0.0069,
+      "route": "auto_approve",
+      "hitl_required": false,
+      "compliance_report": null,
+      "features": {
+        "credit_score": 807.0,
+        "debt_to_income": 0.129,
+        "employment_years": 21.0,
+        "loan_amount": 61524.01,
+        "loan_term_months": 60.0,
+        "prior_delinquencies": 0.0
+      },
+      "region": "midwest"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00502",
+    "score": 0.0079,
+    "decision": "approve_automated",
+    "summary": "Routed as auto_approve at risk 0.8%",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "northeast",
+      "features": {
+        "credit_score": 808.0,
+        "debt_to_income": 0.154,
+        "employment_years": 23.8,
+        "loan_amount": 33158.3,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 1.0
+      }
+    },
+    "hitl_required": false,
+    "llm_mode": "mock",
+    "application_id": "LN-00502",
+    "default_risk": 0.0079,
+    "route": "auto_approve",
+    "compliance_report": null,
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00502",
+      "default_risk": 0.0079,
+      "route": "auto_approve",
+      "hitl_required": false,
+      "compliance_report": null,
+      "features": {
+        "credit_score": 808.0,
+        "debt_to_income": 0.154,
+        "employment_years": 23.8,
+        "loan_amount": 33158.3,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 1.0
+      },
+      "region": "northeast"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00779",
+    "score": 0.4998,
+    "decision": "escalate_hitl",
+    "summary": "Compliance review for LN-00779\nDefault risk: 50.0% (gray zone 40%-60%).\nApplicant signals: credit=775.0, DTI=0.416, prior_delinquencies=3.0.\nApplicable regional rules:\n- CA DFPI: gray-zone credit decisions require second-level review before funding.\n- WA Consumer Loan Act: document compensating factors when credit < 640.\nRecommendation: hold funding pending human underwriter attestation of compens",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "compliance_investigated",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "west",
+      "features": {
+        "credit_score": 775.0,
+        "debt_to_income": 0.416,
+        "employment_years": 16.2,
+        "loan_amount": 17104.62,
+        "loan_term_months": 36.0,
+        "prior_delinquencies": 3.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "application_id": "LN-00779",
+    "default_risk": 0.4998,
+    "route": "compliance_review",
+    "compliance_report": "Compliance review for LN-00779\nDefault risk: 50.0% (gray zone 40%-60%).\nApplicant signals: credit=775.0, DTI=0.416, prior_delinquencies=3.0.\nApplicable regional rules:\n- CA DFPI: gray-zone credit decisions require second-level review before funding.\n- WA Consumer Loan Act: document compensating factors when credit < 640.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00779",
+      "default_risk": 0.4998,
+      "route": "compliance_review",
+      "hitl_required": true,
+      "compliance_report": "Compliance review for LN-00779\nDefault risk: 50.0% (gray zone 40%-60%).\nApplicant signals: credit=775.0, DTI=0.416, prior_delinquencies=3.0.\nApplicable regional rules:\n- CA DFPI: gray-zone credit decisions require second-level review before funding.\n- WA Consumer Loan Act: document compensating factors when credit < 640.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+      "features": {
+        "credit_score": 775.0,
+        "debt_to_income": 0.416,
+        "employment_years": 16.2,
+        "loan_amount": 17104.62,
+        "loan_term_months": 36.0,
+        "prior_delinquencies": 3.0
+      },
+      "region": "west"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00083",
+    "score": 0.4992,
+    "decision": "escalate_hitl",
+    "summary": "Compliance review for LN-00083\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=769.0, DTI=0.307, prior_delinquencies=4.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestati",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "compliance_investigated",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "midwest",
+      "features": {
+        "credit_score": 769.0,
+        "debt_to_income": 0.307,
+        "employment_years": 6.7,
+        "loan_amount": 27382.24,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 4.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "application_id": "LN-00083",
+    "default_risk": 0.4992,
+    "route": "compliance_review",
+    "compliance_report": "Compliance review for LN-00083\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=769.0, DTI=0.307, prior_delinquencies=4.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00083",
+      "default_risk": 0.4992,
+      "route": "compliance_review",
+      "hitl_required": true,
+      "compliance_report": "Compliance review for LN-00083\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=769.0, DTI=0.307, prior_delinquencies=4.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+      "features": {
+        "credit_score": 769.0,
+        "debt_to_income": 0.307,
+        "employment_years": 6.7,
+        "loan_amount": 27382.24,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 4.0
+      },
+      "region": "midwest"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00255",
+    "score": 0.499,
+    "decision": "escalate_hitl",
+    "summary": "Compliance review for LN-00255\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=563.0, DTI=0.21, prior_delinquencies=2.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestatio",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "compliance_investigated",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "midwest",
+      "features": {
+        "credit_score": 563.0,
+        "debt_to_income": 0.21,
+        "employment_years": 14.5,
+        "loan_amount": 96714.48,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 2.0
+      }
+    },
+    "hitl_required": true,
+    "llm_mode": "mock",
+    "application_id": "LN-00255",
+    "default_risk": 0.499,
+    "route": "compliance_review",
+    "compliance_report": "Compliance review for LN-00255\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=563.0, DTI=0.21, prior_delinquencies=2.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00255",
+      "default_risk": 0.499,
+      "route": "compliance_review",
+      "hitl_required": true,
+      "compliance_report": "Compliance review for LN-00255\nDefault risk: 49.9% (gray zone 40%-60%).\nApplicant signals: credit=563.0, DTI=0.21, prior_delinquencies=2.0.\nApplicable regional rules:\n- IL Predatory Loan Prevention Act: cap fees; require ability-to-repay attestation.\n- OH Residential Mortgage Lending Act: retain underwriting rationale for 36 months.\nRecommendation: hold funding pending human underwriter attestation of compensating factors.",
+      "features": {
+        "credit_score": 563.0,
+        "debt_to_income": 0.21,
+        "employment_years": 14.5,
+        "loan_amount": 96714.48,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 2.0
+      },
+      "region": "midwest"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00748",
+    "score": 0.9957,
+    "decision": "deny_automated",
+    "summary": "Routed as auto_deny at risk 99.6%",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "southeast",
+      "features": {
+        "credit_score": 613.0,
+        "debt_to_income": 0.586,
+        "employment_years": 9.7,
+        "loan_amount": 106133.69,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 5.0
+      }
+    },
+    "hitl_required": false,
+    "llm_mode": "mock",
+    "application_id": "LN-00748",
+    "default_risk": 0.9957,
+    "route": "auto_deny",
+    "compliance_report": null,
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00748",
+      "default_risk": 0.9957,
+      "route": "auto_deny",
+      "hitl_required": false,
+      "compliance_report": null,
+      "features": {
+        "credit_score": 613.0,
+        "debt_to_income": 0.586,
+        "employment_years": 9.7,
+        "loan_amount": 106133.69,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 5.0
+      },
+      "region": "southeast"
+    }
+  },
+  {
+    "project": "loan-underwriting-agent",
+    "case_id": "LN-00854",
+    "score": 0.995,
+    "decision": "deny_automated",
+    "summary": "Routed as auto_deny at risk 99.5%",
+    "actions": [
+      "scored_default_risk",
+      "triaged",
+      "webhook_packaged"
+    ],
+    "artifacts": {
+      "region": "west",
+      "features": {
+        "credit_score": 606.0,
+        "debt_to_income": 0.578,
+        "employment_years": 10.7,
+        "loan_amount": 61981.5,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 3.0
+      }
+    },
+    "hitl_required": false,
+    "llm_mode": "mock",
+    "application_id": "LN-00854",
+    "default_risk": 0.995,
+    "route": "auto_deny",
+    "compliance_report": null,
+    "webhook_payload": {
+      "destination": "appian_hitl_review_dashboard",
+      "application_id": "LN-00854",
+      "default_risk": 0.995,
+      "route": "auto_deny",
+      "hitl_required": false,
+      "compliance_report": null,
+      "features": {
+        "credit_score": 606.0,
+        "debt_to_income": 0.578,
+        "employment_years": 10.7,
+        "loan_amount": 61981.5,
+        "loan_term_months": 48.0,
+        "prior_delinquencies": 3.0
+      },
+      "region": "west"
+    }
+  }
+]

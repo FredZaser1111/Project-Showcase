@@ -1,0 +1,15 @@
+{
+  "accuracy": 0.77,
+  "roc_auc": 0.8074712643678161,
+  "n_train": 800,
+  "n_test": 200,
+  "features": [
+    "credit_score",
+    "debt_to_income",
+    "employment_years",
+    "loan_amount",
+    "loan_term_months",
+    "prior_delinquencies"
+  ],
+  "positive_rate": 0.58
+}

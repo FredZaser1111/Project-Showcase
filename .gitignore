@@ -10,6 +10,10 @@ __pycache__/
 *.py[cod]
 .env
 .env.*
+!.env.example
+
+# Retrainable local model artifacts (synthetic data + train.py regenerate quickly)
+projects/automated-workflows/**/models/*.joblib
 
 # Build output
 dist/

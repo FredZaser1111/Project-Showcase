@@ -1,0 +1,15 @@
+{
+  "accuracy": 0.8111111111111111,
+  "roc_auc": 0.8686287625418061,
+  "n_train": 720,
+  "n_test": 180,
+  "features": [
+    "login_frequency_30d",
+    "support_tickets_90d",
+    "usage_drop_pct",
+    "payment_late_count",
+    "nps_score",
+    "tenure_months"
+  ],
+  "positive_rate": 0.6388888888888888
+}

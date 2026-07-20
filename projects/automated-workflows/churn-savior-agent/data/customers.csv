@@ -1,0 +1,901 @@
+customer_id,company_name,industry,company_size,account_manager,login_frequency_30d,support_tickets_90d,usage_drop_pct,payment_late_count,nps_score,tenure_months,latest_ticket_text,churned
+CUS-00000,Acme Corp 0,Retail,SMB,AM-1,3,0,32.2,2,7,51,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00001,Acme Corp 1,Manufacturing,Mid-Market,AM-2,30,0,13.3,3,5,41,Product downtime last week; team lost confidence.,0
+CUS-00002,Acme Corp 2,Finance,Mid-Market,AM-3,26,2,-5.9,0,10,40,Product downtime last week; team lost confidence.,0
+CUS-00003,Acme Corp 3,SaaS,SMB,AM-4,17,10,33.3,3,8,32,Product downtime last week; team lost confidence.,1
+CUS-00004,Acme Corp 4,SaaS,Enterprise,AM-5,17,5,76.3,4,0,2,Competitor demo scheduled; pricing feels high.,1
+CUS-00005,Acme Corp 5,Healthcare,Mid-Market,AM-6,34,8,48.7,0,4,23,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00006,Acme Corp 6,Manufacturing,Enterprise,AM-7,3,4,34.6,1,3,44,Product downtime last week; team lost confidence.,1
+CUS-00007,Acme Corp 7,Finance,Enterprise,AM-8,27,2,-0.0,3,6,48,Billing confusion after plan change; waiting on refund.,0
+CUS-00008,Acme Corp 8,Finance,Enterprise,AM-1,8,4,12.7,3,2,34,Competitor demo scheduled; pricing feels high.,1
+CUS-00009,Acme Corp 9,Retail,Mid-Market,AM-2,3,1,16.5,3,10,42,Onboarding incomplete; champion left the company.,0
+CUS-00010,Acme Corp 10,Retail,SMB,AM-3,21,9,58.8,2,3,2,Product downtime last week; team lost confidence.,1
+CUS-00011,Acme Corp 11,Retail,SMB,AM-4,39,2,68.9,3,5,28,Billing confusion after plan change; waiting on refund.,1
+CUS-00012,Acme Corp 12,SaaS,Mid-Market,AM-5,29,4,71.1,3,1,30,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00013,Acme Corp 13,Retail,SMB,AM-6,30,11,78.6,0,10,53,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00014,Acme Corp 14,Retail,Mid-Market,AM-7,28,7,78.4,3,10,19,Competitor demo scheduled; pricing feels high.,1
+CUS-00015,Acme Corp 15,Healthcare,SMB,AM-8,31,5,75.8,2,8,14,Onboarding incomplete; champion left the company.,0
+CUS-00016,Acme Corp 16,Manufacturing,Enterprise,AM-1,20,6,-3.5,0,3,21,Product downtime last week; team lost confidence.,0
+CUS-00017,Acme Corp 17,Finance,SMB,AM-2,5,9,2.4,2,0,11,Onboarding incomplete; champion left the company.,1
+CUS-00018,Acme Corp 18,Healthcare,Enterprise,AM-3,33,3,17.4,2,7,33,Billing confusion after plan change; waiting on refund.,1
+CUS-00019,Acme Corp 19,Finance,SMB,AM-4,18,7,39.8,0,4,38,Product downtime last week; team lost confidence.,1
+CUS-00020,Acme Corp 20,SaaS,SMB,AM-5,20,10,-1.3,4,10,48,Onboarding incomplete; champion left the company.,1
+CUS-00021,Acme Corp 21,Finance,Enterprise,AM-6,14,6,66.1,1,7,58,Onboarding incomplete; champion left the company.,0
+CUS-00022,Acme Corp 22,Manufacturing,Enterprise,AM-7,7,5,45.5,1,5,5,Billing confusion after plan change; waiting on refund.,1
+CUS-00023,Acme Corp 23,Healthcare,Mid-Market,AM-8,37,1,38.8,2,10,15,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00024,Acme Corp 24,Manufacturing,Enterprise,AM-1,31,2,4.9,4,8,18,Product downtime last week; team lost confidence.,0
+CUS-00025,Acme Corp 25,Healthcare,SMB,AM-2,25,11,12.8,3,5,15,Onboarding incomplete; champion left the company.,1
+CUS-00026,Acme Corp 26,Manufacturing,Enterprise,AM-3,16,6,4.4,3,0,49,Onboarding incomplete; champion left the company.,1
+CUS-00027,Acme Corp 27,SaaS,SMB,AM-4,32,3,66.7,1,1,9,Onboarding incomplete; champion left the company.,1
+CUS-00028,Acme Corp 28,Healthcare,Mid-Market,AM-5,21,5,42.6,4,4,2,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00029,Acme Corp 29,Healthcare,SMB,AM-6,17,6,56.2,4,6,51,Competitor demo scheduled; pricing feels high.,1
+CUS-00030,Acme Corp 30,SaaS,SMB,AM-7,18,6,16.6,2,0,57,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00031,Acme Corp 31,Healthcare,Mid-Market,AM-8,9,8,23.4,2,1,14,Product downtime last week; team lost confidence.,1
+CUS-00032,Acme Corp 32,Manufacturing,Mid-Market,AM-1,3,3,26.4,0,7,20,Product downtime last week; team lost confidence.,0
+CUS-00033,Acme Corp 33,Manufacturing,SMB,AM-2,22,7,58.4,3,8,30,Onboarding incomplete; champion left the company.,1
+CUS-00034,Acme Corp 34,Retail,Enterprise,AM-3,35,5,59.5,4,0,32,Onboarding incomplete; champion left the company.,1
+CUS-00035,Acme Corp 35,SaaS,Mid-Market,AM-4,2,11,8.6,2,5,59,Product downtime last week; team lost confidence.,1
+CUS-00036,Acme Corp 36,Healthcare,SMB,AM-5,34,1,74.7,2,0,24,Onboarding incomplete; champion left the company.,1
+CUS-00037,Acme Corp 37,Finance,Mid-Market,AM-6,33,1,0.9,2,7,1,Billing confusion after plan change; waiting on refund.,0
+CUS-00038,Acme Corp 38,Healthcare,SMB,AM-7,11,5,70.7,0,9,25,Onboarding incomplete; champion left the company.,0
+CUS-00039,Acme Corp 39,SaaS,SMB,AM-8,25,6,-1.0,3,9,33,Competitor demo scheduled; pricing feels high.,0
+CUS-00040,Acme Corp 40,Retail,Mid-Market,AM-1,6,8,13.8,3,6,31,Onboarding incomplete; champion left the company.,1
+CUS-00041,Acme Corp 41,SaaS,SMB,AM-2,30,4,66.2,4,6,31,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00042,Acme Corp 42,Healthcare,SMB,AM-3,28,10,6.2,4,10,55,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00043,Acme Corp 43,Finance,Mid-Market,AM-4,14,5,27.2,2,6,48,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00044,Acme Corp 44,Healthcare,SMB,AM-5,2,1,30.5,4,4,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00045,Acme Corp 45,Manufacturing,Enterprise,AM-6,38,1,12.1,2,8,21,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00046,Acme Corp 46,Retail,Mid-Market,AM-7,17,11,53.9,3,6,40,Product downtime last week; team lost confidence.,1
+CUS-00047,Acme Corp 47,Healthcare,SMB,AM-8,35,1,66.6,3,9,25,Onboarding incomplete; champion left the company.,0
+CUS-00048,Acme Corp 48,Manufacturing,Mid-Market,AM-1,27,11,68.7,4,5,26,Onboarding incomplete; champion left the company.,1
+CUS-00049,Acme Corp 49,Retail,SMB,AM-2,31,3,20.5,3,9,10,Product downtime last week; team lost confidence.,0
+CUS-00050,Acme Corp 50,Healthcare,Mid-Market,AM-3,30,1,37.8,0,0,16,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00051,Acme Corp 51,Healthcare,SMB,AM-4,7,3,12.4,0,0,44,Competitor demo scheduled; pricing feels high.,0
+CUS-00052,Acme Corp 52,Finance,Enterprise,AM-5,14,7,12.0,2,1,50,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00053,Acme Corp 53,SaaS,SMB,AM-6,18,5,4.5,2,6,47,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00054,Acme Corp 54,Finance,Mid-Market,AM-7,19,9,74.6,3,7,19,Onboarding incomplete; champion left the company.,0
+CUS-00055,Acme Corp 55,Retail,SMB,AM-8,1,7,69.9,2,2,9,Competitor demo scheduled; pricing feels high.,1
+CUS-00056,Acme Corp 56,Finance,SMB,AM-1,21,4,60.0,2,1,10,Onboarding incomplete; champion left the company.,1
+CUS-00057,Acme Corp 57,Healthcare,Mid-Market,AM-2,6,7,36.6,4,9,24,Onboarding incomplete; champion left the company.,1
+CUS-00058,Acme Corp 58,Retail,Mid-Market,AM-3,29,11,34.2,1,8,31,Competitor demo scheduled; pricing feels high.,0
+CUS-00059,Acme Corp 59,Manufacturing,Enterprise,AM-4,27,4,37.7,2,7,53,Competitor demo scheduled; pricing feels high.,0
+CUS-00060,Acme Corp 60,Healthcare,SMB,AM-5,36,1,38.3,2,5,54,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00061,Acme Corp 61,Healthcare,SMB,AM-6,29,4,29.1,2,4,1,Competitor demo scheduled; pricing feels high.,1
+CUS-00062,Acme Corp 62,Retail,SMB,AM-7,14,10,1.9,4,0,42,Competitor demo scheduled; pricing feels high.,1
+CUS-00063,Acme Corp 63,Manufacturing,SMB,AM-8,38,2,1.3,4,2,18,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00064,Acme Corp 64,Healthcare,Enterprise,AM-1,16,11,75.7,2,9,12,Billing confusion after plan change; waiting on refund.,1
+CUS-00065,Acme Corp 65,Manufacturing,Enterprise,AM-2,13,7,33.4,2,3,33,Competitor demo scheduled; pricing feels high.,1
+CUS-00066,Acme Corp 66,Manufacturing,Enterprise,AM-3,36,7,75.8,2,7,3,Product downtime last week; team lost confidence.,1
+CUS-00067,Acme Corp 67,SaaS,SMB,AM-4,14,3,4.7,0,7,20,Onboarding incomplete; champion left the company.,0
+CUS-00068,Acme Corp 68,Finance,SMB,AM-5,3,11,39.9,2,3,33,Competitor demo scheduled; pricing feels high.,1
+CUS-00069,Acme Corp 69,SaaS,Mid-Market,AM-6,18,0,8.7,1,2,17,Product downtime last week; team lost confidence.,0
+CUS-00070,Acme Corp 70,Manufacturing,SMB,AM-7,31,3,12.8,0,7,36,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00071,Acme Corp 71,Retail,Mid-Market,AM-8,7,5,-7.3,0,1,28,Onboarding incomplete; champion left the company.,0
+CUS-00072,Acme Corp 72,Manufacturing,SMB,AM-1,18,5,0.7,2,5,48,Product downtime last week; team lost confidence.,1
+CUS-00073,Acme Corp 73,Manufacturing,SMB,AM-2,5,5,72.5,0,9,11,Product downtime last week; team lost confidence.,1
+CUS-00074,Acme Corp 74,Manufacturing,Enterprise,AM-3,27,1,18.9,3,7,4,Onboarding incomplete; champion left the company.,0
+CUS-00075,Acme Corp 75,Manufacturing,SMB,AM-4,19,2,44.7,2,8,32,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00076,Acme Corp 76,Finance,Enterprise,AM-5,13,1,31.9,1,0,16,Billing confusion after plan change; waiting on refund.,1
+CUS-00077,Acme Corp 77,Manufacturing,SMB,AM-6,9,6,26.0,3,2,42,Onboarding incomplete; champion left the company.,1
+CUS-00078,Acme Corp 78,Finance,SMB,AM-7,22,4,37.9,2,3,6,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00079,Acme Corp 79,Retail,SMB,AM-8,26,6,6.9,3,3,34,Onboarding incomplete; champion left the company.,1
+CUS-00080,Acme Corp 80,Healthcare,SMB,AM-1,37,7,79.0,3,2,59,Onboarding incomplete; champion left the company.,1
+CUS-00081,Acme Corp 81,Healthcare,Mid-Market,AM-2,17,8,63.6,0,10,6,Product downtime last week; team lost confidence.,1
+CUS-00082,Acme Corp 82,Manufacturing,SMB,AM-3,6,6,56.7,1,1,18,Billing confusion after plan change; waiting on refund.,1
+CUS-00083,Acme Corp 83,Retail,Mid-Market,AM-4,33,7,32.2,2,7,50,Competitor demo scheduled; pricing feels high.,0
+CUS-00084,Acme Corp 84,SaaS,Enterprise,AM-5,25,7,3.8,4,6,32,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00085,Acme Corp 85,Healthcare,SMB,AM-6,28,7,72.9,0,6,11,Onboarding incomplete; champion left the company.,1
+CUS-00086,Acme Corp 86,Finance,SMB,AM-7,3,7,20.7,0,2,13,Onboarding incomplete; champion left the company.,1
+CUS-00087,Acme Corp 87,Manufacturing,SMB,AM-8,12,3,-5.5,4,3,46,Billing confusion after plan change; waiting on refund.,1
+CUS-00088,Acme Corp 88,Manufacturing,Mid-Market,AM-1,30,2,20.8,4,6,51,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00089,Acme Corp 89,SaaS,Mid-Market,AM-2,33,9,61.5,0,3,22,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00090,Acme Corp 90,SaaS,SMB,AM-3,17,4,46.0,2,7,28,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00091,Acme Corp 91,Healthcare,Mid-Market,AM-4,32,6,57.6,3,0,47,Product downtime last week; team lost confidence.,1
+CUS-00092,Acme Corp 92,Finance,Mid-Market,AM-5,33,2,61.4,0,0,11,Competitor demo scheduled; pricing feels high.,0
+CUS-00093,Acme Corp 93,Retail,SMB,AM-6,15,5,9.1,1,8,13,Onboarding incomplete; champion left the company.,0
+CUS-00094,Acme Corp 94,Manufacturing,SMB,AM-7,35,6,73.1,1,6,46,Product downtime last week; team lost confidence.,1
+CUS-00095,Acme Corp 95,Retail,Enterprise,AM-8,11,7,29.4,3,0,12,Product downtime last week; team lost confidence.,1
+CUS-00096,Acme Corp 96,Retail,SMB,AM-1,9,6,47.5,1,9,46,Product downtime last week; team lost confidence.,1
+CUS-00097,Acme Corp 97,Manufacturing,SMB,AM-2,27,4,-9.8,2,0,30,Onboarding incomplete; champion left the company.,0
+CUS-00098,Acme Corp 98,Finance,SMB,AM-3,25,11,79.4,1,10,59,Billing confusion after plan change; waiting on refund.,1
+CUS-00099,Acme Corp 99,Retail,Mid-Market,AM-4,5,6,15.3,3,8,2,Competitor demo scheduled; pricing feels high.,1
+CUS-00100,Acme Corp 100,Retail,SMB,AM-5,33,9,-4.4,0,10,56,Onboarding incomplete; champion left the company.,0
+CUS-00101,Acme Corp 101,Finance,SMB,AM-6,7,8,31.2,1,10,14,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00102,Acme Corp 102,Healthcare,SMB,AM-7,32,6,1.6,1,3,3,Product downtime last week; team lost confidence.,0
+CUS-00103,Acme Corp 103,Finance,Mid-Market,AM-8,0,10,3.7,4,8,43,Billing confusion after plan change; waiting on refund.,1
+CUS-00104,Acme Corp 104,Retail,SMB,AM-1,31,1,46.9,4,2,32,Product downtime last week; team lost confidence.,0
+CUS-00105,Acme Corp 105,Finance,Enterprise,AM-2,31,11,25.4,2,5,50,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00106,Acme Corp 106,Retail,SMB,AM-3,31,10,73.0,0,2,7,Product downtime last week; team lost confidence.,1
+CUS-00107,Acme Corp 107,Manufacturing,SMB,AM-4,26,6,18.7,3,5,5,Competitor demo scheduled; pricing feels high.,0
+CUS-00108,Acme Corp 108,Healthcare,Enterprise,AM-5,18,8,55.4,2,9,34,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00109,Acme Corp 109,Manufacturing,Enterprise,AM-6,28,6,31.5,4,4,53,Product downtime last week; team lost confidence.,0
+CUS-00110,Acme Corp 110,Healthcare,SMB,AM-7,11,3,49.4,1,1,24,Competitor demo scheduled; pricing feels high.,1
+CUS-00111,Acme Corp 111,Manufacturing,Enterprise,AM-8,31,9,44.0,4,3,48,Product downtime last week; team lost confidence.,1
+CUS-00112,Acme Corp 112,Manufacturing,Mid-Market,AM-1,22,2,32.6,4,8,54,Product downtime last week; team lost confidence.,0
+CUS-00113,Acme Corp 113,Retail,SMB,AM-2,18,3,75.5,1,5,52,Product downtime last week; team lost confidence.,1
+CUS-00114,Acme Corp 114,Retail,Enterprise,AM-3,20,6,20.8,3,6,31,Competitor demo scheduled; pricing feels high.,0
+CUS-00115,Acme Corp 115,Healthcare,Mid-Market,AM-4,22,10,6.0,1,4,42,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00116,Acme Corp 116,Manufacturing,SMB,AM-5,1,4,51.0,1,3,32,Product downtime last week; team lost confidence.,1
+CUS-00117,Acme Corp 117,Retail,Mid-Market,AM-6,5,5,66.1,1,6,40,Product downtime last week; team lost confidence.,1
+CUS-00118,Acme Corp 118,Retail,SMB,AM-7,9,0,-6.4,3,6,34,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00119,Acme Corp 119,SaaS,SMB,AM-8,4,1,30.5,1,9,31,Onboarding incomplete; champion left the company.,0
+CUS-00120,Acme Corp 120,SaaS,Enterprise,AM-1,17,0,70.3,3,6,26,Onboarding incomplete; champion left the company.,1
+CUS-00121,Acme Corp 121,SaaS,Mid-Market,AM-2,26,0,57.5,2,10,39,Competitor demo scheduled; pricing feels high.,0
+CUS-00122,Acme Corp 122,Finance,Mid-Market,AM-3,26,10,79.3,3,9,45,Billing confusion after plan change; waiting on refund.,1
+CUS-00123,Acme Corp 123,Finance,Mid-Market,AM-4,18,10,37.8,4,0,55,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00124,Acme Corp 124,SaaS,Mid-Market,AM-5,34,9,49.4,0,4,37,Product downtime last week; team lost confidence.,1
+CUS-00125,Acme Corp 125,SaaS,SMB,AM-6,22,0,17.2,4,4,6,Competitor demo scheduled; pricing feels high.,1
+CUS-00126,Acme Corp 126,Manufacturing,Enterprise,AM-7,3,0,75.3,0,0,35,Onboarding incomplete; champion left the company.,1
+CUS-00127,Acme Corp 127,Retail,Mid-Market,AM-8,30,3,23.0,2,1,19,Competitor demo scheduled; pricing feels high.,0
+CUS-00128,Acme Corp 128,Healthcare,Mid-Market,AM-1,22,6,56.5,1,8,2,Competitor demo scheduled; pricing feels high.,1
+CUS-00129,Acme Corp 129,Manufacturing,Mid-Market,AM-2,25,4,26.3,3,3,5,Billing confusion after plan change; waiting on refund.,1
+CUS-00130,Acme Corp 130,Healthcare,SMB,AM-3,22,5,40.6,3,1,35,Billing confusion after plan change; waiting on refund.,1
+CUS-00131,Acme Corp 131,SaaS,SMB,AM-4,22,2,54.8,4,3,56,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00132,Acme Corp 132,Healthcare,SMB,AM-5,3,8,35.8,2,3,30,Onboarding incomplete; champion left the company.,1
+CUS-00133,Acme Corp 133,Finance,SMB,AM-6,22,3,71.6,4,1,27,Product downtime last week; team lost confidence.,1
+CUS-00134,Acme Corp 134,Manufacturing,Mid-Market,AM-7,31,0,27.7,1,1,6,Billing confusion after plan change; waiting on refund.,0
+CUS-00135,Acme Corp 135,SaaS,Enterprise,AM-8,12,8,48.2,1,8,40,Billing confusion after plan change; waiting on refund.,1
+CUS-00136,Acme Corp 136,Retail,SMB,AM-1,24,10,20.8,1,9,4,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00137,Acme Corp 137,Finance,SMB,AM-2,1,0,26.7,2,5,50,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00138,Acme Corp 138,Finance,Mid-Market,AM-3,13,5,29.6,3,6,49,Product downtime last week; team lost confidence.,1
+CUS-00139,Acme Corp 139,Manufacturing,SMB,AM-4,17,9,1.3,4,10,59,Product downtime last week; team lost confidence.,1
+CUS-00140,Acme Corp 140,SaaS,Enterprise,AM-5,39,8,-1.7,1,9,17,Onboarding incomplete; champion left the company.,0
+CUS-00141,Acme Corp 141,Healthcare,SMB,AM-6,8,10,50.1,1,0,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00142,Acme Corp 142,Healthcare,SMB,AM-7,11,4,49.0,4,10,18,Onboarding incomplete; champion left the company.,1
+CUS-00143,Acme Corp 143,SaaS,SMB,AM-8,16,4,49.7,2,0,48,Competitor demo scheduled; pricing feels high.,1
+CUS-00144,Acme Corp 144,SaaS,Enterprise,AM-1,39,8,-8.2,1,0,13,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00145,Acme Corp 145,Healthcare,SMB,AM-2,34,1,19.4,4,4,53,Product downtime last week; team lost confidence.,1
+CUS-00146,Acme Corp 146,Retail,Mid-Market,AM-3,1,2,7.8,2,8,10,Billing confusion after plan change; waiting on refund.,0
+CUS-00147,Acme Corp 147,Healthcare,SMB,AM-4,9,7,60.0,4,0,3,Billing confusion after plan change; waiting on refund.,1
+CUS-00148,Acme Corp 148,Retail,SMB,AM-5,32,8,67.5,4,3,13,Product downtime last week; team lost confidence.,1
+CUS-00149,Acme Corp 149,Healthcare,Enterprise,AM-6,2,1,12.2,4,2,45,Competitor demo scheduled; pricing feels high.,1
+CUS-00150,Acme Corp 150,SaaS,SMB,AM-7,34,6,50.1,2,4,36,Billing confusion after plan change; waiting on refund.,1
+CUS-00151,Acme Corp 151,Finance,SMB,AM-8,11,4,1.6,3,10,21,Competitor demo scheduled; pricing feels high.,1
+CUS-00152,Acme Corp 152,Retail,Mid-Market,AM-1,36,6,14.8,4,3,39,Onboarding incomplete; champion left the company.,1
+CUS-00153,Acme Corp 153,Healthcare,Enterprise,AM-2,11,11,2.5,1,2,39,Competitor demo scheduled; pricing feels high.,1
+CUS-00154,Acme Corp 154,Finance,SMB,AM-3,17,0,15.5,0,1,33,Onboarding incomplete; champion left the company.,0
+CUS-00155,Acme Corp 155,Finance,SMB,AM-4,26,11,50.7,1,2,31,Billing confusion after plan change; waiting on refund.,1
+CUS-00156,Acme Corp 156,Finance,Enterprise,AM-5,5,5,71.9,3,1,6,Billing confusion after plan change; waiting on refund.,1
+CUS-00157,Acme Corp 157,SaaS,Mid-Market,AM-6,22,9,8.2,2,6,16,Onboarding incomplete; champion left the company.,1
+CUS-00158,Acme Corp 158,Manufacturing,Enterprise,AM-7,20,5,38.8,0,4,32,Onboarding incomplete; champion left the company.,0
+CUS-00159,Acme Corp 159,Finance,Mid-Market,AM-8,31,3,53.1,2,5,8,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00160,Acme Corp 160,Finance,Mid-Market,AM-1,39,9,75.8,0,9,29,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00161,Acme Corp 161,Healthcare,SMB,AM-2,26,8,44.9,2,6,7,Billing confusion after plan change; waiting on refund.,1
+CUS-00162,Acme Corp 162,Finance,SMB,AM-3,16,1,13.0,2,1,47,Product downtime last week; team lost confidence.,0
+CUS-00163,Acme Corp 163,Retail,Mid-Market,AM-4,16,8,46.3,3,4,7,Product downtime last week; team lost confidence.,1
+CUS-00164,Acme Corp 164,Retail,Mid-Market,AM-5,16,9,18.8,2,3,6,Billing confusion after plan change; waiting on refund.,1
+CUS-00165,Acme Corp 165,Retail,Enterprise,AM-6,32,4,77.9,2,9,38,Billing confusion after plan change; waiting on refund.,1
+CUS-00166,Acme Corp 166,Manufacturing,Mid-Market,AM-7,12,11,26.0,3,3,14,Billing confusion after plan change; waiting on refund.,1
+CUS-00167,Acme Corp 167,SaaS,SMB,AM-8,6,7,51.7,3,1,21,Onboarding incomplete; champion left the company.,1
+CUS-00168,Acme Corp 168,Retail,Mid-Market,AM-1,13,4,-7.9,4,8,19,Billing confusion after plan change; waiting on refund.,0
+CUS-00169,Acme Corp 169,Finance,Mid-Market,AM-2,0,0,26.0,1,4,13,Billing confusion after plan change; waiting on refund.,0
+CUS-00170,Acme Corp 170,Retail,SMB,AM-3,4,8,68.8,2,1,45,Billing confusion after plan change; waiting on refund.,1
+CUS-00171,Acme Corp 171,Healthcare,Mid-Market,AM-4,3,2,44.9,1,7,41,Competitor demo scheduled; pricing feels high.,0
+CUS-00172,Acme Corp 172,SaaS,Mid-Market,AM-5,30,9,30.0,2,2,15,Competitor demo scheduled; pricing feels high.,1
+CUS-00173,Acme Corp 173,Retail,SMB,AM-6,28,6,74.2,0,9,41,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00174,Acme Corp 174,Manufacturing,Mid-Market,AM-7,27,5,66.9,2,9,43,Billing confusion after plan change; waiting on refund.,0
+CUS-00175,Acme Corp 175,Retail,Mid-Market,AM-8,18,1,19.0,0,4,32,Product downtime last week; team lost confidence.,0
+CUS-00176,Acme Corp 176,Finance,Enterprise,AM-1,28,8,39.0,2,6,35,Onboarding incomplete; champion left the company.,0
+CUS-00177,Acme Corp 177,Manufacturing,SMB,AM-2,6,1,34.1,4,6,56,Competitor demo scheduled; pricing feels high.,1
+CUS-00178,Acme Corp 178,Retail,Mid-Market,AM-3,36,5,46.9,4,7,27,Billing confusion after plan change; waiting on refund.,1
+CUS-00179,Acme Corp 179,SaaS,Mid-Market,AM-4,20,10,20.1,2,0,23,Product downtime last week; team lost confidence.,1
+CUS-00180,Acme Corp 180,Retail,Mid-Market,AM-5,37,11,12.0,0,3,32,Onboarding incomplete; champion left the company.,1
+CUS-00181,Acme Corp 181,SaaS,SMB,AM-6,6,11,72.1,1,1,50,Billing confusion after plan change; waiting on refund.,1
+CUS-00182,Acme Corp 182,Manufacturing,Enterprise,AM-7,19,11,73.1,0,7,42,Product downtime last week; team lost confidence.,1
+CUS-00183,Acme Corp 183,SaaS,Enterprise,AM-8,27,6,65.9,3,0,5,Competitor demo scheduled; pricing feels high.,1
+CUS-00184,Acme Corp 184,Finance,Mid-Market,AM-1,19,2,78.0,4,5,28,Onboarding incomplete; champion left the company.,1
+CUS-00185,Acme Corp 185,Healthcare,Mid-Market,AM-2,17,10,57.0,2,8,44,Onboarding incomplete; champion left the company.,1
+CUS-00186,Acme Corp 186,Retail,SMB,AM-3,6,9,58.8,0,10,14,Onboarding incomplete; champion left the company.,1
+CUS-00187,Acme Corp 187,SaaS,Mid-Market,AM-4,15,11,58.6,0,3,59,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00188,Acme Corp 188,Healthcare,SMB,AM-5,9,7,33.3,4,0,48,Onboarding incomplete; champion left the company.,1
+CUS-00189,Acme Corp 189,Finance,Mid-Market,AM-6,12,1,31.1,1,7,50,Onboarding incomplete; champion left the company.,0
+CUS-00190,Acme Corp 190,Healthcare,SMB,AM-7,27,6,11.6,0,0,5,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00191,Acme Corp 191,Retail,Mid-Market,AM-8,25,5,48.0,0,0,35,Billing confusion after plan change; waiting on refund.,0
+CUS-00192,Acme Corp 192,Finance,SMB,AM-1,24,10,16.0,1,10,32,Billing confusion after plan change; waiting on refund.,1
+CUS-00193,Acme Corp 193,Manufacturing,Mid-Market,AM-2,14,4,13.2,3,9,37,Onboarding incomplete; champion left the company.,0
+CUS-00194,Acme Corp 194,SaaS,Mid-Market,AM-3,38,3,42.7,4,7,51,Product downtime last week; team lost confidence.,0
+CUS-00195,Acme Corp 195,Healthcare,SMB,AM-4,3,0,26.9,1,9,21,Product downtime last week; team lost confidence.,0
+CUS-00196,Acme Corp 196,Healthcare,SMB,AM-5,13,10,9.7,3,0,32,Billing confusion after plan change; waiting on refund.,1
+CUS-00197,Acme Corp 197,Healthcare,Enterprise,AM-6,4,9,63.4,0,0,41,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00198,Acme Corp 198,Healthcare,Mid-Market,AM-7,13,0,67.5,0,3,45,Competitor demo scheduled; pricing feels high.,0
+CUS-00199,Acme Corp 199,Retail,SMB,AM-8,38,5,5.1,0,0,46,Competitor demo scheduled; pricing feels high.,0
+CUS-00200,Acme Corp 200,Healthcare,SMB,AM-1,14,5,-9.3,4,9,20,Billing confusion after plan change; waiting on refund.,0
+CUS-00201,Acme Corp 201,Healthcare,SMB,AM-2,36,5,20.3,2,0,59,Product downtime last week; team lost confidence.,0
+CUS-00202,Acme Corp 202,Retail,Mid-Market,AM-3,19,11,61.8,4,5,1,Competitor demo scheduled; pricing feels high.,1
+CUS-00203,Acme Corp 203,Healthcare,Mid-Market,AM-4,27,1,65.5,0,9,30,Onboarding incomplete; champion left the company.,0
+CUS-00204,Acme Corp 204,Healthcare,SMB,AM-5,18,3,2.4,0,8,36,Competitor demo scheduled; pricing feels high.,0
+CUS-00205,Acme Corp 205,Retail,Mid-Market,AM-6,10,2,59.7,4,2,4,Competitor demo scheduled; pricing feels high.,1
+CUS-00206,Acme Corp 206,Finance,Mid-Market,AM-7,30,2,0.4,0,5,27,Onboarding incomplete; champion left the company.,0
+CUS-00207,Acme Corp 207,Retail,Mid-Market,AM-8,38,10,25.1,0,6,36,Competitor demo scheduled; pricing feels high.,0
+CUS-00208,Acme Corp 208,Retail,SMB,AM-1,10,11,79.9,2,8,36,Product downtime last week; team lost confidence.,1
+CUS-00209,Acme Corp 209,Finance,SMB,AM-2,31,0,7.3,3,4,8,Billing confusion after plan change; waiting on refund.,0
+CUS-00210,Acme Corp 210,Manufacturing,SMB,AM-3,10,7,3.9,1,3,17,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00211,Acme Corp 211,Healthcare,SMB,AM-4,28,2,28.1,2,8,15,Billing confusion after plan change; waiting on refund.,0
+CUS-00212,Acme Corp 212,Healthcare,SMB,AM-5,31,2,45.8,3,9,38,Product downtime last week; team lost confidence.,0
+CUS-00213,Acme Corp 213,Retail,SMB,AM-6,17,3,74.0,2,5,20,Billing confusion after plan change; waiting on refund.,1
+CUS-00214,Acme Corp 214,Retail,SMB,AM-7,29,2,78.3,1,0,34,Product downtime last week; team lost confidence.,0
+CUS-00215,Acme Corp 215,SaaS,Mid-Market,AM-8,10,5,-3.7,0,5,44,Product downtime last week; team lost confidence.,1
+CUS-00216,Acme Corp 216,SaaS,SMB,AM-1,3,11,2.4,2,9,48,Billing confusion after plan change; waiting on refund.,0
+CUS-00217,Acme Corp 217,Healthcare,Mid-Market,AM-2,3,7,61.2,4,10,11,Onboarding incomplete; champion left the company.,1
+CUS-00218,Acme Corp 218,Finance,SMB,AM-3,17,8,14.4,3,4,54,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00219,Acme Corp 219,Manufacturing,Mid-Market,AM-4,36,5,69.6,4,1,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00220,Acme Corp 220,Finance,SMB,AM-5,5,0,49.7,0,6,2,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00221,Acme Corp 221,SaaS,Mid-Market,AM-6,18,1,0.1,0,9,3,Onboarding incomplete; champion left the company.,0
+CUS-00222,Acme Corp 222,Retail,Mid-Market,AM-7,28,3,64.9,2,10,12,Onboarding incomplete; champion left the company.,1
+CUS-00223,Acme Corp 223,Retail,SMB,AM-8,8,2,5.9,0,0,52,Onboarding incomplete; champion left the company.,0
+CUS-00224,Acme Corp 224,Retail,Mid-Market,AM-1,28,10,28.1,2,3,13,Product downtime last week; team lost confidence.,1
+CUS-00225,Acme Corp 225,Retail,SMB,AM-2,12,10,39.7,4,5,41,Billing confusion after plan change; waiting on refund.,1
+CUS-00226,Acme Corp 226,Healthcare,Mid-Market,AM-3,32,10,35.1,1,1,25,Onboarding incomplete; champion left the company.,1
+CUS-00227,Acme Corp 227,SaaS,SMB,AM-4,23,7,51.8,2,9,3,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00228,Acme Corp 228,Finance,SMB,AM-5,21,6,48.7,3,1,27,Onboarding incomplete; champion left the company.,1
+CUS-00229,Acme Corp 229,Finance,SMB,AM-6,7,7,79.3,0,7,2,Onboarding incomplete; champion left the company.,1
+CUS-00230,Acme Corp 230,SaaS,Enterprise,AM-7,18,4,79.9,4,10,29,Competitor demo scheduled; pricing feels high.,1
+CUS-00231,Acme Corp 231,Retail,SMB,AM-8,34,8,36.5,1,7,33,Product downtime last week; team lost confidence.,0
+CUS-00232,Acme Corp 232,Retail,Mid-Market,AM-1,0,9,-1.4,4,8,31,Billing confusion after plan change; waiting on refund.,0
+CUS-00233,Acme Corp 233,Manufacturing,SMB,AM-2,30,9,55.5,3,2,17,Onboarding incomplete; champion left the company.,1
+CUS-00234,Acme Corp 234,Finance,SMB,AM-3,19,7,77.9,0,9,46,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00235,Acme Corp 235,Retail,SMB,AM-4,28,0,18.6,3,4,36,Product downtime last week; team lost confidence.,1
+CUS-00236,Acme Corp 236,Manufacturing,Enterprise,AM-5,26,8,31.5,0,0,16,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00237,Acme Corp 237,Finance,Mid-Market,AM-6,17,4,28.2,2,4,26,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00238,Acme Corp 238,Finance,SMB,AM-7,12,8,-5.4,4,3,7,Product downtime last week; team lost confidence.,1
+CUS-00239,Acme Corp 239,Healthcare,Mid-Market,AM-8,25,6,50.5,4,5,55,Onboarding incomplete; champion left the company.,1
+CUS-00240,Acme Corp 240,Finance,SMB,AM-1,5,10,21.8,4,2,45,Competitor demo scheduled; pricing feels high.,1
+CUS-00241,Acme Corp 241,Retail,SMB,AM-2,23,4,60.9,2,5,17,Onboarding incomplete; champion left the company.,0
+CUS-00242,Acme Corp 242,SaaS,Mid-Market,AM-3,3,11,64.9,2,4,40,Competitor demo scheduled; pricing feels high.,1
+CUS-00243,Acme Corp 243,Manufacturing,SMB,AM-4,25,10,63.9,1,3,41,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00244,Acme Corp 244,Finance,SMB,AM-5,25,3,27.5,4,7,36,Competitor demo scheduled; pricing feels high.,1
+CUS-00245,Acme Corp 245,Healthcare,Mid-Market,AM-6,3,5,18.9,2,3,4,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00246,Acme Corp 246,Retail,SMB,AM-7,30,6,57.4,3,8,52,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00247,Acme Corp 247,Healthcare,Enterprise,AM-8,16,9,62.1,1,2,57,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00248,Acme Corp 248,SaaS,Mid-Market,AM-1,31,8,34.2,3,9,58,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00249,Acme Corp 249,Finance,Enterprise,AM-2,1,10,70.4,1,4,58,Product downtime last week; team lost confidence.,1
+CUS-00250,Acme Corp 250,SaaS,Mid-Market,AM-3,7,4,3.0,3,0,55,Billing confusion after plan change; waiting on refund.,1
+CUS-00251,Acme Corp 251,Retail,Enterprise,AM-4,19,6,69.1,0,1,44,Billing confusion after plan change; waiting on refund.,1
+CUS-00252,Acme Corp 252,SaaS,SMB,AM-5,7,5,-1.4,0,8,4,Product downtime last week; team lost confidence.,0
+CUS-00253,Acme Corp 253,Manufacturing,Mid-Market,AM-6,13,10,3.8,1,9,28,Competitor demo scheduled; pricing feels high.,1
+CUS-00254,Acme Corp 254,Finance,Mid-Market,AM-7,26,3,38.0,2,2,15,Onboarding incomplete; champion left the company.,1
+CUS-00255,Acme Corp 255,Manufacturing,Enterprise,AM-8,5,7,-3.9,3,6,13,Onboarding incomplete; champion left the company.,1
+CUS-00256,Acme Corp 256,Manufacturing,SMB,AM-1,27,1,-5.2,1,6,50,Billing confusion after plan change; waiting on refund.,0
+CUS-00257,Acme Corp 257,Finance,Mid-Market,AM-2,4,10,-10.0,0,1,48,Competitor demo scheduled; pricing feels high.,1
+CUS-00258,Acme Corp 258,Finance,Mid-Market,AM-3,7,4,29.3,1,4,31,Product downtime last week; team lost confidence.,0
+CUS-00259,Acme Corp 259,Finance,SMB,AM-4,23,4,59.7,2,7,44,Competitor demo scheduled; pricing feels high.,0
+CUS-00260,Acme Corp 260,Healthcare,Enterprise,AM-5,31,6,-6.9,2,10,8,Billing confusion after plan change; waiting on refund.,0
+CUS-00261,Acme Corp 261,Retail,SMB,AM-6,6,5,48.7,3,9,14,Product downtime last week; team lost confidence.,0
+CUS-00262,Acme Corp 262,Finance,SMB,AM-7,11,10,64.1,1,1,51,Billing confusion after plan change; waiting on refund.,1
+CUS-00263,Acme Corp 263,Healthcare,Mid-Market,AM-8,37,6,5.1,3,2,27,Product downtime last week; team lost confidence.,0
+CUS-00264,Acme Corp 264,Manufacturing,SMB,AM-1,39,6,3.2,3,4,33,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00265,Acme Corp 265,SaaS,SMB,AM-2,23,1,67.5,3,1,28,Onboarding incomplete; champion left the company.,1
+CUS-00266,Acme Corp 266,Finance,SMB,AM-3,17,0,64.1,2,6,12,Onboarding incomplete; champion left the company.,1
+CUS-00267,Acme Corp 267,Manufacturing,SMB,AM-4,13,4,38.5,4,0,49,Product downtime last week; team lost confidence.,1
+CUS-00268,Acme Corp 268,Manufacturing,Mid-Market,AM-5,24,11,63.7,1,1,45,Product downtime last week; team lost confidence.,1
+CUS-00269,Acme Corp 269,Finance,Enterprise,AM-6,23,11,-1.7,3,0,41,Competitor demo scheduled; pricing feels high.,1
+CUS-00270,Acme Corp 270,Healthcare,Mid-Market,AM-7,11,7,25.5,0,3,21,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00271,Acme Corp 271,Retail,SMB,AM-8,0,7,56.4,0,8,38,Competitor demo scheduled; pricing feels high.,1
+CUS-00272,Acme Corp 272,Finance,Mid-Market,AM-1,6,4,13.2,4,1,57,Competitor demo scheduled; pricing feels high.,1
+CUS-00273,Acme Corp 273,SaaS,Enterprise,AM-2,38,2,57.7,2,10,39,Onboarding incomplete; champion left the company.,0
+CUS-00274,Acme Corp 274,Finance,Mid-Market,AM-3,16,0,35.4,3,2,30,Billing confusion after plan change; waiting on refund.,0
+CUS-00275,Acme Corp 275,Healthcare,SMB,AM-4,19,4,57.5,3,0,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00276,Acme Corp 276,Retail,SMB,AM-5,18,3,31.8,3,3,31,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00277,Acme Corp 277,Retail,Enterprise,AM-6,31,2,23.1,1,8,22,Onboarding incomplete; champion left the company.,0
+CUS-00278,Acme Corp 278,Manufacturing,Enterprise,AM-7,2,3,9.7,0,1,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00279,Acme Corp 279,Finance,SMB,AM-8,3,0,8.8,0,0,3,Competitor demo scheduled; pricing feels high.,0
+CUS-00280,Acme Corp 280,Healthcare,Enterprise,AM-1,11,7,57.6,4,9,12,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00281,Acme Corp 281,SaaS,SMB,AM-2,19,11,0.7,1,6,47,Product downtime last week; team lost confidence.,1
+CUS-00282,Acme Corp 282,Retail,SMB,AM-3,26,8,-2.3,2,3,23,Billing confusion after plan change; waiting on refund.,0
+CUS-00283,Acme Corp 283,Manufacturing,Mid-Market,AM-4,19,5,5.9,2,8,26,Competitor demo scheduled; pricing feels high.,1
+CUS-00284,Acme Corp 284,Manufacturing,Mid-Market,AM-5,17,5,5.8,0,9,33,Product downtime last week; team lost confidence.,0
+CUS-00285,Acme Corp 285,Manufacturing,SMB,AM-6,37,3,64.1,2,3,26,Competitor demo scheduled; pricing feels high.,0
+CUS-00286,Acme Corp 286,Healthcare,Enterprise,AM-7,6,1,25.9,0,6,45,Competitor demo scheduled; pricing feels high.,0
+CUS-00287,Acme Corp 287,Finance,Enterprise,AM-8,22,7,79.1,0,0,15,Product downtime last week; team lost confidence.,1
+CUS-00288,Acme Corp 288,SaaS,SMB,AM-1,21,6,2.3,0,3,45,Billing confusion after plan change; waiting on refund.,0
+CUS-00289,Acme Corp 289,SaaS,Mid-Market,AM-2,18,0,48.8,4,6,13,Onboarding incomplete; champion left the company.,0
+CUS-00290,Acme Corp 290,SaaS,Mid-Market,AM-3,32,4,30.4,2,2,22,Onboarding incomplete; champion left the company.,1
+CUS-00291,Acme Corp 291,Finance,Mid-Market,AM-4,10,3,25.4,4,10,35,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00292,Acme Corp 292,SaaS,Enterprise,AM-5,38,2,68.8,2,10,53,Product downtime last week; team lost confidence.,0
+CUS-00293,Acme Corp 293,Manufacturing,Mid-Market,AM-6,13,8,77.8,1,2,14,Product downtime last week; team lost confidence.,1
+CUS-00294,Acme Corp 294,Finance,SMB,AM-7,21,6,68.6,3,4,35,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00295,Acme Corp 295,Manufacturing,SMB,AM-8,20,7,7.3,4,2,4,Competitor demo scheduled; pricing feels high.,1
+CUS-00296,Acme Corp 296,Finance,Enterprise,AM-1,33,8,9.9,2,5,5,Competitor demo scheduled; pricing feels high.,0
+CUS-00297,Acme Corp 297,SaaS,Enterprise,AM-2,17,11,49.0,0,1,46,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00298,Acme Corp 298,Retail,SMB,AM-3,11,9,16.0,1,4,43,Competitor demo scheduled; pricing feels high.,1
+CUS-00299,Acme Corp 299,Retail,SMB,AM-4,0,7,56.1,4,6,23,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00300,Acme Corp 300,Manufacturing,Mid-Market,AM-5,14,10,41.0,2,6,37,Competitor demo scheduled; pricing feels high.,1
+CUS-00301,Acme Corp 301,Manufacturing,SMB,AM-6,33,5,39.6,4,6,23,Onboarding incomplete; champion left the company.,1
+CUS-00302,Acme Corp 302,Retail,SMB,AM-7,0,11,64.6,2,2,17,Billing confusion after plan change; waiting on refund.,1
+CUS-00303,Acme Corp 303,Healthcare,Enterprise,AM-8,35,9,53.9,0,8,26,Competitor demo scheduled; pricing feels high.,1
+CUS-00304,Acme Corp 304,SaaS,Enterprise,AM-1,21,7,-7.6,4,7,19,Competitor demo scheduled; pricing feels high.,1
+CUS-00305,Acme Corp 305,Retail,Enterprise,AM-2,5,10,-5.5,3,8,49,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00306,Acme Corp 306,Healthcare,Mid-Market,AM-3,12,6,44.1,3,5,25,Competitor demo scheduled; pricing feels high.,1
+CUS-00307,Acme Corp 307,Retail,SMB,AM-4,22,8,33.8,4,9,19,Onboarding incomplete; champion left the company.,1
+CUS-00308,Acme Corp 308,Manufacturing,Enterprise,AM-5,12,3,13.4,0,4,32,Onboarding incomplete; champion left the company.,0
+CUS-00309,Acme Corp 309,Retail,SMB,AM-6,4,11,27.7,4,8,45,Billing confusion after plan change; waiting on refund.,1
+CUS-00310,Acme Corp 310,Retail,SMB,AM-7,26,7,58.2,1,2,17,Billing confusion after plan change; waiting on refund.,1
+CUS-00311,Acme Corp 311,SaaS,Enterprise,AM-8,26,9,64.4,4,2,56,Billing confusion after plan change; waiting on refund.,1
+CUS-00312,Acme Corp 312,Manufacturing,Mid-Market,AM-1,4,5,40.5,0,5,28,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00313,Acme Corp 313,Retail,Enterprise,AM-2,11,10,24.7,2,6,39,Competitor demo scheduled; pricing feels high.,1
+CUS-00314,Acme Corp 314,SaaS,SMB,AM-3,9,0,14.4,3,8,57,Product downtime last week; team lost confidence.,0
+CUS-00315,Acme Corp 315,Healthcare,Enterprise,AM-4,26,1,37.0,0,3,26,Onboarding incomplete; champion left the company.,0
+CUS-00316,Acme Corp 316,Manufacturing,Mid-Market,AM-5,29,6,18.3,0,9,12,Onboarding incomplete; champion left the company.,0
+CUS-00317,Acme Corp 317,Finance,Mid-Market,AM-6,29,8,40.8,4,3,45,Product downtime last week; team lost confidence.,1
+CUS-00318,Acme Corp 318,Retail,Enterprise,AM-7,37,9,50.9,0,5,1,Onboarding incomplete; champion left the company.,1
+CUS-00319,Acme Corp 319,Finance,SMB,AM-8,30,5,-4.1,3,10,28,Product downtime last week; team lost confidence.,0
+CUS-00320,Acme Corp 320,SaaS,Mid-Market,AM-1,12,7,-9.9,4,5,58,Competitor demo scheduled; pricing feels high.,1
+CUS-00321,Acme Corp 321,Healthcare,Mid-Market,AM-2,4,6,9.1,3,7,25,Competitor demo scheduled; pricing feels high.,1
+CUS-00322,Acme Corp 322,Finance,Mid-Market,AM-3,24,11,70.5,2,9,41,Billing confusion after plan change; waiting on refund.,1
+CUS-00323,Acme Corp 323,SaaS,Enterprise,AM-4,36,7,48.2,2,10,31,Onboarding incomplete; champion left the company.,0
+CUS-00324,Acme Corp 324,Manufacturing,Mid-Market,AM-5,39,5,5.5,3,5,13,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00325,Acme Corp 325,Healthcare,SMB,AM-6,9,11,70.1,2,4,19,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00326,Acme Corp 326,Healthcare,SMB,AM-7,9,1,32.3,2,2,31,Competitor demo scheduled; pricing feels high.,1
+CUS-00327,Acme Corp 327,Retail,Enterprise,AM-8,1,11,32.8,0,5,7,Competitor demo scheduled; pricing feels high.,1
+CUS-00328,Acme Corp 328,Healthcare,Enterprise,AM-1,5,1,74.2,3,10,25,Billing confusion after plan change; waiting on refund.,1
+CUS-00329,Acme Corp 329,Finance,Enterprise,AM-2,22,3,-4.6,3,5,25,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00330,Acme Corp 330,Finance,SMB,AM-3,21,9,9.4,3,3,50,Competitor demo scheduled; pricing feels high.,1
+CUS-00331,Acme Corp 331,Retail,SMB,AM-4,14,8,42.7,0,1,8,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00332,Acme Corp 332,Retail,Mid-Market,AM-5,12,11,7.6,3,4,50,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00333,Acme Corp 333,SaaS,Mid-Market,AM-6,33,8,51.2,3,2,25,Product downtime last week; team lost confidence.,1
+CUS-00334,Acme Corp 334,Healthcare,SMB,AM-7,18,7,9.3,0,10,39,Billing confusion after plan change; waiting on refund.,0
+CUS-00335,Acme Corp 335,SaaS,Mid-Market,AM-8,32,4,-1.1,4,5,33,Competitor demo scheduled; pricing feels high.,0
+CUS-00336,Acme Corp 336,Finance,SMB,AM-1,38,0,8.6,2,1,18,Onboarding incomplete; champion left the company.,0
+CUS-00337,Acme Corp 337,Healthcare,Mid-Market,AM-2,12,1,28.0,2,0,55,Billing confusion after plan change; waiting on refund.,1
+CUS-00338,Acme Corp 338,Healthcare,SMB,AM-3,8,3,5.9,3,9,14,Product downtime last week; team lost confidence.,0
+CUS-00339,Acme Corp 339,Finance,SMB,AM-4,38,0,2.1,2,10,3,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00340,Acme Corp 340,Manufacturing,SMB,AM-5,25,6,67.4,2,8,45,Product downtime last week; team lost confidence.,1
+CUS-00341,Acme Corp 341,Manufacturing,Enterprise,AM-6,11,9,18.8,1,1,37,Product downtime last week; team lost confidence.,1
+CUS-00342,Acme Corp 342,SaaS,Mid-Market,AM-7,24,11,22.5,4,1,53,Competitor demo scheduled; pricing feels high.,1
+CUS-00343,Acme Corp 343,Retail,Enterprise,AM-8,20,5,-5.0,4,2,28,Competitor demo scheduled; pricing feels high.,1
+CUS-00344,Acme Corp 344,Retail,Mid-Market,AM-1,36,10,22.2,0,8,1,Product downtime last week; team lost confidence.,1
+CUS-00345,Acme Corp 345,Healthcare,SMB,AM-2,10,11,13.8,3,8,2,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00346,Acme Corp 346,Manufacturing,SMB,AM-3,39,10,44.9,0,9,26,Onboarding incomplete; champion left the company.,0
+CUS-00347,Acme Corp 347,Finance,Mid-Market,AM-4,37,5,8.5,1,1,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00348,Acme Corp 348,Healthcare,SMB,AM-5,7,3,70.0,4,1,55,Product downtime last week; team lost confidence.,1
+CUS-00349,Acme Corp 349,Healthcare,Mid-Market,AM-6,6,11,73.7,0,9,7,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00350,Acme Corp 350,Healthcare,Enterprise,AM-7,21,2,-1.0,1,10,52,Billing confusion after plan change; waiting on refund.,0
+CUS-00351,Acme Corp 351,Finance,Enterprise,AM-8,1,4,-0.3,1,7,13,Billing confusion after plan change; waiting on refund.,1
+CUS-00352,Acme Corp 352,SaaS,SMB,AM-1,11,0,0.4,3,1,8,Competitor demo scheduled; pricing feels high.,1
+CUS-00353,Acme Corp 353,Finance,Mid-Market,AM-2,17,9,45.8,2,0,17,Onboarding incomplete; champion left the company.,1
+CUS-00354,Acme Corp 354,Manufacturing,SMB,AM-3,38,7,1.0,2,0,9,Product downtime last week; team lost confidence.,0
+CUS-00355,Acme Corp 355,Retail,SMB,AM-4,39,1,66.7,4,7,24,Onboarding incomplete; champion left the company.,1
+CUS-00356,Acme Corp 356,Retail,Mid-Market,AM-5,6,2,57.9,2,9,20,Billing confusion after plan change; waiting on refund.,1
+CUS-00357,Acme Corp 357,Finance,Mid-Market,AM-6,35,6,63.8,3,6,32,Product downtime last week; team lost confidence.,1
+CUS-00358,Acme Corp 358,Manufacturing,Mid-Market,AM-7,3,6,37.3,0,2,32,Product downtime last week; team lost confidence.,1
+CUS-00359,Acme Corp 359,Healthcare,SMB,AM-8,29,9,79.7,1,8,1,Onboarding incomplete; champion left the company.,1
+CUS-00360,Acme Corp 360,SaaS,Enterprise,AM-1,33,3,-6.0,4,0,8,Competitor demo scheduled; pricing feels high.,1
+CUS-00361,Acme Corp 361,Manufacturing,Enterprise,AM-2,35,11,26.1,4,9,10,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00362,Acme Corp 362,SaaS,Mid-Market,AM-3,8,5,19.2,3,9,12,Billing confusion after plan change; waiting on refund.,0
+CUS-00363,Acme Corp 363,SaaS,Enterprise,AM-4,35,9,75.4,1,7,6,Product downtime last week; team lost confidence.,1
+CUS-00364,Acme Corp 364,Finance,SMB,AM-5,4,2,41.9,0,9,19,Product downtime last week; team lost confidence.,1
+CUS-00365,Acme Corp 365,Retail,Mid-Market,AM-6,20,0,62.6,4,6,33,Onboarding incomplete; champion left the company.,1
+CUS-00366,Acme Corp 366,Manufacturing,Enterprise,AM-7,18,0,5.3,3,5,19,Onboarding incomplete; champion left the company.,0
+CUS-00367,Acme Corp 367,Healthcare,Enterprise,AM-8,12,4,78.1,1,3,20,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00368,Acme Corp 368,SaaS,Enterprise,AM-1,0,11,34.9,2,10,28,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00369,Acme Corp 369,SaaS,Mid-Market,AM-2,30,0,34.4,3,7,33,Competitor demo scheduled; pricing feels high.,0
+CUS-00370,Acme Corp 370,Healthcare,Enterprise,AM-3,13,4,77.4,2,2,20,Billing confusion after plan change; waiting on refund.,1
+CUS-00371,Acme Corp 371,SaaS,Mid-Market,AM-4,26,1,24.3,4,10,14,Billing confusion after plan change; waiting on refund.,0
+CUS-00372,Acme Corp 372,Retail,SMB,AM-5,16,11,25.8,0,0,25,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00373,Acme Corp 373,Healthcare,SMB,AM-6,14,8,42.6,1,6,2,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00374,Acme Corp 374,Retail,Mid-Market,AM-7,35,9,1.5,0,2,30,Product downtime last week; team lost confidence.,1
+CUS-00375,Acme Corp 375,Retail,Mid-Market,AM-8,3,8,18.9,3,7,56,Billing confusion after plan change; waiting on refund.,1
+CUS-00376,Acme Corp 376,Healthcare,Mid-Market,AM-1,29,7,7.4,3,4,24,Competitor demo scheduled; pricing feels high.,1
+CUS-00377,Acme Corp 377,Retail,Enterprise,AM-2,29,9,-0.7,4,4,7,Onboarding incomplete; champion left the company.,1
+CUS-00378,Acme Corp 378,SaaS,Mid-Market,AM-3,15,0,68.0,2,7,42,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00379,Acme Corp 379,Healthcare,SMB,AM-4,10,10,43.0,0,8,8,Onboarding incomplete; champion left the company.,1
+CUS-00380,Acme Corp 380,Finance,SMB,AM-5,0,8,22.3,2,4,12,Competitor demo scheduled; pricing feels high.,1
+CUS-00381,Acme Corp 381,Finance,Mid-Market,AM-6,37,8,26.8,0,10,9,Competitor demo scheduled; pricing feels high.,0
+CUS-00382,Acme Corp 382,Retail,Mid-Market,AM-7,37,4,28.8,3,5,53,Billing confusion after plan change; waiting on refund.,0
+CUS-00383,Acme Corp 383,Finance,Mid-Market,AM-8,9,9,47.0,3,1,58,Billing confusion after plan change; waiting on refund.,1
+CUS-00384,Acme Corp 384,Retail,Mid-Market,AM-1,1,4,73.4,4,0,34,Competitor demo scheduled; pricing feels high.,1
+CUS-00385,Acme Corp 385,SaaS,Mid-Market,AM-2,4,0,74.0,1,2,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00386,Acme Corp 386,Finance,Mid-Market,AM-3,2,10,25.2,1,7,39,Product downtime last week; team lost confidence.,1
+CUS-00387,Acme Corp 387,Retail,Enterprise,AM-4,33,2,19.6,0,5,37,Competitor demo scheduled; pricing feels high.,0
+CUS-00388,Acme Corp 388,Manufacturing,SMB,AM-5,35,1,30.6,2,3,33,Product downtime last week; team lost confidence.,1
+CUS-00389,Acme Corp 389,Manufacturing,Mid-Market,AM-6,6,7,41.1,2,5,59,Billing confusion after plan change; waiting on refund.,1
+CUS-00390,Acme Corp 390,Healthcare,Mid-Market,AM-7,29,2,31.6,3,9,44,Billing confusion after plan change; waiting on refund.,0
+CUS-00391,Acme Corp 391,Manufacturing,SMB,AM-8,7,10,49.3,3,6,6,Onboarding incomplete; champion left the company.,1
+CUS-00392,Acme Corp 392,Retail,Mid-Market,AM-1,14,5,39.9,0,0,24,Competitor demo scheduled; pricing feels high.,1
+CUS-00393,Acme Corp 393,Healthcare,Mid-Market,AM-2,23,0,18.9,1,0,58,Competitor demo scheduled; pricing feels high.,0
+CUS-00394,Acme Corp 394,Healthcare,Mid-Market,AM-3,28,11,21.1,2,5,24,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00395,Acme Corp 395,Manufacturing,Mid-Market,AM-4,34,6,24.1,1,4,13,Competitor demo scheduled; pricing feels high.,1
+CUS-00396,Acme Corp 396,Healthcare,SMB,AM-5,1,3,-1.5,0,9,52,Competitor demo scheduled; pricing feels high.,0
+CUS-00397,Acme Corp 397,SaaS,SMB,AM-6,7,8,4.9,4,6,37,Product downtime last week; team lost confidence.,1
+CUS-00398,Acme Corp 398,Finance,SMB,AM-7,11,6,55.1,3,8,34,Product downtime last week; team lost confidence.,0
+CUS-00399,Acme Corp 399,Healthcare,SMB,AM-8,12,0,25.0,2,6,25,Product downtime last week; team lost confidence.,1
+CUS-00400,Acme Corp 400,Manufacturing,Mid-Market,AM-1,39,9,9.3,1,3,8,Billing confusion after plan change; waiting on refund.,0
+CUS-00401,Acme Corp 401,Manufacturing,Enterprise,AM-2,31,4,40.6,4,7,23,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00402,Acme Corp 402,Finance,Mid-Market,AM-3,12,8,58.0,0,6,26,Product downtime last week; team lost confidence.,1
+CUS-00403,Acme Corp 403,Manufacturing,SMB,AM-4,38,10,13.2,2,7,55,Onboarding incomplete; champion left the company.,1
+CUS-00404,Acme Corp 404,Manufacturing,SMB,AM-5,19,7,64.4,4,2,19,Product downtime last week; team lost confidence.,1
+CUS-00405,Acme Corp 405,Finance,SMB,AM-6,20,8,73.5,4,7,9,Billing confusion after plan change; waiting on refund.,1
+CUS-00406,Acme Corp 406,Finance,Mid-Market,AM-7,17,3,43.8,1,3,26,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00407,Acme Corp 407,SaaS,SMB,AM-8,5,2,50.2,3,8,59,Product downtime last week; team lost confidence.,1
+CUS-00408,Acme Corp 408,Manufacturing,Mid-Market,AM-1,37,4,-5.3,0,8,29,Billing confusion after plan change; waiting on refund.,0
+CUS-00409,Acme Corp 409,SaaS,Mid-Market,AM-2,0,10,75.1,0,6,23,Product downtime last week; team lost confidence.,1
+CUS-00410,Acme Corp 410,Finance,Mid-Market,AM-3,6,6,25.3,1,10,40,Billing confusion after plan change; waiting on refund.,1
+CUS-00411,Acme Corp 411,SaaS,SMB,AM-4,9,4,73.2,4,5,39,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00412,Acme Corp 412,Healthcare,SMB,AM-5,11,9,42.1,3,0,18,Billing confusion after plan change; waiting on refund.,1
+CUS-00413,Acme Corp 413,SaaS,Mid-Market,AM-6,5,10,-9.6,2,6,58,Product downtime last week; team lost confidence.,1
+CUS-00414,Acme Corp 414,Manufacturing,Mid-Market,AM-7,0,10,-6.5,1,8,35,Product downtime last week; team lost confidence.,0
+CUS-00415,Acme Corp 415,SaaS,SMB,AM-8,27,3,51.2,0,1,4,Billing confusion after plan change; waiting on refund.,1
+CUS-00416,Acme Corp 416,SaaS,Enterprise,AM-1,38,8,40.6,1,1,25,Billing confusion after plan change; waiting on refund.,0
+CUS-00417,Acme Corp 417,Retail,Mid-Market,AM-2,4,7,-7.6,0,3,55,Onboarding incomplete; champion left the company.,1
+CUS-00418,Acme Corp 418,Finance,Mid-Market,AM-3,11,5,56.9,0,9,24,Product downtime last week; team lost confidence.,1
+CUS-00419,Acme Corp 419,Retail,SMB,AM-4,20,4,66.7,3,5,34,Billing confusion after plan change; waiting on refund.,1
+CUS-00420,Acme Corp 420,Retail,SMB,AM-5,37,1,34.7,0,10,37,Product downtime last week; team lost confidence.,0
+CUS-00421,Acme Corp 421,Manufacturing,SMB,AM-6,27,3,31.9,0,9,42,Product downtime last week; team lost confidence.,0
+CUS-00422,Acme Corp 422,Retail,SMB,AM-7,30,6,-9.5,2,6,52,Onboarding incomplete; champion left the company.,0
+CUS-00423,Acme Corp 423,Healthcare,Mid-Market,AM-8,23,10,60.8,1,7,9,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00424,Acme Corp 424,Retail,Mid-Market,AM-1,16,10,19.8,2,3,31,Product downtime last week; team lost confidence.,1
+CUS-00425,Acme Corp 425,SaaS,Enterprise,AM-2,7,2,69.1,0,0,32,Competitor demo scheduled; pricing feels high.,1
+CUS-00426,Acme Corp 426,Healthcare,Enterprise,AM-3,34,8,23.6,1,4,9,Competitor demo scheduled; pricing feels high.,1
+CUS-00427,Acme Corp 427,Manufacturing,SMB,AM-4,32,1,40.9,2,6,40,Billing confusion after plan change; waiting on refund.,0
+CUS-00428,Acme Corp 428,Healthcare,SMB,AM-5,1,8,14.3,3,2,7,Onboarding incomplete; champion left the company.,1
+CUS-00429,Acme Corp 429,SaaS,Mid-Market,AM-6,28,4,4.5,2,2,27,Onboarding incomplete; champion left the company.,0
+CUS-00430,Acme Corp 430,SaaS,Enterprise,AM-7,3,5,59.7,2,0,20,Onboarding incomplete; champion left the company.,1
+CUS-00431,Acme Corp 431,Finance,Enterprise,AM-8,29,8,34.7,2,8,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00432,Acme Corp 432,Healthcare,SMB,AM-1,33,5,38.3,1,9,49,Onboarding incomplete; champion left the company.,0
+CUS-00433,Acme Corp 433,SaaS,SMB,AM-2,5,9,76.9,1,9,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00434,Acme Corp 434,Manufacturing,SMB,AM-3,17,6,76.7,2,4,16,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00435,Acme Corp 435,Retail,Enterprise,AM-4,4,11,67.0,0,6,51,Onboarding incomplete; champion left the company.,1
+CUS-00436,Acme Corp 436,Retail,Mid-Market,AM-5,22,7,6.9,3,10,52,Billing confusion after plan change; waiting on refund.,0
+CUS-00437,Acme Corp 437,Finance,Mid-Market,AM-6,37,3,43.5,3,6,3,Onboarding incomplete; champion left the company.,1
+CUS-00438,Acme Corp 438,Healthcare,Mid-Market,AM-7,3,9,69.0,1,3,17,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00439,Acme Corp 439,Retail,SMB,AM-8,15,4,23.7,1,3,42,Competitor demo scheduled; pricing feels high.,1
+CUS-00440,Acme Corp 440,Manufacturing,Mid-Market,AM-1,38,6,-0.9,1,7,46,Product downtime last week; team lost confidence.,0
+CUS-00441,Acme Corp 441,Manufacturing,SMB,AM-2,12,1,63.0,3,4,59,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00442,Acme Corp 442,Healthcare,Mid-Market,AM-3,5,1,33.4,3,9,33,Billing confusion after plan change; waiting on refund.,0
+CUS-00443,Acme Corp 443,Manufacturing,Mid-Market,AM-4,19,6,40.8,0,9,1,Product downtime last week; team lost confidence.,1
+CUS-00444,Acme Corp 444,Manufacturing,Mid-Market,AM-5,20,2,78.4,2,0,52,Billing confusion after plan change; waiting on refund.,1
+CUS-00445,Acme Corp 445,SaaS,SMB,AM-6,26,11,44.6,0,7,10,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00446,Acme Corp 446,SaaS,Enterprise,AM-7,12,10,28.2,2,4,8,Competitor demo scheduled; pricing feels high.,1
+CUS-00447,Acme Corp 447,Manufacturing,Mid-Market,AM-8,38,8,23.3,1,5,40,Onboarding incomplete; champion left the company.,0
+CUS-00448,Acme Corp 448,SaaS,SMB,AM-1,20,8,27.6,1,2,36,Competitor demo scheduled; pricing feels high.,1
+CUS-00449,Acme Corp 449,Finance,SMB,AM-2,11,7,0.7,2,4,4,Product downtime last week; team lost confidence.,1
+CUS-00450,Acme Corp 450,SaaS,Mid-Market,AM-3,38,0,61.5,1,3,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00451,Acme Corp 451,Finance,SMB,AM-4,36,4,65.4,1,0,35,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00452,Acme Corp 452,Manufacturing,SMB,AM-5,19,5,15.6,3,8,16,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00453,Acme Corp 453,Retail,SMB,AM-6,0,10,17.3,4,1,41,Billing confusion after plan change; waiting on refund.,1
+CUS-00454,Acme Corp 454,Healthcare,SMB,AM-7,23,2,68.7,0,4,25,Billing confusion after plan change; waiting on refund.,0
+CUS-00455,Acme Corp 455,Healthcare,Mid-Market,AM-8,22,5,-7.8,1,2,35,Onboarding incomplete; champion left the company.,0
+CUS-00456,Acme Corp 456,Manufacturing,Mid-Market,AM-1,5,4,36.8,4,1,29,Billing confusion after plan change; waiting on refund.,1
+CUS-00457,Acme Corp 457,Manufacturing,SMB,AM-2,25,1,31.7,2,4,22,Competitor demo scheduled; pricing feels high.,0
+CUS-00458,Acme Corp 458,Healthcare,Mid-Market,AM-3,33,1,52.1,1,10,21,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00459,Acme Corp 459,Retail,SMB,AM-4,4,4,4.7,2,10,42,Product downtime last week; team lost confidence.,0
+CUS-00460,Acme Corp 460,Finance,SMB,AM-5,28,0,50.1,0,4,31,Product downtime last week; team lost confidence.,0
+CUS-00461,Acme Corp 461,Healthcare,SMB,AM-6,5,0,23.9,0,5,36,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00462,Acme Corp 462,Manufacturing,Mid-Market,AM-7,29,4,45.7,3,10,35,Product downtime last week; team lost confidence.,0
+CUS-00463,Acme Corp 463,SaaS,Enterprise,AM-8,16,2,-6.4,2,2,13,Product downtime last week; team lost confidence.,0
+CUS-00464,Acme Corp 464,Finance,Mid-Market,AM-1,0,6,31.6,3,10,54,Billing confusion after plan change; waiting on refund.,1
+CUS-00465,Acme Corp 465,SaaS,SMB,AM-2,38,0,37.0,1,1,34,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00466,Acme Corp 466,Healthcare,SMB,AM-3,6,3,9.3,4,2,43,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00467,Acme Corp 467,Retail,SMB,AM-4,23,5,2.6,2,3,53,Billing confusion after plan change; waiting on refund.,0
+CUS-00468,Acme Corp 468,Healthcare,Enterprise,AM-5,7,11,7.0,3,0,55,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00469,Acme Corp 469,SaaS,SMB,AM-6,37,7,21.0,0,8,40,Billing confusion after plan change; waiting on refund.,0
+CUS-00470,Acme Corp 470,Manufacturing,Enterprise,AM-7,29,10,-1.3,0,9,47,Billing confusion after plan change; waiting on refund.,1
+CUS-00471,Acme Corp 471,SaaS,Mid-Market,AM-8,32,4,75.3,3,4,28,Product downtime last week; team lost confidence.,1
+CUS-00472,Acme Corp 472,Finance,Mid-Market,AM-1,17,5,26.4,4,9,44,Onboarding incomplete; champion left the company.,0
+CUS-00473,Acme Corp 473,SaaS,Enterprise,AM-2,18,5,62.8,4,8,19,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00474,Acme Corp 474,Healthcare,SMB,AM-3,25,10,77.7,1,8,42,Competitor demo scheduled; pricing feels high.,1
+CUS-00475,Acme Corp 475,Finance,Mid-Market,AM-4,31,11,-2.7,0,8,6,Billing confusion after plan change; waiting on refund.,0
+CUS-00476,Acme Corp 476,SaaS,SMB,AM-5,33,11,48.7,4,6,54,Onboarding incomplete; champion left the company.,0
+CUS-00477,Acme Corp 477,SaaS,Enterprise,AM-6,0,9,68.4,3,1,15,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00478,Acme Corp 478,Manufacturing,Mid-Market,AM-7,26,6,47.1,1,10,39,Competitor demo scheduled; pricing feels high.,0
+CUS-00479,Acme Corp 479,SaaS,SMB,AM-8,4,6,28.6,3,6,1,Product downtime last week; team lost confidence.,1
+CUS-00480,Acme Corp 480,Finance,Enterprise,AM-1,11,11,28.8,4,9,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00481,Acme Corp 481,Retail,SMB,AM-2,33,3,-6.8,1,10,59,Onboarding incomplete; champion left the company.,0
+CUS-00482,Acme Corp 482,Finance,SMB,AM-3,10,4,38.1,3,2,50,Onboarding incomplete; champion left the company.,1
+CUS-00483,Acme Corp 483,Healthcare,Mid-Market,AM-4,31,10,79.4,3,4,14,Product downtime last week; team lost confidence.,1
+CUS-00484,Acme Corp 484,SaaS,Mid-Market,AM-5,18,4,76.3,2,2,8,Billing confusion after plan change; waiting on refund.,1
+CUS-00485,Acme Corp 485,Finance,Enterprise,AM-6,9,2,-6.4,3,0,49,Billing confusion after plan change; waiting on refund.,0
+CUS-00486,Acme Corp 486,Manufacturing,Mid-Market,AM-7,13,6,53.5,1,10,59,Onboarding incomplete; champion left the company.,0
+CUS-00487,Acme Corp 487,Finance,Mid-Market,AM-8,21,3,17.2,4,10,10,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00488,Acme Corp 488,Healthcare,SMB,AM-1,30,10,71.3,4,10,40,Onboarding incomplete; champion left the company.,1
+CUS-00489,Acme Corp 489,Retail,SMB,AM-2,24,10,-5.9,4,9,17,Onboarding incomplete; champion left the company.,1
+CUS-00490,Acme Corp 490,Retail,Enterprise,AM-3,37,3,74.2,3,7,44,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00491,Acme Corp 491,Retail,SMB,AM-4,34,6,65.4,0,5,25,Competitor demo scheduled; pricing feels high.,1
+CUS-00492,Acme Corp 492,Healthcare,Mid-Market,AM-5,30,11,0.6,1,10,8,Competitor demo scheduled; pricing feels high.,1
+CUS-00493,Acme Corp 493,Healthcare,SMB,AM-6,24,8,-4.6,2,6,20,Onboarding incomplete; champion left the company.,0
+CUS-00494,Acme Corp 494,Manufacturing,SMB,AM-7,11,2,65.1,4,7,32,Competitor demo scheduled; pricing feels high.,1
+CUS-00495,Acme Corp 495,SaaS,Mid-Market,AM-8,16,7,4.0,2,2,48,Onboarding incomplete; champion left the company.,1
+CUS-00496,Acme Corp 496,Healthcare,Mid-Market,AM-1,4,7,38.1,2,8,2,Competitor demo scheduled; pricing feels high.,1
+CUS-00497,Acme Corp 497,Healthcare,Mid-Market,AM-2,14,7,72.4,0,9,57,Competitor demo scheduled; pricing feels high.,1
+CUS-00498,Acme Corp 498,SaaS,Enterprise,AM-3,37,0,41.1,3,7,39,Competitor demo scheduled; pricing feels high.,0
+CUS-00499,Acme Corp 499,SaaS,SMB,AM-4,17,3,25.8,1,5,52,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00500,Acme Corp 500,Retail,Mid-Market,AM-5,4,10,30.1,0,2,55,Product downtime last week; team lost confidence.,1
+CUS-00501,Acme Corp 501,SaaS,SMB,AM-6,26,2,-4.3,4,0,10,Competitor demo scheduled; pricing feels high.,0
+CUS-00502,Acme Corp 502,Healthcare,Mid-Market,AM-7,38,3,77.2,0,6,6,Billing confusion after plan change; waiting on refund.,1
+CUS-00503,Acme Corp 503,Retail,SMB,AM-8,34,3,18.0,0,7,46,Onboarding incomplete; champion left the company.,0
+CUS-00504,Acme Corp 504,Finance,Mid-Market,AM-1,10,2,7.0,0,8,12,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00505,Acme Corp 505,SaaS,SMB,AM-2,18,1,15.7,2,10,9,Competitor demo scheduled; pricing feels high.,1
+CUS-00506,Acme Corp 506,Retail,Enterprise,AM-3,21,4,76.8,0,5,28,Product downtime last week; team lost confidence.,0
+CUS-00507,Acme Corp 507,SaaS,Enterprise,AM-4,9,10,-1.5,4,9,54,Competitor demo scheduled; pricing feels high.,1
+CUS-00508,Acme Corp 508,Retail,Enterprise,AM-5,10,0,68.1,2,7,47,Product downtime last week; team lost confidence.,1
+CUS-00509,Acme Corp 509,Retail,SMB,AM-6,9,3,53.7,1,3,31,Onboarding incomplete; champion left the company.,1
+CUS-00510,Acme Corp 510,Manufacturing,Enterprise,AM-7,39,0,64.7,0,9,12,Product downtime last week; team lost confidence.,0
+CUS-00511,Acme Corp 511,Retail,SMB,AM-8,29,6,77.8,2,0,20,Competitor demo scheduled; pricing feels high.,1
+CUS-00512,Acme Corp 512,Finance,SMB,AM-1,33,3,65.8,0,6,41,Billing confusion after plan change; waiting on refund.,0
+CUS-00513,Acme Corp 513,SaaS,SMB,AM-2,32,9,74.9,4,10,10,Onboarding incomplete; champion left the company.,0
+CUS-00514,Acme Corp 514,SaaS,SMB,AM-3,38,7,1.4,1,7,31,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00515,Acme Corp 515,SaaS,Mid-Market,AM-4,4,9,61.6,2,10,1,Competitor demo scheduled; pricing feels high.,1
+CUS-00516,Acme Corp 516,Healthcare,SMB,AM-5,35,7,39.1,0,0,20,Onboarding incomplete; champion left the company.,1
+CUS-00517,Acme Corp 517,SaaS,SMB,AM-6,2,5,38.9,0,5,15,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00518,Acme Corp 518,SaaS,Mid-Market,AM-7,19,10,70.9,1,8,41,Billing confusion after plan change; waiting on refund.,1
+CUS-00519,Acme Corp 519,Healthcare,Enterprise,AM-8,23,5,77.5,0,7,54,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00520,Acme Corp 520,Finance,Mid-Market,AM-1,14,11,53.4,3,9,9,Product downtime last week; team lost confidence.,1
+CUS-00521,Acme Corp 521,Finance,Mid-Market,AM-2,5,11,33.5,4,5,48,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00522,Acme Corp 522,SaaS,SMB,AM-3,7,7,31.1,4,7,39,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00523,Acme Corp 523,Finance,Enterprise,AM-4,32,8,24.8,1,4,58,Competitor demo scheduled; pricing feels high.,1
+CUS-00524,Acme Corp 524,Healthcare,SMB,AM-5,12,3,22.5,3,9,54,Competitor demo scheduled; pricing feels high.,1
+CUS-00525,Acme Corp 525,Retail,SMB,AM-6,12,9,25.2,2,1,6,Competitor demo scheduled; pricing feels high.,1
+CUS-00526,Acme Corp 526,Healthcare,SMB,AM-7,36,8,-1.9,0,2,44,Product downtime last week; team lost confidence.,0
+CUS-00527,Acme Corp 527,Retail,Mid-Market,AM-8,5,10,-3.0,0,1,35,Billing confusion after plan change; waiting on refund.,1
+CUS-00528,Acme Corp 528,Manufacturing,SMB,AM-1,36,3,60.2,2,7,7,Product downtime last week; team lost confidence.,1
+CUS-00529,Acme Corp 529,Manufacturing,Mid-Market,AM-2,36,9,30.1,2,2,16,Onboarding incomplete; champion left the company.,1
+CUS-00530,Acme Corp 530,Retail,SMB,AM-3,23,5,73.8,0,3,55,Competitor demo scheduled; pricing feels high.,0
+CUS-00531,Acme Corp 531,Manufacturing,Mid-Market,AM-4,6,2,45.1,4,9,33,Product downtime last week; team lost confidence.,0
+CUS-00532,Acme Corp 532,Manufacturing,Mid-Market,AM-5,6,2,-6.8,3,3,20,Onboarding incomplete; champion left the company.,0
+CUS-00533,Acme Corp 533,SaaS,SMB,AM-6,11,6,4.2,2,1,19,Billing confusion after plan change; waiting on refund.,1
+CUS-00534,Acme Corp 534,Healthcare,SMB,AM-7,23,3,8.5,4,0,50,Billing confusion after plan change; waiting on refund.,1
+CUS-00535,Acme Corp 535,SaaS,Mid-Market,AM-8,6,1,77.8,4,2,17,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00536,Acme Corp 536,Manufacturing,Mid-Market,AM-1,18,5,9.7,4,10,10,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00537,Acme Corp 537,Retail,SMB,AM-2,4,7,36.4,1,6,34,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00538,Acme Corp 538,Manufacturing,Mid-Market,AM-3,21,3,74.3,4,10,59,Product downtime last week; team lost confidence.,1
+CUS-00539,Acme Corp 539,Retail,SMB,AM-4,0,11,77.9,2,2,11,Onboarding incomplete; champion left the company.,1
+CUS-00540,Acme Corp 540,Healthcare,SMB,AM-5,28,9,11.3,3,3,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00541,Acme Corp 541,SaaS,SMB,AM-6,2,6,-5.6,4,1,28,Product downtime last week; team lost confidence.,1
+CUS-00542,Acme Corp 542,Finance,Mid-Market,AM-7,7,11,3.8,0,4,12,Competitor demo scheduled; pricing feels high.,1
+CUS-00543,Acme Corp 543,Healthcare,SMB,AM-8,6,5,-4.3,2,6,39,Competitor demo scheduled; pricing feels high.,0
+CUS-00544,Acme Corp 544,SaaS,Mid-Market,AM-1,33,1,7.6,0,8,15,Onboarding incomplete; champion left the company.,0
+CUS-00545,Acme Corp 545,Healthcare,SMB,AM-2,2,0,41.2,1,4,8,Onboarding incomplete; champion left the company.,1
+CUS-00546,Acme Corp 546,Finance,Mid-Market,AM-3,17,11,72.1,2,8,16,Product downtime last week; team lost confidence.,1
+CUS-00547,Acme Corp 547,Healthcare,SMB,AM-4,23,11,38.3,4,6,55,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00548,Acme Corp 548,Finance,Mid-Market,AM-5,20,8,46.3,4,3,56,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00549,Acme Corp 549,Retail,Mid-Market,AM-6,27,1,8.2,1,10,30,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00550,Acme Corp 550,Finance,SMB,AM-7,32,3,62.1,1,4,24,Competitor demo scheduled; pricing feels high.,1
+CUS-00551,Acme Corp 551,Manufacturing,SMB,AM-8,15,0,45.6,2,1,49,Product downtime last week; team lost confidence.,0
+CUS-00552,Acme Corp 552,SaaS,Mid-Market,AM-1,33,0,67.8,4,10,12,Competitor demo scheduled; pricing feels high.,0
+CUS-00553,Acme Corp 553,Retail,Enterprise,AM-2,12,2,75.4,4,10,39,Product downtime last week; team lost confidence.,0
+CUS-00554,Acme Corp 554,Retail,Enterprise,AM-3,39,6,21.3,1,0,41,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00555,Acme Corp 555,Healthcare,SMB,AM-4,20,0,-1.8,0,9,42,Product downtime last week; team lost confidence.,0
+CUS-00556,Acme Corp 556,Retail,Mid-Market,AM-5,29,11,10.3,3,10,13,Onboarding incomplete; champion left the company.,0
+CUS-00557,Acme Corp 557,SaaS,SMB,AM-6,35,5,29.4,1,9,43,Billing confusion after plan change; waiting on refund.,0
+CUS-00558,Acme Corp 558,Manufacturing,SMB,AM-7,31,3,75.1,0,2,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00559,Acme Corp 559,Finance,Mid-Market,AM-8,34,6,24.0,0,6,52,Product downtime last week; team lost confidence.,0
+CUS-00560,Acme Corp 560,SaaS,Mid-Market,AM-1,21,9,59.4,2,5,11,Onboarding incomplete; champion left the company.,1
+CUS-00561,Acme Corp 561,Retail,Mid-Market,AM-2,1,3,38.6,1,6,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00562,Acme Corp 562,Manufacturing,Enterprise,AM-3,19,0,6.5,2,6,49,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00563,Acme Corp 563,SaaS,SMB,AM-4,7,0,18.9,1,7,17,Billing confusion after plan change; waiting on refund.,0
+CUS-00564,Acme Corp 564,Healthcare,Mid-Market,AM-5,35,10,48.8,3,5,44,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00565,Acme Corp 565,Healthcare,SMB,AM-6,9,1,50.6,3,7,6,Product downtime last week; team lost confidence.,1
+CUS-00566,Acme Corp 566,SaaS,SMB,AM-7,9,7,29.1,2,5,43,Product downtime last week; team lost confidence.,1
+CUS-00567,Acme Corp 567,Finance,SMB,AM-8,9,4,10.6,0,0,36,Billing confusion after plan change; waiting on refund.,0
+CUS-00568,Acme Corp 568,Retail,Enterprise,AM-1,25,9,55.0,2,0,12,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00569,Acme Corp 569,Manufacturing,Mid-Market,AM-2,22,0,5.2,3,10,4,Competitor demo scheduled; pricing feels high.,0
+CUS-00570,Acme Corp 570,Retail,SMB,AM-3,37,10,74.3,1,10,44,Billing confusion after plan change; waiting on refund.,1
+CUS-00571,Acme Corp 571,Finance,Mid-Market,AM-4,16,8,6.9,1,6,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00572,Acme Corp 572,Finance,Enterprise,AM-5,11,5,-0.3,2,1,30,Competitor demo scheduled; pricing feels high.,1
+CUS-00573,Acme Corp 573,Manufacturing,Enterprise,AM-6,1,2,34.8,1,8,4,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00574,Acme Corp 574,Healthcare,Mid-Market,AM-7,0,11,36.8,2,1,57,Billing confusion after plan change; waiting on refund.,1
+CUS-00575,Acme Corp 575,Retail,SMB,AM-8,14,3,35.7,1,4,33,Product downtime last week; team lost confidence.,0
+CUS-00576,Acme Corp 576,Finance,Mid-Market,AM-1,37,5,29.3,1,3,55,Onboarding incomplete; champion left the company.,0
+CUS-00577,Acme Corp 577,Retail,Enterprise,AM-2,20,4,79.5,3,0,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00578,Acme Corp 578,Retail,Enterprise,AM-3,35,2,33.8,2,8,13,Product downtime last week; team lost confidence.,0
+CUS-00579,Acme Corp 579,SaaS,Enterprise,AM-4,4,4,33.0,2,5,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00580,Acme Corp 580,Finance,Mid-Market,AM-5,3,1,28.0,3,3,36,Onboarding incomplete; champion left the company.,0
+CUS-00581,Acme Corp 581,Manufacturing,SMB,AM-6,33,0,-4.0,1,5,47,Competitor demo scheduled; pricing feels high.,0
+CUS-00582,Acme Corp 582,Healthcare,Mid-Market,AM-7,4,3,43.4,0,0,55,Onboarding incomplete; champion left the company.,1
+CUS-00583,Acme Corp 583,Retail,SMB,AM-8,2,1,10.5,4,4,49,Product downtime last week; team lost confidence.,1
+CUS-00584,Acme Corp 584,Retail,SMB,AM-1,16,4,47.4,0,5,9,Onboarding incomplete; champion left the company.,1
+CUS-00585,Acme Corp 585,SaaS,Mid-Market,AM-2,36,10,-5.4,2,3,19,Onboarding incomplete; champion left the company.,0
+CUS-00586,Acme Corp 586,Finance,Mid-Market,AM-3,27,1,78.3,1,9,54,Billing confusion after plan change; waiting on refund.,0
+CUS-00587,Acme Corp 587,Finance,Enterprise,AM-4,3,0,32.2,1,2,33,Billing confusion after plan change; waiting on refund.,1
+CUS-00588,Acme Corp 588,Finance,Mid-Market,AM-5,33,1,70.7,0,1,52,Billing confusion after plan change; waiting on refund.,0
+CUS-00589,Acme Corp 589,Healthcare,Enterprise,AM-6,33,6,32.8,4,5,34,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00590,Acme Corp 590,Healthcare,Mid-Market,AM-7,32,3,-4.6,2,9,3,Competitor demo scheduled; pricing feels high.,0
+CUS-00591,Acme Corp 591,SaaS,Mid-Market,AM-8,36,5,64.0,1,4,28,Billing confusion after plan change; waiting on refund.,0
+CUS-00592,Acme Corp 592,Manufacturing,SMB,AM-1,9,0,48.3,3,0,49,Product downtime last week; team lost confidence.,1
+CUS-00593,Acme Corp 593,Healthcare,Mid-Market,AM-2,39,3,60.4,0,10,39,Onboarding incomplete; champion left the company.,0
+CUS-00594,Acme Corp 594,Finance,SMB,AM-3,12,4,28.5,2,4,8,Billing confusion after plan change; waiting on refund.,1
+CUS-00595,Acme Corp 595,Finance,SMB,AM-4,32,5,47.4,2,1,13,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00596,Acme Corp 596,SaaS,SMB,AM-5,23,6,67.1,2,6,51,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00597,Acme Corp 597,Finance,Enterprise,AM-6,31,9,46.8,0,3,58,Product downtime last week; team lost confidence.,1
+CUS-00598,Acme Corp 598,SaaS,Mid-Market,AM-7,25,5,21.3,4,10,45,Billing confusion after plan change; waiting on refund.,0
+CUS-00599,Acme Corp 599,Retail,Enterprise,AM-8,25,10,49.6,1,3,6,Product downtime last week; team lost confidence.,1
+CUS-00600,Acme Corp 600,Retail,Enterprise,AM-1,24,6,50.5,3,6,37,Onboarding incomplete; champion left the company.,1
+CUS-00601,Acme Corp 601,Finance,Enterprise,AM-2,31,3,76.5,3,5,49,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00602,Acme Corp 602,Manufacturing,SMB,AM-3,29,2,23.4,1,2,38,Product downtime last week; team lost confidence.,1
+CUS-00603,Acme Corp 603,Finance,Enterprise,AM-4,5,3,28.3,0,5,36,Product downtime last week; team lost confidence.,1
+CUS-00604,Acme Corp 604,Retail,Enterprise,AM-5,33,7,63.1,1,1,28,Product downtime last week; team lost confidence.,1
+CUS-00605,Acme Corp 605,Finance,Enterprise,AM-6,21,2,35.5,4,7,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00606,Acme Corp 606,Finance,SMB,AM-7,12,10,56.3,4,8,17,Billing confusion after plan change; waiting on refund.,1
+CUS-00607,Acme Corp 607,Finance,SMB,AM-8,20,5,31.4,4,10,44,Onboarding incomplete; champion left the company.,1
+CUS-00608,Acme Corp 608,Retail,Enterprise,AM-1,38,10,9.4,1,3,5,Competitor demo scheduled; pricing feels high.,1
+CUS-00609,Acme Corp 609,Healthcare,SMB,AM-2,34,8,57.1,3,3,5,Billing confusion after plan change; waiting on refund.,1
+CUS-00610,Acme Corp 610,Finance,SMB,AM-3,33,4,1.8,0,6,24,Product downtime last week; team lost confidence.,0
+CUS-00611,Acme Corp 611,Manufacturing,Mid-Market,AM-4,18,2,7.9,3,7,46,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00612,Acme Corp 612,Finance,SMB,AM-5,31,8,46.4,2,10,39,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00613,Acme Corp 613,Retail,SMB,AM-6,15,3,57.3,3,0,35,Competitor demo scheduled; pricing feels high.,1
+CUS-00614,Acme Corp 614,Finance,Enterprise,AM-7,27,2,70.5,3,2,32,Onboarding incomplete; champion left the company.,0
+CUS-00615,Acme Corp 615,Manufacturing,Enterprise,AM-8,25,11,14.5,4,2,7,Onboarding incomplete; champion left the company.,1
+CUS-00616,Acme Corp 616,Manufacturing,Enterprise,AM-1,9,5,-0.0,2,2,20,Product downtime last week; team lost confidence.,1
+CUS-00617,Acme Corp 617,SaaS,SMB,AM-2,10,0,76.0,1,5,5,Product downtime last week; team lost confidence.,1
+CUS-00618,Acme Corp 618,Retail,SMB,AM-3,2,5,3.9,2,9,45,Product downtime last week; team lost confidence.,0
+CUS-00619,Acme Corp 619,Manufacturing,SMB,AM-4,5,5,7.8,0,0,45,Competitor demo scheduled; pricing feels high.,0
+CUS-00620,Acme Corp 620,Manufacturing,Mid-Market,AM-5,17,10,16.2,0,8,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00621,Acme Corp 621,Finance,SMB,AM-6,19,8,37.6,2,6,18,Competitor demo scheduled; pricing feels high.,1
+CUS-00622,Acme Corp 622,Healthcare,Mid-Market,AM-7,6,2,69.5,4,6,19,Competitor demo scheduled; pricing feels high.,1
+CUS-00623,Acme Corp 623,Healthcare,Enterprise,AM-8,16,1,58.4,2,7,53,Billing confusion after plan change; waiting on refund.,0
+CUS-00624,Acme Corp 624,Finance,Mid-Market,AM-1,24,7,53.7,3,1,29,Competitor demo scheduled; pricing feels high.,1
+CUS-00625,Acme Corp 625,Finance,SMB,AM-2,9,0,5.8,0,8,45,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00626,Acme Corp 626,SaaS,SMB,AM-3,13,3,22.2,2,2,27,Competitor demo scheduled; pricing feels high.,1
+CUS-00627,Acme Corp 627,Healthcare,SMB,AM-4,14,1,33.1,3,5,42,Onboarding incomplete; champion left the company.,0
+CUS-00628,Acme Corp 628,Finance,SMB,AM-5,20,0,3.3,1,7,32,Product downtime last week; team lost confidence.,0
+CUS-00629,Acme Corp 629,SaaS,Mid-Market,AM-6,14,11,14.6,0,6,17,Competitor demo scheduled; pricing feels high.,1
+CUS-00630,Acme Corp 630,Manufacturing,SMB,AM-7,29,1,17.7,0,3,52,Onboarding incomplete; champion left the company.,0
+CUS-00631,Acme Corp 631,SaaS,Mid-Market,AM-8,13,0,1.5,4,4,42,Product downtime last week; team lost confidence.,0
+CUS-00632,Acme Corp 632,SaaS,Enterprise,AM-1,17,11,39.5,3,5,46,Onboarding incomplete; champion left the company.,1
+CUS-00633,Acme Corp 633,Manufacturing,SMB,AM-2,15,2,53.5,1,0,56,Billing confusion after plan change; waiting on refund.,1
+CUS-00634,Acme Corp 634,Manufacturing,SMB,AM-3,7,9,-3.7,1,7,15,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00635,Acme Corp 635,Retail,SMB,AM-4,27,0,33.3,0,1,6,Competitor demo scheduled; pricing feels high.,0
+CUS-00636,Acme Corp 636,Finance,SMB,AM-5,9,1,60.4,4,5,35,Product downtime last week; team lost confidence.,1
+CUS-00637,Acme Corp 637,Healthcare,Mid-Market,AM-6,11,1,57.3,0,7,20,Competitor demo scheduled; pricing feels high.,0
+CUS-00638,Acme Corp 638,Retail,Enterprise,AM-7,31,8,63.4,3,0,26,Billing confusion after plan change; waiting on refund.,1
+CUS-00639,Acme Corp 639,Manufacturing,Enterprise,AM-8,37,7,30.3,1,10,14,Product downtime last week; team lost confidence.,0
+CUS-00640,Acme Corp 640,Manufacturing,Mid-Market,AM-1,26,5,63.9,1,4,24,Competitor demo scheduled; pricing feels high.,1
+CUS-00641,Acme Corp 641,Healthcare,SMB,AM-2,36,2,11.7,1,0,24,Billing confusion after plan change; waiting on refund.,0
+CUS-00642,Acme Corp 642,Manufacturing,SMB,AM-3,34,1,22.5,4,7,21,Competitor demo scheduled; pricing feels high.,0
+CUS-00643,Acme Corp 643,Retail,SMB,AM-4,19,6,5.9,0,6,44,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00644,Acme Corp 644,Retail,SMB,AM-5,30,2,32.1,1,7,35,Onboarding incomplete; champion left the company.,0
+CUS-00645,Acme Corp 645,Finance,Enterprise,AM-6,13,7,25.3,1,8,28,Product downtime last week; team lost confidence.,1
+CUS-00646,Acme Corp 646,Healthcare,Mid-Market,AM-7,18,8,11.7,1,5,7,Competitor demo scheduled; pricing feels high.,1
+CUS-00647,Acme Corp 647,Manufacturing,SMB,AM-8,21,10,57.7,0,9,34,Product downtime last week; team lost confidence.,1
+CUS-00648,Acme Corp 648,Finance,SMB,AM-1,38,5,18.2,4,4,11,Competitor demo scheduled; pricing feels high.,1
+CUS-00649,Acme Corp 649,Manufacturing,SMB,AM-2,33,0,14.6,1,5,19,Competitor demo scheduled; pricing feels high.,0
+CUS-00650,Acme Corp 650,Finance,Enterprise,AM-3,19,3,1.8,2,1,25,Billing confusion after plan change; waiting on refund.,1
+CUS-00651,Acme Corp 651,Retail,SMB,AM-4,26,10,29.5,1,6,9,Billing confusion after plan change; waiting on refund.,1
+CUS-00652,Acme Corp 652,Healthcare,SMB,AM-5,8,6,17.3,4,2,23,Billing confusion after plan change; waiting on refund.,1
+CUS-00653,Acme Corp 653,Finance,SMB,AM-6,32,7,23.2,1,7,16,Billing confusion after plan change; waiting on refund.,0
+CUS-00654,Acme Corp 654,Manufacturing,Enterprise,AM-7,22,5,11.2,1,8,51,Product downtime last week; team lost confidence.,1
+CUS-00655,Acme Corp 655,Healthcare,Mid-Market,AM-8,21,1,58.7,1,9,51,Billing confusion after plan change; waiting on refund.,0
+CUS-00656,Acme Corp 656,Healthcare,Mid-Market,AM-1,30,10,73.7,1,10,1,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00657,Acme Corp 657,Healthcare,SMB,AM-2,25,9,34.8,0,1,36,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00658,Acme Corp 658,Finance,SMB,AM-3,2,11,47.9,3,1,38,Billing confusion after plan change; waiting on refund.,1
+CUS-00659,Acme Corp 659,SaaS,Enterprise,AM-4,11,10,68.0,0,10,23,Product downtime last week; team lost confidence.,1
+CUS-00660,Acme Corp 660,Manufacturing,SMB,AM-5,7,3,79.9,1,4,28,Competitor demo scheduled; pricing feels high.,1
+CUS-00661,Acme Corp 661,Retail,SMB,AM-6,29,3,45.2,1,0,47,Competitor demo scheduled; pricing feels high.,0
+CUS-00662,Acme Corp 662,SaaS,Mid-Market,AM-7,1,2,70.1,1,3,23,Onboarding incomplete; champion left the company.,1
+CUS-00663,Acme Corp 663,Manufacturing,SMB,AM-8,8,11,71.8,3,9,4,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00664,Acme Corp 664,Manufacturing,SMB,AM-1,23,6,61.2,2,3,22,Competitor demo scheduled; pricing feels high.,0
+CUS-00665,Acme Corp 665,Manufacturing,Enterprise,AM-2,27,5,31.5,4,0,15,Competitor demo scheduled; pricing feels high.,1
+CUS-00666,Acme Corp 666,Retail,Mid-Market,AM-3,20,11,-2.7,1,7,23,Onboarding incomplete; champion left the company.,0
+CUS-00667,Acme Corp 667,Healthcare,SMB,AM-4,34,7,-8.6,4,2,14,Onboarding incomplete; champion left the company.,1
+CUS-00668,Acme Corp 668,SaaS,SMB,AM-5,36,10,32.9,0,3,9,Product downtime last week; team lost confidence.,1
+CUS-00669,Acme Corp 669,SaaS,Mid-Market,AM-6,5,11,34.5,2,0,59,Onboarding incomplete; champion left the company.,1
+CUS-00670,Acme Corp 670,Healthcare,SMB,AM-7,38,0,26.7,3,6,8,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00671,Acme Corp 671,Manufacturing,SMB,AM-8,24,4,41.1,2,4,42,Product downtime last week; team lost confidence.,1
+CUS-00672,Acme Corp 672,SaaS,Mid-Market,AM-1,25,8,39.7,4,9,43,Billing confusion after plan change; waiting on refund.,0
+CUS-00673,Acme Corp 673,Finance,Mid-Market,AM-2,3,9,65.3,1,3,37,Onboarding incomplete; champion left the company.,1
+CUS-00674,Acme Corp 674,Retail,Enterprise,AM-3,24,1,-0.2,0,2,54,Competitor demo scheduled; pricing feels high.,0
+CUS-00675,Acme Corp 675,Healthcare,SMB,AM-4,29,3,10.3,3,1,1,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00676,Acme Corp 676,Finance,SMB,AM-5,23,6,61.4,0,2,18,Onboarding incomplete; champion left the company.,1
+CUS-00677,Acme Corp 677,SaaS,Mid-Market,AM-6,3,9,66.3,3,4,11,Competitor demo scheduled; pricing feels high.,1
+CUS-00678,Acme Corp 678,Finance,Mid-Market,AM-7,20,1,79.5,3,0,35,Product downtime last week; team lost confidence.,1
+CUS-00679,Acme Corp 679,Healthcare,SMB,AM-8,37,7,68.6,4,4,38,Onboarding incomplete; champion left the company.,1
+CUS-00680,Acme Corp 680,Healthcare,Mid-Market,AM-1,28,3,70.1,2,9,53,Onboarding incomplete; champion left the company.,1
+CUS-00681,Acme Corp 681,Retail,SMB,AM-2,5,2,18.3,4,8,23,Product downtime last week; team lost confidence.,1
+CUS-00682,Acme Corp 682,Finance,Enterprise,AM-3,38,6,26.1,0,7,14,Competitor demo scheduled; pricing feels high.,0
+CUS-00683,Acme Corp 683,Healthcare,Enterprise,AM-4,38,4,14.1,2,9,55,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00684,Acme Corp 684,Finance,SMB,AM-5,6,7,44.6,0,8,40,Product downtime last week; team lost confidence.,0
+CUS-00685,Acme Corp 685,Healthcare,Enterprise,AM-6,32,3,74.5,3,7,46,Billing confusion after plan change; waiting on refund.,1
+CUS-00686,Acme Corp 686,Healthcare,Enterprise,AM-7,16,9,21.0,3,9,27,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00687,Acme Corp 687,Manufacturing,SMB,AM-8,23,0,40.1,4,1,27,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00688,Acme Corp 688,Manufacturing,SMB,AM-1,17,10,16.7,3,9,23,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00689,Acme Corp 689,Healthcare,Mid-Market,AM-2,31,0,5.3,1,3,45,Product downtime last week; team lost confidence.,0
+CUS-00690,Acme Corp 690,SaaS,SMB,AM-3,39,8,7.6,0,8,13,Competitor demo scheduled; pricing feels high.,0
+CUS-00691,Acme Corp 691,Healthcare,SMB,AM-4,31,4,-4.8,4,10,58,Competitor demo scheduled; pricing feels high.,0
+CUS-00692,Acme Corp 692,Retail,SMB,AM-5,37,4,75.4,2,5,11,Competitor demo scheduled; pricing feels high.,0
+CUS-00693,Acme Corp 693,SaaS,Enterprise,AM-6,37,0,26.3,0,0,28,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00694,Acme Corp 694,SaaS,SMB,AM-7,3,8,65.1,4,4,19,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00695,Acme Corp 695,Finance,Mid-Market,AM-8,10,1,51.3,4,4,38,Onboarding incomplete; champion left the company.,1
+CUS-00696,Acme Corp 696,SaaS,SMB,AM-1,28,7,7.3,2,10,41,Billing confusion after plan change; waiting on refund.,0
+CUS-00697,Acme Corp 697,Retail,SMB,AM-2,23,8,5.8,3,10,55,Billing confusion after plan change; waiting on refund.,0
+CUS-00698,Acme Corp 698,Manufacturing,Enterprise,AM-3,2,10,63.1,0,6,47,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00699,Acme Corp 699,Healthcare,SMB,AM-4,3,8,13.8,0,10,15,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00700,Acme Corp 700,Retail,SMB,AM-5,20,3,72.2,1,4,13,Billing confusion after plan change; waiting on refund.,1
+CUS-00701,Acme Corp 701,SaaS,SMB,AM-6,24,8,2.6,3,4,53,Product downtime last week; team lost confidence.,1
+CUS-00702,Acme Corp 702,Manufacturing,Mid-Market,AM-7,6,9,51.0,0,9,29,Product downtime last week; team lost confidence.,1
+CUS-00703,Acme Corp 703,Manufacturing,SMB,AM-8,6,3,63.3,0,7,6,Product downtime last week; team lost confidence.,1
+CUS-00704,Acme Corp 704,Finance,SMB,AM-1,5,1,11.2,3,5,49,Competitor demo scheduled; pricing feels high.,1
+CUS-00705,Acme Corp 705,Finance,SMB,AM-2,22,10,14.9,3,5,39,Onboarding incomplete; champion left the company.,1
+CUS-00706,Acme Corp 706,Healthcare,SMB,AM-3,0,1,76.8,3,7,2,Onboarding incomplete; champion left the company.,1
+CUS-00707,Acme Corp 707,SaaS,SMB,AM-4,22,7,13.8,3,8,47,Onboarding incomplete; champion left the company.,1
+CUS-00708,Acme Corp 708,Healthcare,Mid-Market,AM-5,19,2,28.7,4,5,36,Competitor demo scheduled; pricing feels high.,1
+CUS-00709,Acme Corp 709,SaaS,SMB,AM-6,18,1,28.9,3,0,37,Competitor demo scheduled; pricing feels high.,0
+CUS-00710,Acme Corp 710,Retail,SMB,AM-7,27,9,12.8,2,1,52,Billing confusion after plan change; waiting on refund.,1
+CUS-00711,Acme Corp 711,SaaS,Mid-Market,AM-8,20,1,59.8,4,1,30,Billing confusion after plan change; waiting on refund.,0
+CUS-00712,Acme Corp 712,Finance,Mid-Market,AM-1,29,8,59.5,1,5,28,Product downtime last week; team lost confidence.,1
+CUS-00713,Acme Corp 713,Manufacturing,SMB,AM-2,30,8,24.0,0,6,37,Onboarding incomplete; champion left the company.,0
+CUS-00714,Acme Corp 714,Healthcare,SMB,AM-3,36,0,65.2,3,8,12,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00715,Acme Corp 715,Finance,SMB,AM-4,31,2,9.2,1,2,9,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00716,Acme Corp 716,Manufacturing,Enterprise,AM-5,20,9,-9.6,4,8,50,Competitor demo scheduled; pricing feels high.,1
+CUS-00717,Acme Corp 717,Retail,SMB,AM-6,19,6,41.4,2,7,13,Billing confusion after plan change; waiting on refund.,1
+CUS-00718,Acme Corp 718,SaaS,SMB,AM-7,9,1,79.5,4,0,30,Billing confusion after plan change; waiting on refund.,1
+CUS-00719,Acme Corp 719,Healthcare,SMB,AM-8,23,11,-6.5,0,3,16,Onboarding incomplete; champion left the company.,0
+CUS-00720,Acme Corp 720,Retail,SMB,AM-1,5,3,8.7,3,3,14,Onboarding incomplete; champion left the company.,1
+CUS-00721,Acme Corp 721,Manufacturing,SMB,AM-2,37,0,36.7,2,9,36,Competitor demo scheduled; pricing feels high.,1
+CUS-00722,Acme Corp 722,Healthcare,SMB,AM-3,33,11,62.9,2,10,48,Billing confusion after plan change; waiting on refund.,1
+CUS-00723,Acme Corp 723,Manufacturing,Mid-Market,AM-4,4,0,-2.0,1,9,27,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00724,Acme Corp 724,Healthcare,Mid-Market,AM-5,31,6,25.6,4,5,9,Onboarding incomplete; champion left the company.,1
+CUS-00725,Acme Corp 725,Healthcare,Mid-Market,AM-6,4,11,57.2,1,5,15,Onboarding incomplete; champion left the company.,1
+CUS-00726,Acme Corp 726,Retail,Mid-Market,AM-7,28,6,23.4,4,3,10,Billing confusion after plan change; waiting on refund.,1
+CUS-00727,Acme Corp 727,SaaS,SMB,AM-8,3,7,7.0,2,8,53,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00728,Acme Corp 728,Retail,Enterprise,AM-1,19,4,7.6,0,0,19,Onboarding incomplete; champion left the company.,0
+CUS-00729,Acme Corp 729,Healthcare,Mid-Market,AM-2,26,1,26.9,4,2,23,Product downtime last week; team lost confidence.,0
+CUS-00730,Acme Corp 730,Healthcare,Enterprise,AM-3,29,6,33.1,0,1,5,Product downtime last week; team lost confidence.,1
+CUS-00731,Acme Corp 731,Manufacturing,Mid-Market,AM-4,16,10,67.6,1,5,27,Product downtime last week; team lost confidence.,1
+CUS-00732,Acme Corp 732,Healthcare,SMB,AM-5,36,1,47.8,4,3,54,Billing confusion after plan change; waiting on refund.,1
+CUS-00733,Acme Corp 733,Manufacturing,SMB,AM-6,30,10,52.1,4,2,25,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00734,Acme Corp 734,Manufacturing,SMB,AM-7,8,4,78.5,4,4,39,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00735,Acme Corp 735,Manufacturing,SMB,AM-8,26,6,27.1,2,9,11,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00736,Acme Corp 736,Healthcare,Mid-Market,AM-1,29,1,26.3,3,6,9,Product downtime last week; team lost confidence.,0
+CUS-00737,Acme Corp 737,Finance,SMB,AM-2,13,7,73.1,1,9,44,Onboarding incomplete; champion left the company.,1
+CUS-00738,Acme Corp 738,Healthcare,SMB,AM-3,29,2,12.1,3,10,4,Onboarding incomplete; champion left the company.,0
+CUS-00739,Acme Corp 739,Healthcare,Enterprise,AM-4,35,3,55.7,2,9,27,Onboarding incomplete; champion left the company.,0
+CUS-00740,Acme Corp 740,Finance,Mid-Market,AM-5,32,8,57.9,0,3,19,Onboarding incomplete; champion left the company.,1
+CUS-00741,Acme Corp 741,Healthcare,Mid-Market,AM-6,30,0,-1.2,2,9,1,Onboarding incomplete; champion left the company.,0
+CUS-00742,Acme Corp 742,Manufacturing,SMB,AM-7,25,5,32.1,2,10,32,Competitor demo scheduled; pricing feels high.,0
+CUS-00743,Acme Corp 743,SaaS,Mid-Market,AM-8,10,7,8.1,1,10,57,Billing confusion after plan change; waiting on refund.,0
+CUS-00744,Acme Corp 744,Manufacturing,Enterprise,AM-1,31,1,6.7,1,3,5,Billing confusion after plan change; waiting on refund.,0
+CUS-00745,Acme Corp 745,Finance,Mid-Market,AM-2,14,3,31.7,2,2,49,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00746,Acme Corp 746,Manufacturing,Mid-Market,AM-3,21,4,16.0,0,6,32,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00747,Acme Corp 747,Retail,Mid-Market,AM-4,12,7,61.6,0,10,43,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00748,Acme Corp 748,Finance,SMB,AM-5,12,11,71.7,3,9,6,Product downtime last week; team lost confidence.,1
+CUS-00749,Acme Corp 749,Healthcare,Mid-Market,AM-6,6,10,62.2,1,6,52,Onboarding incomplete; champion left the company.,1
+CUS-00750,Acme Corp 750,Healthcare,Enterprise,AM-7,38,2,13.9,3,1,1,Billing confusion after plan change; waiting on refund.,0
+CUS-00751,Acme Corp 751,SaaS,SMB,AM-8,5,0,14.7,2,4,54,Product downtime last week; team lost confidence.,1
+CUS-00752,Acme Corp 752,Manufacturing,SMB,AM-1,3,0,12.9,2,7,39,Competitor demo scheduled; pricing feels high.,0
+CUS-00753,Acme Corp 753,Manufacturing,SMB,AM-2,37,7,2.2,2,6,20,Product downtime last week; team lost confidence.,0
+CUS-00754,Acme Corp 754,Manufacturing,SMB,AM-3,22,1,74.9,2,3,1,Onboarding incomplete; champion left the company.,1
+CUS-00755,Acme Corp 755,Manufacturing,Enterprise,AM-4,17,2,26.2,4,3,37,Billing confusion after plan change; waiting on refund.,1
+CUS-00756,Acme Corp 756,SaaS,Mid-Market,AM-5,29,10,10.2,4,0,6,Onboarding incomplete; champion left the company.,1
+CUS-00757,Acme Corp 757,Manufacturing,SMB,AM-6,15,10,66.2,1,3,36,Competitor demo scheduled; pricing feels high.,1
+CUS-00758,Acme Corp 758,Manufacturing,SMB,AM-7,5,10,25.9,3,7,46,Onboarding incomplete; champion left the company.,1
+CUS-00759,Acme Corp 759,Healthcare,SMB,AM-8,29,3,-6.8,4,2,16,Onboarding incomplete; champion left the company.,0
+CUS-00760,Acme Corp 760,Retail,SMB,AM-1,7,7,4.6,0,10,15,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00761,Acme Corp 761,Finance,Mid-Market,AM-2,22,7,47.5,3,0,14,Product downtime last week; team lost confidence.,1
+CUS-00762,Acme Corp 762,Retail,Enterprise,AM-3,37,2,60.5,2,6,14,Product downtime last week; team lost confidence.,0
+CUS-00763,Acme Corp 763,Manufacturing,Mid-Market,AM-4,37,6,9.0,4,5,7,Competitor demo scheduled; pricing feels high.,0
+CUS-00764,Acme Corp 764,Retail,SMB,AM-5,14,6,72.6,2,9,15,Onboarding incomplete; champion left the company.,1
+CUS-00765,Acme Corp 765,Manufacturing,Mid-Market,AM-6,31,4,66.6,4,9,39,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00766,Acme Corp 766,Manufacturing,Mid-Market,AM-7,24,9,66.4,0,5,18,Billing confusion after plan change; waiting on refund.,1
+CUS-00767,Acme Corp 767,Manufacturing,SMB,AM-8,19,8,10.5,0,6,47,Billing confusion after plan change; waiting on refund.,1
+CUS-00768,Acme Corp 768,Manufacturing,Mid-Market,AM-1,5,6,-5.5,4,7,49,Product downtime last week; team lost confidence.,1
+CUS-00769,Acme Corp 769,Finance,Mid-Market,AM-2,15,8,68.1,2,5,45,Onboarding incomplete; champion left the company.,1
+CUS-00770,Acme Corp 770,Healthcare,Enterprise,AM-3,26,9,17.5,2,2,32,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00771,Acme Corp 771,Finance,SMB,AM-4,39,6,45.7,0,4,19,Onboarding incomplete; champion left the company.,1
+CUS-00772,Acme Corp 772,Manufacturing,SMB,AM-5,0,3,58.4,1,2,55,Onboarding incomplete; champion left the company.,1
+CUS-00773,Acme Corp 773,Retail,Mid-Market,AM-6,28,9,1.5,4,5,13,Billing confusion after plan change; waiting on refund.,1
+CUS-00774,Acme Corp 774,Healthcare,SMB,AM-7,33,8,60.3,1,6,28,Onboarding incomplete; champion left the company.,1
+CUS-00775,Acme Corp 775,Retail,SMB,AM-8,38,11,74.5,2,2,27,Onboarding incomplete; champion left the company.,1
+CUS-00776,Acme Corp 776,Manufacturing,Mid-Market,AM-1,16,1,55.6,1,2,44,Onboarding incomplete; champion left the company.,1
+CUS-00777,Acme Corp 777,Healthcare,SMB,AM-2,4,5,29.7,1,9,33,Competitor demo scheduled; pricing feels high.,0
+CUS-00778,Acme Corp 778,Healthcare,Mid-Market,AM-3,10,11,68.9,0,4,48,Onboarding incomplete; champion left the company.,1
+CUS-00779,Acme Corp 779,Finance,Enterprise,AM-4,34,6,37.5,4,2,55,Billing confusion after plan change; waiting on refund.,0
+CUS-00780,Acme Corp 780,Retail,Mid-Market,AM-5,35,11,57.0,4,7,24,Billing confusion after plan change; waiting on refund.,1
+CUS-00781,Acme Corp 781,Manufacturing,Mid-Market,AM-6,25,0,63.8,0,7,52,Billing confusion after plan change; waiting on refund.,0
+CUS-00782,Acme Corp 782,SaaS,Mid-Market,AM-7,4,0,57.4,1,9,11,Competitor demo scheduled; pricing feels high.,0
+CUS-00783,Acme Corp 783,SaaS,SMB,AM-8,4,9,15.9,2,8,55,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00784,Acme Corp 784,Finance,SMB,AM-1,19,4,0.6,1,10,11,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00785,Acme Corp 785,SaaS,Mid-Market,AM-2,23,6,11.5,3,6,51,Product downtime last week; team lost confidence.,0
+CUS-00786,Acme Corp 786,Manufacturing,SMB,AM-3,1,5,35.3,1,3,24,Billing confusion after plan change; waiting on refund.,1
+CUS-00787,Acme Corp 787,Finance,SMB,AM-4,27,4,35.5,0,9,57,Competitor demo scheduled; pricing feels high.,0
+CUS-00788,Acme Corp 788,Retail,SMB,AM-5,21,11,42.4,1,2,8,Billing confusion after plan change; waiting on refund.,1
+CUS-00789,Acme Corp 789,Finance,Enterprise,AM-6,0,1,25.6,2,3,28,Competitor demo scheduled; pricing feels high.,1
+CUS-00790,Acme Corp 790,Retail,SMB,AM-7,3,9,60.8,0,9,54,Product downtime last week; team lost confidence.,1
+CUS-00791,Acme Corp 791,Finance,Mid-Market,AM-8,18,10,72.2,4,9,3,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00792,Acme Corp 792,Healthcare,SMB,AM-1,28,7,12.2,0,3,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00793,Acme Corp 793,Retail,Mid-Market,AM-2,33,4,56.3,0,8,5,Competitor demo scheduled; pricing feels high.,0
+CUS-00794,Acme Corp 794,Healthcare,SMB,AM-3,17,1,51.0,2,10,19,Onboarding incomplete; champion left the company.,0
+CUS-00795,Acme Corp 795,Manufacturing,SMB,AM-4,11,8,37.1,2,8,24,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00796,Acme Corp 796,SaaS,Mid-Market,AM-5,38,5,7.0,1,0,37,Onboarding incomplete; champion left the company.,0
+CUS-00797,Acme Corp 797,Finance,Mid-Market,AM-6,18,1,61.6,1,7,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00798,Acme Corp 798,SaaS,SMB,AM-7,12,4,76.5,0,1,10,Product downtime last week; team lost confidence.,1
+CUS-00799,Acme Corp 799,Healthcare,SMB,AM-8,17,11,55.0,3,9,11,Onboarding incomplete; champion left the company.,1
+CUS-00800,Acme Corp 800,Retail,SMB,AM-1,0,3,72.6,1,0,56,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00801,Acme Corp 801,SaaS,SMB,AM-2,12,2,78.6,0,10,57,Product downtime last week; team lost confidence.,1
+CUS-00802,Acme Corp 802,Retail,Mid-Market,AM-3,20,8,21.7,1,1,14,Billing confusion after plan change; waiting on refund.,1
+CUS-00803,Acme Corp 803,Finance,SMB,AM-4,36,2,47.4,4,4,12,Product downtime last week; team lost confidence.,1
+CUS-00804,Acme Corp 804,Finance,Mid-Market,AM-5,29,11,32.7,1,2,4,Product downtime last week; team lost confidence.,1
+CUS-00805,Acme Corp 805,SaaS,SMB,AM-6,31,10,78.8,4,8,57,Onboarding incomplete; champion left the company.,1
+CUS-00806,Acme Corp 806,Retail,Mid-Market,AM-7,21,11,-1.6,1,4,42,Billing confusion after plan change; waiting on refund.,1
+CUS-00807,Acme Corp 807,Retail,SMB,AM-8,4,10,27.1,0,8,45,Billing confusion after plan change; waiting on refund.,1
+CUS-00808,Acme Corp 808,SaaS,Mid-Market,AM-1,15,2,68.8,1,0,18,Product downtime last week; team lost confidence.,1
+CUS-00809,Acme Corp 809,Manufacturing,SMB,AM-2,39,2,15.6,1,4,38,Onboarding incomplete; champion left the company.,0
+CUS-00810,Acme Corp 810,Retail,Enterprise,AM-3,1,4,60.9,0,10,4,Billing confusion after plan change; waiting on refund.,1
+CUS-00811,Acme Corp 811,Manufacturing,Mid-Market,AM-4,35,5,24.5,2,10,40,Product downtime last week; team lost confidence.,0
+CUS-00812,Acme Corp 812,Healthcare,Enterprise,AM-5,27,10,78.2,1,2,35,Product downtime last week; team lost confidence.,1
+CUS-00813,Acme Corp 813,Healthcare,SMB,AM-6,11,8,69.5,3,4,20,Billing confusion after plan change; waiting on refund.,1
+CUS-00814,Acme Corp 814,Manufacturing,SMB,AM-7,31,7,17.1,2,4,42,Product downtime last week; team lost confidence.,0
+CUS-00815,Acme Corp 815,Manufacturing,SMB,AM-8,33,10,59.3,2,6,39,Product downtime last week; team lost confidence.,0
+CUS-00816,Acme Corp 816,SaaS,SMB,AM-1,1,7,20.3,2,5,26,Billing confusion after plan change; waiting on refund.,1
+CUS-00817,Acme Corp 817,Healthcare,Mid-Market,AM-2,4,4,44.6,0,1,12,Competitor demo scheduled; pricing feels high.,1
+CUS-00818,Acme Corp 818,Retail,Enterprise,AM-3,26,4,49.3,3,8,2,Billing confusion after plan change; waiting on refund.,1
+CUS-00819,Acme Corp 819,Finance,Mid-Market,AM-4,39,6,64.7,0,2,56,Onboarding incomplete; champion left the company.,0
+CUS-00820,Acme Corp 820,Healthcare,Mid-Market,AM-5,0,1,-7.8,3,3,17,Competitor demo scheduled; pricing feels high.,1
+CUS-00821,Acme Corp 821,Healthcare,SMB,AM-6,26,8,9.8,4,9,18,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00822,Acme Corp 822,Finance,SMB,AM-7,5,7,54.1,3,7,41,Onboarding incomplete; champion left the company.,1
+CUS-00823,Acme Corp 823,Manufacturing,Mid-Market,AM-8,26,8,40.7,2,4,16,Onboarding incomplete; champion left the company.,1
+CUS-00824,Acme Corp 824,Finance,SMB,AM-1,24,6,34.6,1,10,23,Competitor demo scheduled; pricing feels high.,0
+CUS-00825,Acme Corp 825,Manufacturing,SMB,AM-2,3,9,-5.0,4,4,42,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00826,Acme Corp 826,Finance,Enterprise,AM-3,27,11,21.3,1,6,36,Product downtime last week; team lost confidence.,1
+CUS-00827,Acme Corp 827,SaaS,Enterprise,AM-4,35,6,67.9,2,2,39,Competitor demo scheduled; pricing feels high.,1
+CUS-00828,Acme Corp 828,Healthcare,Mid-Market,AM-5,34,5,-7.2,3,2,1,Onboarding incomplete; champion left the company.,0
+CUS-00829,Acme Corp 829,Healthcare,SMB,AM-6,1,1,25.7,4,5,27,Billing confusion after plan change; waiting on refund.,1
+CUS-00830,Acme Corp 830,SaaS,Enterprise,AM-7,9,9,75.1,4,6,29,Competitor demo scheduled; pricing feels high.,1
+CUS-00831,Acme Corp 831,Manufacturing,SMB,AM-8,9,10,-5.4,0,8,38,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00832,Acme Corp 832,Manufacturing,SMB,AM-1,18,8,57.5,4,4,9,Billing confusion after plan change; waiting on refund.,1
+CUS-00833,Acme Corp 833,SaaS,SMB,AM-2,5,10,13.2,0,9,10,Billing confusion after plan change; waiting on refund.,0
+CUS-00834,Acme Corp 834,SaaS,Enterprise,AM-3,34,10,68.0,2,6,45,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00835,Acme Corp 835,SaaS,Enterprise,AM-4,31,9,57.1,4,0,40,Onboarding incomplete; champion left the company.,1
+CUS-00836,Acme Corp 836,Retail,Mid-Market,AM-5,32,6,69.7,3,8,48,Product downtime last week; team lost confidence.,0
+CUS-00837,Acme Corp 837,Retail,SMB,AM-6,7,1,9.4,4,6,16,Competitor demo scheduled; pricing feels high.,1
+CUS-00838,Acme Corp 838,Healthcare,Mid-Market,AM-7,0,0,37.8,1,4,59,Product downtime last week; team lost confidence.,0
+CUS-00839,Acme Corp 839,Finance,SMB,AM-8,36,2,60.1,1,5,17,Product downtime last week; team lost confidence.,1
+CUS-00840,Acme Corp 840,Healthcare,Enterprise,AM-1,11,5,12.1,1,3,39,Product downtime last week; team lost confidence.,1
+CUS-00841,Acme Corp 841,Retail,SMB,AM-2,26,8,10.8,1,6,10,Onboarding incomplete; champion left the company.,0
+CUS-00842,Acme Corp 842,Retail,SMB,AM-3,36,5,-7.6,3,6,55,Billing confusion after plan change; waiting on refund.,0
+CUS-00843,Acme Corp 843,Healthcare,Mid-Market,AM-4,1,0,76.3,2,4,20,Product downtime last week; team lost confidence.,1
+CUS-00844,Acme Corp 844,Finance,Mid-Market,AM-5,0,2,53.9,3,3,48,Product downtime last week; team lost confidence.,1
+CUS-00845,Acme Corp 845,Finance,Enterprise,AM-6,0,11,47.2,2,4,20,Billing confusion after plan change; waiting on refund.,1
+CUS-00846,Acme Corp 846,SaaS,SMB,AM-7,6,11,57.0,1,5,47,Competitor demo scheduled; pricing feels high.,1
+CUS-00847,Acme Corp 847,Retail,Enterprise,AM-8,2,4,37.8,0,5,27,Billing confusion after plan change; waiting on refund.,1
+CUS-00848,Acme Corp 848,SaaS,SMB,AM-1,32,9,32.9,2,3,4,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00849,Acme Corp 849,Retail,SMB,AM-2,24,8,30.5,4,6,12,Billing confusion after plan change; waiting on refund.,1
+CUS-00850,Acme Corp 850,Manufacturing,Mid-Market,AM-3,39,11,47.6,4,2,41,Product downtime last week; team lost confidence.,1
+CUS-00851,Acme Corp 851,Retail,SMB,AM-4,32,10,8.1,1,5,12,Billing confusion after plan change; waiting on refund.,1
+CUS-00852,Acme Corp 852,Healthcare,Mid-Market,AM-5,38,7,69.9,2,1,17,Product downtime last week; team lost confidence.,1
+CUS-00853,Acme Corp 853,Healthcare,SMB,AM-6,9,4,63.1,3,5,32,Competitor demo scheduled; pricing feels high.,1
+CUS-00854,Acme Corp 854,Healthcare,SMB,AM-7,11,7,21.5,3,8,15,Billing confusion after plan change; waiting on refund.,1
+CUS-00855,Acme Corp 855,Healthcare,Mid-Market,AM-8,33,3,42.1,0,8,8,Onboarding incomplete; champion left the company.,0
+CUS-00856,Acme Corp 856,Healthcare,SMB,AM-1,9,4,2.7,2,7,37,Competitor demo scheduled; pricing feels high.,1
+CUS-00857,Acme Corp 857,Manufacturing,Mid-Market,AM-2,2,7,77.5,0,8,41,Onboarding incomplete; champion left the company.,1
+CUS-00858,Acme Corp 858,SaaS,Mid-Market,AM-3,26,6,71.3,0,0,44,Billing confusion after plan change; waiting on refund.,1
+CUS-00859,Acme Corp 859,SaaS,SMB,AM-4,32,6,73.0,3,3,56,Competitor demo scheduled; pricing feels high.,1
+CUS-00860,Acme Corp 860,Retail,Mid-Market,AM-5,38,4,19.9,0,7,8,Billing confusion after plan change; waiting on refund.,0
+CUS-00861,Acme Corp 861,Manufacturing,SMB,AM-6,37,4,5.2,1,8,26,Billing confusion after plan change; waiting on refund.,0
+CUS-00862,Acme Corp 862,Healthcare,SMB,AM-7,4,0,9.1,2,6,14,Onboarding incomplete; champion left the company.,0
+CUS-00863,Acme Corp 863,Healthcare,SMB,AM-8,30,7,-1.9,3,9,54,Product downtime last week; team lost confidence.,1
+CUS-00864,Acme Corp 864,Manufacturing,Enterprise,AM-1,33,6,0.8,2,3,32,Billing confusion after plan change; waiting on refund.,0
+CUS-00865,Acme Corp 865,Healthcare,Mid-Market,AM-2,27,11,-3.6,0,1,6,Competitor demo scheduled; pricing feels high.,1
+CUS-00866,Acme Corp 866,Manufacturing,Mid-Market,AM-3,32,6,79.1,3,0,41,Onboarding incomplete; champion left the company.,1
+CUS-00867,Acme Corp 867,SaaS,Enterprise,AM-4,33,5,-3.3,4,6,3,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00868,Acme Corp 868,SaaS,SMB,AM-5,17,0,1.9,4,7,17,Onboarding incomplete; champion left the company.,0
+CUS-00869,Acme Corp 869,Retail,Enterprise,AM-6,1,2,64.5,3,3,43,Onboarding incomplete; champion left the company.,1
+CUS-00870,Acme Corp 870,Healthcare,Mid-Market,AM-7,18,4,42.2,2,8,30,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00871,Acme Corp 871,Manufacturing,Enterprise,AM-8,8,4,59.7,4,8,45,Billing confusion after plan change; waiting on refund.,1
+CUS-00872,Acme Corp 872,Retail,Enterprise,AM-1,4,4,46.8,2,3,34,Product downtime last week; team lost confidence.,1
+CUS-00873,Acme Corp 873,Healthcare,Enterprise,AM-2,4,4,69.4,0,2,50,Competitor demo scheduled; pricing feels high.,0
+CUS-00874,Acme Corp 874,SaaS,SMB,AM-3,27,9,47.5,4,8,34,Product downtime last week; team lost confidence.,1
+CUS-00875,Acme Corp 875,SaaS,Mid-Market,AM-4,20,1,37.0,1,7,4,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00876,Acme Corp 876,Manufacturing,Enterprise,AM-5,21,3,54.1,4,1,5,Product downtime last week; team lost confidence.,1
+CUS-00877,Acme Corp 877,Healthcare,Mid-Market,AM-6,29,1,30.3,1,2,46,Onboarding incomplete; champion left the company.,0
+CUS-00878,Acme Corp 878,Retail,SMB,AM-7,21,3,21.1,4,5,3,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00879,Acme Corp 879,Finance,Enterprise,AM-8,25,8,32.1,2,5,23,Product downtime last week; team lost confidence.,0
+CUS-00880,Acme Corp 880,Finance,SMB,AM-1,3,0,5.3,2,1,1,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00881,Acme Corp 881,Healthcare,Mid-Market,AM-2,34,4,61.7,1,10,18,Billing confusion after plan change; waiting on refund.,0
+CUS-00882,Acme Corp 882,SaaS,Mid-Market,AM-3,17,0,13.5,4,4,36,Product downtime last week; team lost confidence.,1
+CUS-00883,Acme Corp 883,Manufacturing,SMB,AM-4,6,11,3.8,0,4,11,Onboarding incomplete; champion left the company.,0
+CUS-00884,Acme Corp 884,Manufacturing,Mid-Market,AM-5,32,8,12.2,2,0,28,Onboarding incomplete; champion left the company.,1
+CUS-00885,Acme Corp 885,Healthcare,SMB,AM-6,29,2,65.8,1,9,59,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00886,Acme Corp 886,Retail,Mid-Market,AM-7,2,2,19.7,2,2,5,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00887,Acme Corp 887,SaaS,Enterprise,AM-8,7,1,51.7,1,10,4,Competitor demo scheduled; pricing feels high.,1
+CUS-00888,Acme Corp 888,Manufacturing,SMB,AM-1,0,5,67.1,3,5,17,Competitor demo scheduled; pricing feels high.,1
+CUS-00889,Acme Corp 889,Manufacturing,Mid-Market,AM-2,10,9,-3.0,1,9,49,Product downtime last week; team lost confidence.,0
+CUS-00890,Acme Corp 890,Healthcare,SMB,AM-3,3,7,58.9,0,1,24,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00891,Acme Corp 891,Retail,Enterprise,AM-4,28,10,17.7,0,1,38,Competitor demo scheduled; pricing feels high.,1
+CUS-00892,Acme Corp 892,Healthcare,Enterprise,AM-5,20,4,9.5,3,8,2,Billing confusion after plan change; waiting on refund.,0
+CUS-00893,Acme Corp 893,SaaS,SMB,AM-6,39,3,52.0,1,9,44,Feature gap vs roadmap promises; escalation requested.,0
+CUS-00894,Acme Corp 894,SaaS,Mid-Market,AM-7,29,5,71.9,1,5,4,Product downtime last week; team lost confidence.,1
+CUS-00895,Acme Corp 895,Finance,Mid-Market,AM-8,24,2,16.6,3,0,42,Onboarding incomplete; champion left the company.,1
+CUS-00896,Acme Corp 896,Retail,Mid-Market,AM-1,20,11,41.2,1,10,9,Onboarding incomplete; champion left the company.,1
+CUS-00897,Acme Corp 897,SaaS,Mid-Market,AM-2,2,2,16.1,1,4,51,Feature gap vs roadmap promises; escalation requested.,1
+CUS-00898,Acme Corp 898,SaaS,Mid-Market,AM-3,2,5,39.9,1,10,18,Product downtime last week; team lost confidence.,1
+CUS-00899,Acme Corp 899,Healthcare,Mid-Market,AM-4,24,6,46.0,1,9,11,Product downtime last week; team lost confidence.,0

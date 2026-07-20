@@ -15,6 +15,7 @@ One GitHub repository for the landing page, shipped projects, and McCombs capsto
 | `index.html` | Landing page for GitHub Pages |
 | `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
+| `projects/automated-workflows/` | XGBoost + LangGraph agents (maintenance, loan underwriting, churn) |
 | `projects/capstones/` | UT Austin McCombs AI/ML capstone projects (in progress) |
 
 Update and push from the repo root:
@@ -48,6 +49,25 @@ git push
 | Live demo | Add your URL here when you have one |
 
 **Highlights:** NBA game data, predictions, injuries, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
+
+---
+
+## Automated Workflows
+
+Predictive score → autonomous investigation → workflow action (HITL when needed). Appian-style case management and hyperautomation demos.
+
+| Project | Folder | Focus |
+| --- | --- | --- |
+| Predictive Maintenance & Procurement | [projects/automated-workflows/predictive-maintenance-agent](projects/automated-workflows/predictive-maintenance-agent) | XGBoost days-to-failure → inventory / PO / approval agent |
+| Loan Underwriting & Risk | [projects/automated-workflows/loan-underwriting-agent](projects/automated-workflows/loan-underwriting-agent) | Default risk → triager / compliance / HITL webhook |
+| Churn Savior | [projects/automated-workflows/churn-savior-agent](projects/automated-workflows/churn-savior-agent) | Churn probability → CRM / ticket analysis / retention offer |
+
+| | Link |
+| --- | --- |
+| Section index | [projects/automated-workflows](projects/automated-workflows) |
+| Browse on GitHub | [tree/main/projects/automated-workflows](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/automated-workflows) |
+
+**Highlights:** Mock LLM by default (optional OpenAI/Anthropic keys); shared thresholds and JSON case packets; continues ReneWind / EasyVisa themes into agentic workflows.
 
 ---
 
