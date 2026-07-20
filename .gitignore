@@ -15,6 +15,12 @@ __pycache__/
 # Retrainable local model artifacts (synthetic data + train.py regenerate quickly)
 projects/automated-workflows/**/models/*.joblib
 
+# Listing orchestrator local env + generated demo binaries (JSON outputs ok)
+projects/listing-orchestrator/.env
+projects/listing-orchestrator/data/demo_seed/**/*.jpg
+projects/listing-orchestrator/data/demo_seed/**/*.jpeg
+projects/listing-orchestrator/data/demo_seed/**/*.png
+
 # Build output
 dist/
 build/

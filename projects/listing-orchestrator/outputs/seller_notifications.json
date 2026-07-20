@@ -1,0 +1,105 @@
+{
+  "notify_email": null,
+  "sales": [
+    {
+      "sale_id": "shopify_sale_1",
+      "channel": "shopify",
+      "sku": "DEMO-SKU-001",
+      "title": "Demo shopify sale #1",
+      "price": 80.0,
+      "buyer_email": "buyer1@example.com",
+      "buyer_name": "Buyer 1",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.344790+00:00"
+    },
+    {
+      "sale_id": "shopify_sale_2",
+      "channel": "shopify",
+      "sku": "DEMO-SKU-002",
+      "title": "Demo shopify sale #2",
+      "price": 95.0,
+      "buyer_email": "buyer2@example.com",
+      "buyer_name": "Buyer 2",
+      "marketing_consent": false,
+      "sold_at": "2026-07-20T21:10:01.344790+00:00"
+    },
+    {
+      "sale_id": "shopify_sale_3",
+      "channel": "shopify",
+      "sku": "DEMO-SKU-003",
+      "title": "Demo shopify sale #3",
+      "price": 110.0,
+      "buyer_email": "buyer3@example.com",
+      "buyer_name": "Buyer 3",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.344790+00:00"
+    },
+    {
+      "sale_id": "ebay_sale_1",
+      "channel": "ebay",
+      "sku": "DEMO-SKU-001",
+      "title": "Demo ebay sale #1",
+      "price": 80.0,
+      "buyer_email": "buyer1@example.com",
+      "buyer_name": "Buyer 1",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.344965+00:00"
+    },
+    {
+      "sale_id": "ebay_sale_2",
+      "channel": "ebay",
+      "sku": "DEMO-SKU-002",
+      "title": "Demo ebay sale #2",
+      "price": 95.0,
+      "buyer_email": "buyer2@example.com",
+      "buyer_name": "Buyer 2",
+      "marketing_consent": false,
+      "sold_at": "2026-07-20T21:10:01.344965+00:00"
+    },
+    {
+      "sale_id": "ebay_sale_3",
+      "channel": "ebay",
+      "sku": "DEMO-SKU-003",
+      "title": "Demo ebay sale #3",
+      "price": 110.0,
+      "buyer_email": "buyer3@example.com",
+      "buyer_name": "Buyer 3",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.344965+00:00"
+    },
+    {
+      "sale_id": "etsy_sale_1",
+      "channel": "etsy",
+      "sku": "DEMO-SKU-001",
+      "title": "Demo etsy sale #1",
+      "price": 80.0,
+      "buyer_email": "buyer1@example.com",
+      "buyer_name": "Buyer 1",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.345043+00:00"
+    },
+    {
+      "sale_id": "etsy_sale_2",
+      "channel": "etsy",
+      "sku": "DEMO-SKU-002",
+      "title": "Demo etsy sale #2",
+      "price": 95.0,
+      "buyer_email": "buyer2@example.com",
+      "buyer_name": "Buyer 2",
+      "marketing_consent": false,
+      "sold_at": "2026-07-20T21:10:01.345043+00:00"
+    },
+    {
+      "sale_id": "etsy_sale_3",
+      "channel": "etsy",
+      "sku": "DEMO-SKU-003",
+      "title": "Demo etsy sale #3",
+      "price": 110.0,
+      "buyer_email": "buyer3@example.com",
+      "buyer_name": "Buyer 3",
+      "marketing_consent": true,
+      "sold_at": "2026-07-20T21:10:01.345043+00:00"
+    }
+  ],
+  "message": "9 sale(s) detected \u2014 check channel dashboards to fulfill."
+}

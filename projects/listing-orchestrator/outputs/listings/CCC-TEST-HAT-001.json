@@ -1,0 +1,47 @@
+{
+  "sku": "CCC-TEST-HAT-001",
+  "title": "Supreme Hat - black · OSFA",
+  "description": "Supreme hat in black. Condition: New. Size OSFA. Photographed in-house. Authenticity reviewed by Cozy Connoisseur Co. Independent reseller - not affiliated with Supreme. Ships carefully packed.\n\nTags: Supreme, authenticated-reseller, streetwear.",
+  "brand": "Supreme",
+  "category": "hats",
+  "condition": "New",
+  "price": 120.0,
+  "size": "OSFA",
+  "tags": [
+    "Supreme",
+    "authenticated-reseller",
+    "streetwear",
+    "hats",
+    "new"
+  ],
+  "authenticity_note": "Independent reseller - not affiliated with the brands carried. Authenticity reviewed in-house.",
+  "image_paths": [
+    "c:\\Users\\desmo\\Projects\\cozy-connoisseur-co\\data\\seed-inventory\\CCC-TEST-HAT-001\\photo_01.jpg"
+  ],
+  "vision": {
+    "brand": "Supreme",
+    "category": "hats",
+    "color": "black",
+    "garment_type": "hat",
+    "condition_guess": "New",
+    "visible_text": [
+      "photo",
+      "sku",
+      "CCC",
+      "TEST",
+      "HAT",
+      "brand",
+      "Supreme",
+      "category"
+    ],
+    "style_tags": [
+      "Supreme",
+      "authenticated-reseller",
+      "streetwear"
+    ],
+    "confidence": 0.72,
+    "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
+  },
+  "channel_overrides": {},
+  "source_dir": "c:\\Users\\desmo\\Projects\\cozy-connoisseur-co\\data\\seed-inventory\\CCC-TEST-HAT-001"
+}

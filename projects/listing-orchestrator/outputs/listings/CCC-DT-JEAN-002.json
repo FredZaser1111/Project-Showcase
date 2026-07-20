@@ -1,0 +1,52 @@
+{
+  "sku": "CCC-DT-JEAN-002",
+  "title": "Denim Tears Bottom - indigo · 32",
+  "description": "Denim Tears bottom in indigo. Condition: Lightly Used. Size 32. Photographed in-house. Authenticity reviewed by Cozy Connoisseur Co. Independent reseller - not affiliated with Denim Tears. Ships carefully packed.\n\nTags: Denim Tears, authenticated-reseller, denim-tears, jeans, streetwear.",
+  "brand": "Denim Tears",
+  "category": "bottoms",
+  "condition": "Lightly Used",
+  "price": 220.0,
+  "size": "32",
+  "tags": [
+    "Denim Tears",
+    "authenticated-reseller",
+    "denim-tears",
+    "jeans",
+    "streetwear",
+    "bottoms",
+    "lightly used"
+  ],
+  "authenticity_note": "Independent reseller - not affiliated with the brands carried. Authenticity reviewed in-house.",
+  "image_paths": [
+    "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002\\photo_01.jpg",
+    "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002\\photo_02.jpg"
+  ],
+  "vision": {
+    "brand": "Denim Tears",
+    "category": "bottoms",
+    "color": "indigo",
+    "garment_type": "bottom",
+    "condition_guess": "Lightly Used",
+    "visible_text": [
+      "photo",
+      "photo",
+      "sku",
+      "CCC",
+      "JEAN",
+      "brand",
+      "Denim",
+      "Tears"
+    ],
+    "style_tags": [
+      "Denim Tears",
+      "authenticated-reseller",
+      "denim-tears",
+      "jeans",
+      "streetwear"
+    ],
+    "confidence": 0.72,
+    "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
+  },
+  "channel_overrides": {},
+  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002"
+}

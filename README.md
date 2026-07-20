@@ -16,6 +16,7 @@ One GitHub repository for the landing page, shipped projects, and McCombs capsto
 | `projects/seo-optimizer/` | SEO Optimizer (Engineering Content Generator — scripts + docs; frozen `.exe` stays local) |
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
 | `projects/automated-workflows/` | XGBoost + LangGraph agents (maintenance, loan underwriting, churn) |
+| `projects/listing-orchestrator/` | AI listing workflow → Shopify / eBay / Etsy (Cozy Connoisseur production path) |
 | `projects/capstones/` | UT Austin McCombs AI/ML capstone projects (in progress) |
 
 Update and push from the repo root:
@@ -49,6 +50,20 @@ git push
 | Live demo | Add your URL here when you have one |
 
 **Highlights:** NBA game data, predictions, injuries, Flask web UI — see `projects/nba-z-lock/README.md` and `QUICKSTART.md`.
+
+---
+
+## Listing Orchestrator
+
+Shipped AI commerce workflow used by **Cozy Connoisseur Co.**: seed photos → vision → listing copy → publish to **Shopify / eBay / Etsy** → sold notify → consent-aware buyer contact log.
+
+| | Link |
+| --- | --- |
+| Code in this repo | [projects/listing-orchestrator](projects/listing-orchestrator) |
+| Workflow mockup (Pages) | [listing-orchestrator/demo](https://fredzaser1111.github.io/Project-Showcase/projects/listing-orchestrator/demo/) |
+| Browse on GitHub | [tree/main/projects/listing-orchestrator](https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/listing-orchestrator) |
+
+**Highlights:** Official marketplace APIs only (low ToS risk); mock mode for recruiters; production seed packs from the private Cozy `/studio` UI.
 
 ---
 

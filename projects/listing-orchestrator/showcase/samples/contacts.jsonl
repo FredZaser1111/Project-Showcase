@@ -1,0 +1,9 @@
+﻿{"email": "buyer1@example.com", "name": "Buyer 1", "channel": "shopify", "sku": "DEMO-SKU-001", "sale_id": "shopify_sale_1", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.344790+00:00", "ok_to_blast": true}
+{"email": "buyer2@example.com", "name": "Buyer 2", "channel": "shopify", "sku": "DEMO-SKU-002", "sale_id": "shopify_sale_2", "marketing_consent": false, "sold_at": "2026-07-20T21:10:01.344790+00:00", "ok_to_blast": false}
+{"email": "buyer3@example.com", "name": "Buyer 3", "channel": "shopify", "sku": "DEMO-SKU-003", "sale_id": "shopify_sale_3", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.344790+00:00", "ok_to_blast": true}
+{"email": "buyer1@example.com", "name": "Buyer 1", "channel": "ebay", "sku": "DEMO-SKU-001", "sale_id": "ebay_sale_1", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.344965+00:00", "ok_to_blast": true}
+{"email": "buyer2@example.com", "name": "Buyer 2", "channel": "ebay", "sku": "DEMO-SKU-002", "sale_id": "ebay_sale_2", "marketing_consent": false, "sold_at": "2026-07-20T21:10:01.344965+00:00", "ok_to_blast": false}
+{"email": "buyer3@example.com", "name": "Buyer 3", "channel": "ebay", "sku": "DEMO-SKU-003", "sale_id": "ebay_sale_3", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.344965+00:00", "ok_to_blast": true}
+{"email": "buyer1@example.com", "name": "Buyer 1", "channel": "etsy", "sku": "DEMO-SKU-001", "sale_id": "etsy_sale_1", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.345043+00:00", "ok_to_blast": true}
+{"email": "buyer2@example.com", "name": "Buyer 2", "channel": "etsy", "sku": "DEMO-SKU-002", "sale_id": "etsy_sale_2", "marketing_consent": false, "sold_at": "2026-07-20T21:10:01.345043+00:00", "ok_to_blast": false}
+{"email": "buyer3@example.com", "name": "Buyer 3", "channel": "etsy", "sku": "DEMO-SKU-003", "sale_id": "etsy_sale_3", "marketing_consent": true, "sold_at": "2026-07-20T21:10:01.345043+00:00", "ok_to_blast": true}

@@ -1,0 +1,50 @@
+{
+  "sku": "CCC-NK-TEE-003",
+  "title": "Nike Top - cream · L",
+  "description": "Nike top in cream. Condition: Like New. Size L. Photographed in-house. Authenticity reviewed by Cozy Connoisseur Co. Independent reseller - not affiliated with Nike. Ships carefully packed.\n\nTags: authenticated-reseller, nike, streetwear, tee.",
+  "brand": "Nike",
+  "category": "tops",
+  "condition": "Like New",
+  "price": 64.0,
+  "size": "L",
+  "tags": [
+    "authenticated-reseller",
+    "nike",
+    "streetwear",
+    "tee",
+    "tops",
+    "like new"
+  ],
+  "authenticity_note": "Independent reseller - not affiliated with the brands carried. Authenticity reviewed in-house.",
+  "image_paths": [
+    "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003\\photo_01.jpg",
+    "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003\\photo_02.jpg"
+  ],
+  "vision": {
+    "brand": "Nike",
+    "category": "tops",
+    "color": "cream",
+    "garment_type": "top",
+    "condition_guess": "Like New",
+    "visible_text": [
+      "photo",
+      "photo",
+      "sku",
+      "CCC",
+      "TEE",
+      "brand",
+      "Nike",
+      "category"
+    ],
+    "style_tags": [
+      "authenticated-reseller",
+      "nike",
+      "streetwear",
+      "tee"
+    ],
+    "confidence": 0.72,
+    "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
+  },
+  "channel_overrides": {},
+  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003"
+}
