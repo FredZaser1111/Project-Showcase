@@ -111,4 +111,8 @@ Create `projects/<short-name>/`, add a README, and add a card to `index.html` pl
 
 ## License
 
-Add a `LICENSE` file if you want others to know how they may use this content.
+**Proprietary — All Rights Reserved.** See [`LICENSE`](LICENSE).
+
+You may view this portfolio on GitHub for evaluation (e.g. recruiting). Copying,
+reusing, or redistributing the code or materials requires prior express written
+consent from the copyright holder (Zed Fraser / FredZaser1111).
