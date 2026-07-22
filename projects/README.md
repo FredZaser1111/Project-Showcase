@@ -5,6 +5,7 @@
 | `seo-optimizer/` | SEO Optimizer (shipped) |
 | `nba-z-lock/` | NBA Z Lock |
 | `automated-workflows/` | XGBoost + LangGraph automated workflows (maintenance, loan, churn) |
+| `parts-inventory-api/` | Spring Boot + JDBC + Postgres spare-parts inventory API |
 | `listing-orchestrator/` | AI listing → Shopify / eBay / Etsy (Cozy Connoisseur) |
 | `capstones/` | UT Austin McCombs AI/ML capstones (in progress) |
 

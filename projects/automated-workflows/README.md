@@ -10,6 +10,8 @@ Each demo trains a small **XGBoost** model on synthetic data, then runs a **Lang
 | [loan-underwriting-agent](loan-underwriting-agent/) | Banking / risk | Loan default probability | Triager → compliance investigator → HITL webhook bridge |
 | [churn-savior-agent](churn-savior-agent/) | CRM / retention | Customer churn probability | CRM lookup → ticket analysis → tailored offer / escalation |
 
+**Related DBMS / API demo:** [parts-inventory-api](../parts-inventory-api/) — Spring Boot + JDBC + PostgreSQL spare-parts service. The maintenance agent can call it over REST to **append** stock movements, purchase orders, and approval-queue rows (falls back to mock when the API is down).
+
 ## Shared pattern
 
 ```
@@ -31,6 +33,15 @@ python run_agent.py
 ```
 
 Outputs land in each project's `outputs/` folder. No API key required.
+
+### Optional: live spare-parts inventory (maintenance agent)
+
+```bash
+cd projects/parts-inventory-api
+docker compose up -d
+mvn spring-boot:run
+# then run predictive-maintenance-agent with PARTS_API_BASE_URL=http://localhost:8080
+```
 
 ## Portfolio links
 

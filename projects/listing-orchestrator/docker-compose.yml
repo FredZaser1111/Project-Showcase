@@ -1,0 +1,18 @@
+# Optional Phase 2 — local PostgreSQL for inventory DBMS portfolio demos.
+# Phase 1 uses CSV ledger; start this when ready to migrate append_ledger.
+
+services:
+  inventory-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: cozy
+      POSTGRES_PASSWORD: cozy_dev
+      POSTGRES_DB: cozy_inventory
+    ports:
+      - "5432:5432"
+    volumes:
+      - inventory_pg:/var/lib/postgresql/data
+      - ./schema/inventory.sql:/docker-entrypoint-initdb.d/01_inventory.sql:ro
+
+volumes:
+  inventory_pg:

@@ -17,7 +17,7 @@ from shared.llm import complete  # noqa: E402
 from shared.schemas import MaintenanceCase  # noqa: E402
 from shared.thresholds import FAILURE_DAYS_THRESHOLD  # noqa: E402
 
-from tools import check_inventory, enqueue_approval, recommend_part  # noqa: E402
+from tools import check_inventory, recommend_part, reserve_or_order  # noqa: E402
 
 MODEL_PATH = ROOT / "models" / "days_to_failure.joblib"
 DATA_PATH = ROOT / "data" / "sensors.csv"
@@ -86,32 +86,75 @@ def draft_po_node(state: MaintState) -> MaintState:
 
 
 def approval_node(state: MaintState) -> MaintState:
+    """Persist reserve or PO via parts-inventory-api (JDBC append) when available."""
+    case_id = f"PM-{state['asset_id']}"
+    workflow = reserve_or_order(
+        state["part_key"],
+        qty=1,
+        case_id=case_id,
+        asset_id=state["asset_id"],
+        reason=f"Predicted failure in {state['days_to_failure']} days",
+    )
+    parts_in_stock = bool(workflow.get("partsInStock", state["inventory"].get("in_stock")))
+    decision = str(workflow.get("decision") or (
+        "reserve_and_schedule_pm" if parts_in_stock else "expedite_po_pending_approval"
+    ))
     po = dict(state["purchase_order"])
-    queue_id = enqueue_approval(po)
-    parts_in_stock = bool(state["inventory"].get("in_stock"))
-    decision = "reserve_and_schedule_pm" if parts_in_stock else "expedite_po_pending_approval"
+    api_po = workflow.get("purchaseOrder")
+    if isinstance(api_po, dict):
+        # Normalize Java camelCase fields into the case packet
+        po.update(
+            {
+                "sku": api_po.get("sku", po.get("sku")),
+                "supplier": api_po.get("supplier", po.get("supplier")),
+                "qty": api_po.get("qty", po.get("qty")),
+                "unit_cost": float(api_po["unitCost"]) if api_po.get("unitCost") is not None else po.get("unit_cost"),
+                "status": api_po.get("status", "pending_manager_approval"),
+                "po_id": str(api_po.get("poId")) if api_po.get("poId") else None,
+                "narrative": api_po.get("narrative") or po.get("narrative"),
+            }
+        )
+    queue_id = workflow.get("approvalQueueId")
+    if queue_id:
+        po["approval_queue_id"] = queue_id
+        po["status"] = po.get("status") or "pending_manager_approval"
+    elif parts_in_stock:
+        po["status"] = "reserved_from_stock"
+        po["approval_queue_id"] = None
+
+    inventory = workflow.get("inventory") if isinstance(workflow.get("inventory"), dict) else state["inventory"]
+    actions = [
+        "scored_days_to_failure",
+        "checked_inventory",
+        "drafted_purchase_order",
+        "appended_inventory_workflow",
+    ]
+    if queue_id:
+        actions.append("enqueued_manager_approval")
+
     case = MaintenanceCase(
         project="predictive-maintenance-agent",
-        case_id=f"PM-{state['asset_id']}",
+        case_id=case_id,
         asset_id=state["asset_id"],
         score=state["days_to_failure"],
         days_to_failure=state["days_to_failure"],
         decision=decision,
         summary=state.get("summary", ""),
-        actions=[
-            "scored_days_to_failure",
-            "checked_inventory",
-            "drafted_purchase_order",
-            "enqueued_manager_approval",
-        ],
+        actions=actions,
         parts_in_stock=parts_in_stock,
         purchase_order=po,
         approval_queue_id=queue_id,
-        hitl_required=True,
+        hitl_required=bool(queue_id) or not parts_in_stock,
         llm_mode=state.get("llm_mode", "mock"),  # type: ignore[arg-type]
-        artifacts={"inventory": state["inventory"], "features": state["features"]},
+        artifacts={
+            "inventory": inventory,
+            "features": state["features"],
+            "workflow_event": workflow.get("eventType"),
+            "inventory_source": inventory.get("source") if isinstance(inventory, dict) else workflow.get("source"),
+            "movement": workflow.get("movement"),
+        },
     )
-    return {**state, "purchase_order": po, "approval_queue_id": queue_id, "case": case.model_dump()}
+    return {**state, "purchase_order": po, "approval_queue_id": queue_id or None, "case": case.model_dump()}
 
 
 def should_act(state: MaintState) -> str:

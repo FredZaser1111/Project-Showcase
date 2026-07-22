@@ -21,6 +21,16 @@
     "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002\\photo_01.jpg",
     "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002\\photo_02.jpg"
   ],
+  "image_roles": [
+    {
+      "file": "photo_01.jpg",
+      "role": "product"
+    },
+    {
+      "file": "photo_02.jpg",
+      "role": "product"
+    }
+  ],
   "vision": {
     "brand": "Denim Tears",
     "category": "bottoms",
@@ -48,5 +58,6 @@
     "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
   },
   "channel_overrides": {},
-  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002"
+  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-DT-JEAN-002",
+  "item_id": "e7a6fff3-79c7-434a-a221-600b082984ef"
 }

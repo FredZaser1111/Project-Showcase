@@ -36,9 +36,11 @@ class CanonicalListing(BaseModel):
         "Independent reseller — not affiliated with the brands carried. Authenticity reviewed in-house."
     )
     image_paths: list[str] = Field(default_factory=list)
+    image_roles: list[dict[str, str]] = Field(default_factory=list)
     vision: Optional[VisionAttributes] = None
     channel_overrides: dict[str, dict[str, Any]] = Field(default_factory=dict)
     source_dir: str = ""
+    item_id: str = ""
 
 
 class PublishReceipt(BaseModel):

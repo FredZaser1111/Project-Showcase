@@ -35,6 +35,7 @@
       "scored_days_to_failure",
       "checked_inventory",
       "drafted_purchase_order",
+      "appended_inventory_workflow",
       "enqueued_manager_approval"
     ],
     "artifacts": {
@@ -45,7 +46,8 @@
         "qty": 0,
         "unit_cost": 2400.0,
         "supplier": "Helix Parts Co",
-        "in_stock": false
+        "in_stock": false,
+        "source": "mock"
       },
       "features": {
         "vibration_rms": 7.634,
@@ -53,7 +55,10 @@
         "hours_run": 13889.2,
         "oil_pressure_psi": 52.35,
         "motor_amps": 24.37
-      }
+      },
+      "workflow_event": "po_drafted",
+      "inventory_source": "mock",
+      "movement": null
     },
     "hitl_required": true,
     "llm_mode": "mock",
@@ -69,8 +74,9 @@
       "unit_cost": 2400.0,
       "in_stock_at_draft": false,
       "narrative": "Purchase Order DRAFT for ASSET-0387\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 1.84 days (threshold 7). Vibration RMS=7.634.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
-      "approval_queue_id": "APPR-1001",
-      "status": "pending_manager_approval"
+      "status": "pending_manager_approval",
+      "po_id": null,
+      "approval_queue_id": "APPR-1001"
     },
     "approval_queue_id": "APPR-1001"
   },
@@ -84,6 +90,7 @@
       "scored_days_to_failure",
       "checked_inventory",
       "drafted_purchase_order",
+      "appended_inventory_workflow",
       "enqueued_manager_approval"
     ],
     "artifacts": {
@@ -94,7 +101,8 @@
         "qty": 0,
         "unit_cost": 2400.0,
         "supplier": "Helix Parts Co",
-        "in_stock": false
+        "in_stock": false,
+        "source": "mock"
       },
       "features": {
         "vibration_rms": 7.689,
@@ -102,7 +110,10 @@
         "hours_run": 17725.5,
         "oil_pressure_psi": 66.89,
         "motor_amps": 25.99
-      }
+      },
+      "workflow_event": "po_drafted",
+      "inventory_source": "mock",
+      "movement": null
     },
     "hitl_required": true,
     "llm_mode": "mock",
@@ -118,8 +129,9 @@
       "unit_cost": 2400.0,
       "in_stock_at_draft": false,
       "narrative": "Purchase Order DRAFT for ASSET-0136\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.689.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
-      "approval_queue_id": "APPR-1002",
-      "status": "pending_manager_approval"
+      "status": "pending_manager_approval",
+      "po_id": null,
+      "approval_queue_id": "APPR-1002"
     },
     "approval_queue_id": "APPR-1002"
   },
@@ -133,6 +145,7 @@
       "scored_days_to_failure",
       "checked_inventory",
       "drafted_purchase_order",
+      "appended_inventory_workflow",
       "enqueued_manager_approval"
     ],
     "artifacts": {
@@ -143,7 +156,8 @@
         "qty": 0,
         "unit_cost": 2400.0,
         "supplier": "Helix Parts Co",
-        "in_stock": false
+        "in_stock": false,
+        "source": "mock"
       },
       "features": {
         "vibration_rms": 7.554,
@@ -151,7 +165,10 @@
         "hours_run": 19425.6,
         "oil_pressure_psi": 53.42,
         "motor_amps": 10.14
-      }
+      },
+      "workflow_event": "po_drafted",
+      "inventory_source": "mock",
+      "movement": null
     },
     "hitl_required": true,
     "llm_mode": "mock",
@@ -167,8 +184,9 @@
       "unit_cost": 2400.0,
       "in_stock_at_draft": false,
       "narrative": "Purchase Order DRAFT for ASSET-0467\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.23 days (threshold 7). Vibration RMS=7.554.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
-      "approval_queue_id": "APPR-1003",
-      "status": "pending_manager_approval"
+      "status": "pending_manager_approval",
+      "po_id": null,
+      "approval_queue_id": "APPR-1003"
     },
     "approval_queue_id": "APPR-1003"
   },
@@ -182,6 +200,7 @@
       "scored_days_to_failure",
       "checked_inventory",
       "drafted_purchase_order",
+      "appended_inventory_workflow",
       "enqueued_manager_approval"
     ],
     "artifacts": {
@@ -192,7 +211,8 @@
         "qty": 0,
         "unit_cost": 2400.0,
         "supplier": "Helix Parts Co",
-        "in_stock": false
+        "in_stock": false,
+        "source": "mock"
       },
       "features": {
         "vibration_rms": 7.9,
@@ -200,7 +220,10 @@
         "hours_run": 18540.7,
         "oil_pressure_psi": 61.51,
         "motor_amps": 37.03
-      }
+      },
+      "workflow_event": "po_drafted",
+      "inventory_source": "mock",
+      "movement": null
     },
     "hitl_required": true,
     "llm_mode": "mock",
@@ -216,8 +239,9 @@
       "unit_cost": 2400.0,
       "in_stock_at_draft": false,
       "narrative": "Purchase Order DRAFT for ASSET-0385\nSupplier: Helix Parts Co\nSKU: VFD-900 x 1 @ $2400.00\nReason: Predictive model estimates failure in 0.0 days (threshold 7). Vibration RMS=7.9.\nStock status: OUT OF STOCK \u2014 expedite order.\nTerms: Net 30, ship to Warehouse Dock B, reference predictive-maintenance case.",
-      "approval_queue_id": "APPR-1004",
-      "status": "pending_manager_approval"
+      "status": "pending_manager_approval",
+      "po_id": null,
+      "approval_queue_id": "APPR-1004"
     },
     "approval_queue_id": "APPR-1004"
   }

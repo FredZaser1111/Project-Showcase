@@ -20,6 +20,16 @@
     "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003\\photo_01.jpg",
     "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003\\photo_02.jpg"
   ],
+  "image_roles": [
+    {
+      "file": "photo_01.jpg",
+      "role": "product"
+    },
+    {
+      "file": "photo_02.jpg",
+      "role": "product"
+    }
+  ],
   "vision": {
     "brand": "Nike",
     "category": "tops",
@@ -46,5 +56,6 @@
     "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
   },
   "channel_overrides": {},
-  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003"
+  "source_dir": "C:\\Users\\desmo\\Projects\\Project-Showcase\\projects\\listing-orchestrator\\data\\demo_seed\\CCC-NK-TEE-003",
+  "item_id": "43297392-dfd3-48cc-bd2c-8c5daf34cdec"
 }

@@ -19,6 +19,8 @@ class ShopifyAdapter:
 
     @property
     def live(self) -> bool:
+        if os.getenv("ORCHESTRATOR_FORCE_MOCK", "").strip().lower() in {"1", "true", "yes"}:
+            return False
         return bool(self.domain and self.token)
 
     def publish(self, listing: CanonicalListing) -> PublishReceipt:

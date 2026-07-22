@@ -6,6 +6,8 @@ Shipped AI commerce workflow: **seed photos → vision attributes → listing co
 
 **Channels (official APIs only):** Shopify, eBay, Etsy — chosen for feasibility and low ToS/ban risk. No Depop/Facebook Marketplace scrapers.
 
+Official APIs only — full CLI + account setup: **[SETUP.md](SETUP.md)** (Etsy first, then eBay). Short Etsy-only notes: [SETUP_ETSY.md](SETUP_ETSY.md).
+
 ## Recruiter demo (mock results)
 
 | | Link |

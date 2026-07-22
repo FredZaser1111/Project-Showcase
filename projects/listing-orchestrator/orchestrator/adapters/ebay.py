@@ -24,6 +24,8 @@ class EbayAdapter:
 
     @property
     def live(self) -> bool:
+        if os.getenv("ORCHESTRATOR_FORCE_MOCK", "").strip().lower() in {"1", "true", "yes"}:
+            return False
         return bool(self.token)
 
     def publish(self, listing: CanonicalListing) -> PublishReceipt:

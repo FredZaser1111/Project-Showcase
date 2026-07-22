@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: parts-inventory-api
+  datasource:
+    url: jdbc:postgresql://localhost:5433/parts_inventory
+    username: parts
+    password: parts_dev
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    com.showcase.partsinventory: INFO

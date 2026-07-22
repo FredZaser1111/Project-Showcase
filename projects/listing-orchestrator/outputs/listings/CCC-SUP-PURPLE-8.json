@@ -1,0 +1,60 @@
+{
+  "sku": "CCC-SUP-PURPLE-8",
+  "title": "Supreme Script Logo New Era Fitted Purple - 8",
+  "description": "Supreme hat in purple. Condition: New. Size 8. Photographed in-house. Authenticity reviewed by Cozy Connoisseur Co. Independent reseller - not affiliated with Supreme. Ships carefully packed.\n\nTags: Supreme, authenticated-reseller, fitted, new-era, script-logo, streetwear.",
+  "brand": "Supreme",
+  "category": "hats",
+  "condition": "New",
+  "price": 220.0,
+  "size": "8",
+  "tags": [
+    "Supreme",
+    "authenticated-reseller",
+    "fitted",
+    "new-era",
+    "script-logo",
+    "streetwear",
+    "hats",
+    "new"
+  ],
+  "authenticity_note": "Independent reseller - not affiliated with Supreme. Authenticity reviewed in-house.",
+  "image_paths": [
+    "c:\\Users\\desmo\\Projects\\cozy-connoisseur-co\\data\\seed-inventory\\CCC-SUP-PURPLE-8\\hero_01.jpg"
+  ],
+  "image_roles": [
+    {
+      "file": "hero_01.jpg",
+      "role": "hero_graphic"
+    }
+  ],
+  "vision": {
+    "brand": "Supreme",
+    "category": "hats",
+    "color": "purple",
+    "garment_type": "hat",
+    "condition_guess": "New",
+    "visible_text": [
+      "hero",
+      "item",
+      "abcd",
+      "sku",
+      "CCC",
+      "SUP",
+      "PURPLE",
+      "brand"
+    ],
+    "style_tags": [
+      "Supreme",
+      "authenticated-reseller",
+      "fitted",
+      "new-era",
+      "script-logo",
+      "streetwear"
+    ],
+    "confidence": 0.72,
+    "notes": "Mock vision from filename/meta (set OPENAI_API_KEY for live vision)."
+  },
+  "channel_overrides": {},
+  "source_dir": "c:\\Users\\desmo\\Projects\\cozy-connoisseur-co\\data\\seed-inventory\\CCC-SUP-PURPLE-8",
+  "item_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+}

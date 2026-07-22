@@ -1,12 +1,16 @@
-"""Create demo seed packs + run full mock pipeline."""
+"""Create demo seed packs + run full mock pipeline (never hits live APIs)."""
 
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+
+# Recruiter / CI demo path: ignore local .env marketplace tokens.
+os.environ["ORCHESTRATOR_FORCE_MOCK"] = "1"
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
