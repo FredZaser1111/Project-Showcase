@@ -33,7 +33,18 @@ set PARTS_API_BASE_URL=http://localhost:8080
 python run_agent.py
 ```
 
+Open HITL inbox: http://localhost:8080/inbox
+
 If the API is unreachable, tools fall back to the mock catalog automatically. Set `PARTS_API_BASE_URL=mock` to force mock mode.
+
+Cases are written to `outputs/maintenance_cases.json` and, when the API is up, upserted into Postgres `agent_cases`.
+
+## Eval
+
+```bash
+cd projects/automated-workflows
+python eval_agents.py
+```
 
 ## Flow
 

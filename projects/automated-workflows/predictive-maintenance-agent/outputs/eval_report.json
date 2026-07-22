@@ -1,0 +1,65 @@
+{
+  "suite": "predictive-maintenance",
+  "total": 7,
+  "passed": 7,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "id": "rec-high-vibration",
+      "ok": true,
+      "got": "vfd-module",
+      "expected": "vfd-module"
+    },
+    {
+      "id": "rec-mid-vibration",
+      "ok": true,
+      "got": "bearing-kit-b",
+      "expected": "bearing-kit-b"
+    },
+    {
+      "id": "rec-even-asset",
+      "ok": true,
+      "got": "bearing-kit-a",
+      "expected": "bearing-kit-a"
+    },
+    {
+      "id": "gate-act",
+      "ok": true,
+      "got": "inventory",
+      "expected": "inventory"
+    },
+    {
+      "id": "gate-skip",
+      "ok": true,
+      "got": "skip",
+      "expected": "skip"
+    },
+    {
+      "id": "workflow-in-stock",
+      "ok": true,
+      "got": {
+        "decision": "reserve_and_schedule_pm",
+        "partsInStock": true,
+        "source": "mock"
+      },
+      "expected": {
+        "decision": "reserve_and_schedule_pm",
+        "partsInStock": true
+      }
+    },
+    {
+      "id": "workflow-oos",
+      "ok": true,
+      "got": {
+        "decision": "expedite_po_pending_approval",
+        "partsInStock": false,
+        "source": "mock"
+      },
+      "expected": {
+        "decision": "expedite_po_pending_approval",
+        "partsInStock": false
+      }
+    }
+  ]
+}

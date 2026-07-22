@@ -71,6 +71,13 @@ public class PurchaseOrderRepository {
         return jdbc.query(sql, (rs, rowNum) -> map(rs));
     }
 
+    public void updateStatus(UUID poId, String status) {
+        String sql = "UPDATE purchase_orders SET status = :status WHERE po_id = :poId";
+        jdbc.update(sql, new MapSqlParameterSource()
+                .addValue("poId", poId)
+                .addValue("status", status));
+    }
+
     private static PurchaseOrder map(java.sql.ResultSet rs) throws java.sql.SQLException {
         Timestamp ts = rs.getTimestamp("created_at");
         return new PurchaseOrder(

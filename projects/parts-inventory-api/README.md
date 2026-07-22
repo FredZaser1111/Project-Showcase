@@ -63,13 +63,35 @@ curl http://localhost:8080/api/purchase-orders
 
 | Method | Path | Behavior |
 | --- | --- | --- |
+| GET | `/` or `/inbox` | HITL approval inbox (Thymeleaf) |
 | GET | `/api/health` | DB ping |
 | GET | `/api/parts` | Parts + on-hand qty |
 | GET | `/api/parts/{partKey}` | Single part (`in_stock` derived) |
+| GET | `/api/views/parts-on-hand` | SQL view `v_parts_on_hand` |
 | POST | `/api/movements` | Append RECEIPT / RESERVE / ISSUE / ADJUST |
 | GET | `/api/movements?partKey=` | Append-only ledger history |
 | POST | `/api/workflows/reserve-or-order` | Automation: reserve if stock else PO + approval |
 | GET | `/api/purchase-orders` | Open POs |
+| GET | `/api/approvals` | Open HITL approvals (`v_open_approvals`) |
+| POST | `/api/webhooks/po-approved` | Approve/reject PO; optional RECEIPT append |
+| POST | `/api/cases` | Upsert agent case packet (`agent_cases`) |
+| GET | `/api/cases` | Recent durable cases |
+
+### Approve a PO (webhook)
+
+```bash
+curl -s -X POST http://localhost:8080/api/webhooks/po-approved ^
+  -H "Content-Type: application/json" ^
+  -d "{\"approvalId\":\"APPR-1001\",\"decision\":\"approved\",\"receiveStock\":true}"
+```
+
+### Existing Postgres volume upgrade
+
+If Compose data volume already exists, apply views/cases once:
+
+```bash
+docker compose exec -T parts-db psql -U parts -d parts_inventory < schema/02_views_and_cases.sql
+```
 
 ## Seed catalog
 
@@ -82,7 +104,7 @@ Matches the maintenance agent mock:
 | motor-seal | MSL-44 | 3 | Helix Parts Co |
 | vfd-module | VFD-900 | 0 | Helix Parts Co |
 
-Schema: [`schema/parts_inventory.sql`](schema/parts_inventory.sql) (Postgres primary; MariaDB type notes in comments).
+Schema: [`schema/parts_inventory.sql`](schema/parts_inventory.sql). MariaDB type mapping: [`MARIADB.md`](MARIADB.md).
 
 ## Wire the Python agent
 
@@ -110,8 +132,9 @@ Env knobs:
 | Relational DB / SQL / Postgres (MariaDB-friendly) | `schema/parts_inventory.sql` + JDBC repositories |
 | API integrations (REST / JDBC) | Spring REST + `NamedParameterJdbcTemplate` |
 | Automate complex workflows | `POST /api/workflows/reserve-or-order` + LangGraph agent |
-| HITL / production ops | `approval_queue` + `workflow_events` append audit |
+| HITL / production ops | `approval_queue` + `/inbox` + `POST /api/webhooks/po-approved` |
 | AI-assisted process | Predictive score gates the inventory workflow |
+| Durable case memory | `agent_cases` table + `POST /api/cases` from the agent |
 
 ## Config
 

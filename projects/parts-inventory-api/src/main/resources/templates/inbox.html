@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title th:text="${title}">HITL Approval Inbox</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222c;
+      --border: #2d3a47;
+      --text: #e8eef4;
+      --muted: #8b9bab;
+      --accent: #3ecf8e;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+    h1 { font-size: 1.6rem; margin: 0 0 0.35rem; }
+    .lede { color: var(--muted); margin: 0 0 1.5rem; }
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); }
+    th, td { text-align: left; padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+    th { color: var(--muted); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .mono { font-family: ui-monospace, Consolas, monospace; font-size: 0.85rem; }
+    .empty { color: var(--muted); padding: 1.5rem; border: 1px dashed var(--border); }
+    code { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>HITL Approval Inbox</h1>
+    <p class="lede">
+      Open purchase-order approvals from <code>v_open_approvals</code>.
+      Decide via <code>POST /api/webhooks/po-approved</code>.
+    </p>
+
+    <div th:if="${#lists.isEmpty(approvals)}" class="empty">
+      No pending approvals. Trigger an out-of-stock reserve-or-order workflow to enqueue one.
+    </div>
+
+    <table th:if="${!#lists.isEmpty(approvals)}">
+      <thead>
+        <tr>
+          <th>Approval</th>
+          <th>Case</th>
+          <th>SKU</th>
+          <th>Qty</th>
+          <th>Supplier</th>
+          <th>Asset</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="a : ${approvals}">
+          <td class="mono" th:text="${a.approvalId}">APPR-1001</td>
+          <td class="mono" th:text="${a.caseId}">PM-ASSET</td>
+          <td class="mono" th:text="${a.sku}">SKU</td>
+          <td th:text="${a.qty}">1</td>
+          <td th:text="${a.supplier}">Supplier</td>
+          <td class="mono" th:text="${a.assetId}">ASSET</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

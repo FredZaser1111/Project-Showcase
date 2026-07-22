@@ -17,7 +17,7 @@ from shared.llm import complete  # noqa: E402
 from shared.schemas import MaintenanceCase  # noqa: E402
 from shared.thresholds import FAILURE_DAYS_THRESHOLD  # noqa: E402
 
-from tools import check_inventory, recommend_part, reserve_or_order  # noqa: E402
+from tools import check_inventory, persist_case, recommend_part, reserve_or_order  # noqa: E402
 
 MODEL_PATH = ROOT / "models" / "days_to_failure.joblib"
 DATA_PATH = ROOT / "data" / "sensors.csv"
@@ -223,7 +223,12 @@ def main() -> None:
             "features": {f: float(row[f]) for f in features},
         }
         result = graph.invoke(state)
-        cases.append(result["case"])
+        case = result["case"]
+        cases.append(case)
+        if persist_case(case):
+            case.setdefault("artifacts", {})
+            if isinstance(case["artifacts"], dict):
+                case["artifacts"]["persisted_to_parts_api"] = True
 
     out_path = OUT_DIR / "maintenance_cases.json"
     out_path.write_text(json.dumps(cases, indent=2), encoding="utf-8")

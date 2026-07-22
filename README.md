@@ -17,6 +17,7 @@ One GitHub repository for the landing page, shipped projects, and McCombs capsto
 | `projects/nba-z-lock/` | NBA Z Lock (Python app; see its `README.md`) |
 | `projects/automated-workflows/` | XGBoost + LangGraph agents (maintenance, loan underwriting, churn) |
 | `projects/parts-inventory-api/` | Spring Boot + JDBC + Postgres spare-parts inventory (append workflows) |
+| `projects/CAREER_TRACK.md` | Active career track (Track C Phase 1 notes) |
 | `projects/listing-orchestrator/` | AI listing workflow → Shopify / eBay / Etsy (Cozy Connoisseur production path) |
 | `projects/capstones/` | UT Austin McCombs AI/ML capstone projects (in progress) |
 

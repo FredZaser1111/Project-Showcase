@@ -34,6 +34,16 @@ python run_agent.py
 
 Outputs land in each project's `outputs/` folder. No API key required.
 
+### Eval harness (maintenance — Track C Phase 1)
+
+```bash
+cd projects/automated-workflows
+# uses shared .venv if present
+.venv\Scripts\python.exe eval_agents.py
+```
+
+Writes `predictive-maintenance-agent/outputs/eval_report.json` (part recommendation, threshold gate, reserve-or-order decisions). Exit code nonzero on failures.
+
 ### Optional: live spare-parts inventory (maintenance agent)
 
 ```bash

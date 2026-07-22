@@ -1,0 +1,51 @@
+[
+  {
+    "id": "rec-high-vibration",
+    "kind": "recommend_part",
+    "asset_id": "ASSET-1001",
+    "vibration_rms": 6.2,
+    "expected_part": "vfd-module"
+  },
+  {
+    "id": "rec-mid-vibration",
+    "kind": "recommend_part",
+    "asset_id": "ASSET-1002",
+    "vibration_rms": 4.0,
+    "expected_part": "bearing-kit-b"
+  },
+  {
+    "id": "rec-even-asset",
+    "kind": "recommend_part",
+    "asset_id": "ASSET-0200",
+    "vibration_rms": 2.0,
+    "expected_part": "bearing-kit-a"
+  },
+  {
+    "id": "gate-act",
+    "kind": "threshold_gate",
+    "days_to_failure": 3.5,
+    "expected_route": "inventory"
+  },
+  {
+    "id": "gate-skip",
+    "kind": "threshold_gate",
+    "days_to_failure": 12.0,
+    "expected_route": "skip"
+  },
+  {
+    "id": "workflow-in-stock",
+    "kind": "reserve_or_order",
+    "part_key": "bearing-kit-a",
+    "qty": 1,
+    "expected_decision": "reserve_and_schedule_pm",
+    "expected_in_stock": true
+  },
+  {
+    "id": "workflow-oos",
+    "kind": "reserve_or_order",
+    "part_key": "vfd-module",
+    "qty": 1,
+    "expected_decision": "expedite_po_pending_approval",
+    "expected_in_stock": false
+  }
+]

@@ -11,6 +11,7 @@ services:
     volumes:
       - parts_pg:/var/lib/postgresql/data
       - ./schema/parts_inventory.sql:/docker-entrypoint-initdb.d/01_parts_inventory.sql:ro
+      - ./schema/02_views_and_cases.sql:/docker-entrypoint-initdb.d/02_views_and_cases.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U parts -d parts_inventory"]
       interval: 5s
