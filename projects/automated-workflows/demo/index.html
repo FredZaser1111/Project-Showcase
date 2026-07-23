@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Predictive Maintenance — agent live demo</title>
+  <meta name="description" content="Interactive walkthrough: score asset, check inventory, reserve or expedite PO, HITL — with eval scorecard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419; --surface: #1a222c; --surface-2: #222c38; --border: #2d3a47;
+      --text: #e8eef4; --muted: #8b9bab; --accent: #3ecf8e; --accent-dim: #2a9d6c;
+      --warn: #e6b84d; --danger: #e57373;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.55;
+    }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 2.25rem 1.25rem 4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.82rem; }
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.55rem;
+    }
+    h1 { font-size: clamp(1.65rem, 4vw, 2.1rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.45rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.75rem; font-weight: 600; }
+    .lede { color: var(--muted); max-width: 42rem; margin: 0 0 1.1rem; }
+    .nav { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1rem 0 1.35rem; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 0.45rem 0.85rem; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 600; border: 1px solid var(--border); color: var(--text);
+      background: transparent; cursor: pointer; font-family: inherit; text-decoration: none;
+    }
+    .btn:hover { border-color: var(--accent-dim); background: rgba(62, 207, 142, 0.08); text-decoration: none; }
+    .btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
+    .pill {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.45rem; color: var(--muted);
+    }
+    .pill.on { color: var(--accent); border-color: var(--accent-dim); }
+    .flow { display: grid; gap: 0.5rem; margin: 0.5rem 0 1.25rem; }
+    @media (min-width: 720px) { .flow { grid-template-columns: repeat(5, 1fr); } }
+    .step {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem 0.85rem;
+      opacity: 0.45; transition: opacity 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .step.on { opacity: 1; border-color: var(--accent-dim); transform: translateY(-2px); }
+    .step.done { opacity: 0.85; }
+    .step .n { color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 0.7rem; display: block; margin-bottom: 0.3rem; }
+    .step strong { display: block; font-size: 0.88rem; margin-bottom: 0.2rem; }
+    .step span { color: var(--muted); font-size: 0.78rem; }
+    .panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.15rem;
+      min-height: 9.5rem;
+    }
+    .panel .label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.45rem; }
+    .panel .title { font-size: 1.15rem; font-weight: 600; margin: 0 0 0.45rem; }
+    .panel .body { color: var(--muted); font-size: 0.92rem; white-space: pre-wrap; }
+    .stats { display: grid; gap: 0.7rem; grid-template-columns: repeat(2, 1fr); margin: 1rem 0; }
+    @media (min-width: 640px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+    .stat {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem 0.95rem;
+    }
+    .stat b { display: block; font-size: 1.35rem; color: var(--accent); letter-spacing: -0.02em; }
+    .stat em { font-style: normal; color: var(--muted); font-size: 0.78rem; }
+    .eval-row {
+      display: flex; justify-content: space-between; gap: 0.75rem; padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border); font-size: 0.88rem;
+    }
+    .eval-row:last-child { border-bottom: 0; }
+    .pass { color: var(--accent); }
+    footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Live demo · committed case outputs · no API keys</p>
+    <h1>Predictive Maintenance Agent</h1>
+    <p class="lede">Step through a real case path: score days-to-failure → inventory check → PO / reserve → manager HITL. Eval harness shows 7/7 golden checks.</p>
+    <div class="pills">
+      <span class="pill on">Interactive</span>
+      <span class="pill">LangGraph</span>
+      <span class="pill">XGBoost</span>
+      <span class="pill">HITL policy</span>
+    </div>
+    <div class="nav">
+      <a class="btn" href="../../../demos/">All live demos</a>
+      <button class="btn primary" type="button" id="nextBtn">Run next step</button>
+      <button class="btn" type="button" id="resetBtn">Reset</button>
+      <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/automated-workflows/predictive-maintenance-agent">Browse code</a>
+    </div>
+
+    <div class="flow" id="flow">
+      <div class="step" data-i="0"><span class="n">01</span><strong>Score</strong><span>Days to failure</span></div>
+      <div class="step" data-i="1"><span class="n">02</span><strong>Gate</strong><span>≤ 7 days?</span></div>
+      <div class="step" data-i="2"><span class="n">03</span><strong>Inventory</strong><span>REST / mock tools</span></div>
+      <div class="step" data-i="3"><span class="n">04</span><strong>Action</strong><span>Reserve or PO</span></div>
+      <div class="step" data-i="4"><span class="n">05</span><strong>HITL</strong><span>Manager queue</span></div>
+    </div>
+
+    <div class="panel" id="stage">
+      <div class="label">Case PM-ASSET-0387</div>
+      <div class="title">Ready</div>
+      <div class="body">Press “Run next step” to replay the out-of-stock VFD path from committed maintenance_cases.json.</div>
+    </div>
+
+    <h2>Eval scorecard</h2>
+    <div class="stats">
+      <div class="stat"><b>7/7</b><em>Golden cases passed</em></div>
+      <div class="stat"><b>100%</b><em>Pass rate</em></div>
+      <div class="stat"><b>0</b><em>Failures</em></div>
+      <div class="stat"><b>mock</b><em>Deterministic CI mode</em></div>
+    </div>
+    <div class="panel" id="evalList"></div>
+
+    <footer>
+      Source artifacts:
+      <a href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/eval_report.json">eval_report.json</a>
+      ·
+      <a href="../../parts-inventory-api/demo/">Open HITL inventory demo</a>
+      ·
+      <a href="../../../">Portfolio</a>
+    </footer>
+  </div>
+  <script>
+    const STEPS = [
+      {
+        title: "Score asset",
+        body: "XGBoost predicts days_to_failure = 1.84 for ASSET-0387 (vibration_rms 7.634). Case id PM-ASSET-0387.",
+      },
+      {
+        title: "Threshold gate",
+        body: "1.84 ≤ FAILURE_DAYS_THRESHOLD (7) → activate procurement path. Healthy assets would skip to monitor_only.",
+      },
+      {
+        title: "Inventory check",
+        body: "recommend_part → vfd-module (VFD-900). qty=0, unit_cost=$2400, supplier Helix Parts Co → in_stock=false.",
+      },
+      {
+        title: "Append workflow",
+        body: "reserve_or_order drafts PO and appends purchase_orders + approval_queue (APPR-1001). Decision: expedite_po_pending_approval.",
+      },
+      {
+        title: "HITL required",
+        body: "Manager sees the PO in the approval inbox. Approve → RECEIPT movement; reject → close without stock change. Policy also forces HITL when unit_cost ≥ $1000.",
+      },
+    ];
+
+    const EVAL = [
+      ["rec-high-vibration", "vfd-module"],
+      ["rec-mid-vibration", "bearing-kit-b"],
+      ["rec-even-asset", "bearing-kit-a"],
+      ["gate-act", "inventory"],
+      ["gate-skip", "skip"],
+      ["workflow-in-stock", "reserve_and_schedule_pm"],
+      ["workflow-oos", "expedite_po_pending_approval"],
+    ];
+
+    let i = -1;
+    const stage = document.getElementById("stage");
+    const nextBtn = document.getElementById("nextBtn");
+    const steps = [...document.querySelectorAll(".step")];
+
+    document.getElementById("evalList").innerHTML = EVAL.map(([id, got]) =>
+      `<div class="eval-row"><span class="mono">${id}</span><span class="pass">PASS · ${got}</span></div>`
+    ).join("");
+
+    function paint() {
+      steps.forEach((el, idx) => {
+        el.classList.toggle("on", idx === i);
+        el.classList.toggle("done", idx < i);
+      });
+      if (i < 0) {
+        stage.querySelector(".title").textContent = "Ready";
+        stage.querySelector(".body").textContent = "Press “Run next step” to replay the out-of-stock VFD path from committed maintenance_cases.json.";
+        nextBtn.textContent = "Run next step";
+        nextBtn.disabled = false;
+        return;
+      }
+      const s = STEPS[i];
+      stage.querySelector(".title").textContent = s.title;
+      stage.querySelector(".body").textContent = s.body;
+      nextBtn.textContent = i >= STEPS.length - 1 ? "Finished — Reset to replay" : "Run next step";
+      if (i >= STEPS.length - 1) nextBtn.disabled = true;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (i >= STEPS.length - 1) return;
+      i += 1;
+      paint();
+    });
+    document.getElementById("resetBtn").addEventListener("click", () => { i = -1; paint(); });
+    paint();
+  </script>
+</body>
+</html>

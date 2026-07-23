@@ -6,6 +6,8 @@ One GitHub repository for the landing page, shipped projects, and McCombs capsto
 
 **Resume-friendly site (after GitHub Pages is enabled):** [fredzaser1111.github.io/Project-Showcase](https://fredzaser1111.github.io/Project-Showcase/)
 
+**Live demos hub:** [fredzaser1111.github.io/Project-Showcase/demos/](https://fredzaser1111.github.io/Project-Showcase/demos/)
+
 ---
 
 ## Layout

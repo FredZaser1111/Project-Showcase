@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parts Inventory — HITL live demo</title>
+  <meta name="description" content="Interactive recruiter demo: spare-parts stock, append-only movements, and manager approval inbox." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419; --surface: #1a222c; --surface-2: #222c38; --border: #2d3a47;
+      --text: #e8eef4; --muted: #8b9bab; --accent: #3ecf8e; --accent-dim: #2a9d6c;
+      --warn: #e6b84d; --danger: #e57373;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.55;
+    }
+    .wrap { max-width: 56rem; margin: 0 auto; padding: 2.25rem 1.25rem 4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.82rem; }
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.55rem;
+    }
+    h1 { font-size: clamp(1.65rem, 4vw, 2.1rem); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.45rem; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 0.75rem; font-weight: 600; }
+    .lede { color: var(--muted); max-width: 40rem; margin: 0 0 1.1rem; }
+    .nav { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1rem 0 1.5rem; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 0.45rem 0.85rem; border-radius: 8px;
+      font-size: 0.875rem; font-weight: 600; border: 1px solid var(--border); color: var(--text);
+      background: transparent; cursor: pointer; font-family: inherit; text-decoration: none;
+    }
+    .btn:hover { border-color: var(--accent-dim); background: rgba(62, 207, 142, 0.08); text-decoration: none; }
+    .btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .btn.danger { border-color: var(--danger); color: var(--danger); }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .pill {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 1px solid var(--border); border-radius: 6px; padding: 0.2rem 0.45rem; color: var(--muted);
+    }
+    .pill.on { color: var(--accent); border-color: var(--accent-dim); }
+    .grid2 { display: grid; gap: 1rem; }
+    @media (min-width: 720px) { .grid2 { grid-template-columns: 1.1fr 0.9fr; } }
+    .panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.1rem;
+    }
+    .panel h3 { margin: 0 0 0.75rem; font-size: 0.95rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.55rem 0.35rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; }
+    .qty { font-variant-numeric: tabular-nums; }
+    .ok { color: var(--accent); }
+    .bad { color: var(--danger); }
+    .log {
+      margin-top: 1rem; background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.85rem 1rem; max-height: 11rem; overflow: auto;
+    }
+    .log p { margin: 0.35rem 0; font-size: 0.82rem; color: var(--muted); }
+    .log p strong { color: var(--text); font-weight: 600; }
+    .flash { animation: flash 0.7s ease; }
+    @keyframes flash { from { background: rgba(62, 207, 142, 0.18); } to { background: transparent; } }
+    .empty { color: var(--muted); font-size: 0.9rem; padding: 0.5rem 0; }
+    footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Live demo · no login · client-side simulation of the JDBC API</p>
+    <h1>Parts Inventory HITL</h1>
+    <p class="lede">Approve or reject purchase orders the maintenance agent enqueued. Stock updates only through append-style movements — the same pattern as the Spring Boot + Postgres service in this repo.</p>
+    <div class="pills">
+      <span class="pill on">Interactive</span>
+      <span class="pill">Append ledger</span>
+      <span class="pill">Manager approval</span>
+      <span class="pill">Appian-style HITL</span>
+    </div>
+    <div class="nav">
+      <a class="btn" href="../../../demos/">All live demos</a>
+      <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/parts-inventory-api">Browse code</a>
+      <button class="btn" type="button" id="resetBtn">Reset demo</button>
+    </div>
+
+    <div class="grid2">
+      <section class="panel">
+        <h3>On-hand stock <span class="mono" style="color:var(--muted);font-weight:500;">v_parts_on_hand</span></h3>
+        <table>
+          <thead><tr><th>Part</th><th>SKU</th><th>Qty</th><th>Status</th></tr></thead>
+          <tbody id="stockBody"></tbody>
+        </table>
+      </section>
+      <section class="panel">
+        <h3>Approval inbox <span class="mono" style="color:var(--muted);font-weight:500;">v_open_approvals</span></h3>
+        <div id="inbox"></div>
+      </section>
+    </div>
+
+    <h2>Append-only event log</h2>
+    <div class="log" id="eventLog" aria-live="polite"></div>
+
+    <footer>
+      Mirrors <span class="mono">POST /api/webhooks/po-approved</span> and
+      <span class="mono">stock_movements</span> from the Java API.
+      <a href="../../../">Back to portfolio</a>
+    </footer>
+  </div>
+  <script>
+    const SEED = {
+      stock: [
+        { part_key: "bearing-kit-a", sku: "BRG-A-220", qty: 12, unit_cost: 480, supplier: "NorthPeak Industrial" },
+        { part_key: "bearing-kit-b", sku: "BRG-B-110", qty: 0, unit_cost: 620, supplier: "NorthPeak Industrial" },
+        { part_key: "motor-seal", sku: "MSL-44", qty: 3, unit_cost: 95, supplier: "Helix Parts Co" },
+        { part_key: "vfd-module", sku: "VFD-900", qty: 0, unit_cost: 2400, supplier: "Helix Parts Co" },
+      ],
+      approvals: [
+        { approval_id: "APPR-1001", case_id: "PM-ASSET-0387", part_key: "vfd-module", sku: "VFD-900", qty: 1, supplier: "Helix Parts Co", asset_id: "ASSET-0387" },
+        { approval_id: "APPR-1002", case_id: "PM-ASSET-0136", part_key: "vfd-module", sku: "VFD-900", qty: 1, supplier: "Helix Parts Co", asset_id: "ASSET-0136" },
+      ],
+    };
+
+    let state = null;
+    const stockBody = document.getElementById("stockBody");
+    const inbox = document.getElementById("inbox");
+    const eventLog = document.getElementById("eventLog");
+
+    function clone(v) { return JSON.parse(JSON.stringify(v)); }
+
+    function log(type, msg) {
+      const p = document.createElement("p");
+      const t = new Date().toISOString().slice(11, 19);
+      p.innerHTML = `<span class="mono">${t}</span> · <strong>${type}</strong> — ${msg}`;
+      eventLog.prepend(p);
+    }
+
+    function renderStock() {
+      stockBody.innerHTML = state.stock.map((s) => {
+        const ok = s.qty > 0;
+        return `<tr class="flash"><td class="mono">${s.part_key}</td><td class="mono">${s.sku}</td>
+          <td class="qty">${s.qty}</td><td class="${ok ? "ok" : "bad"}">${ok ? "IN STOCK" : "OUT OF STOCK"}</td></tr>`;
+      }).join("");
+    }
+
+    function renderInbox() {
+      if (!state.approvals.length) {
+        inbox.innerHTML = `<p class="empty">Inbox clear. All POs decided — reset to replay.</p>`;
+        return;
+      }
+      inbox.innerHTML = state.approvals.map((a) => `
+        <div style="border-bottom:1px solid var(--border);padding:0.65rem 0;" class="flash">
+          <div class="mono" style="margin-bottom:0.25rem;">${a.approval_id} · ${a.case_id}</div>
+          <div style="font-size:0.88rem;margin-bottom:0.55rem;">${a.sku} × ${a.qty} · ${a.supplier} · ${a.asset_id}</div>
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+            <button class="btn primary" type="button" data-approve="${a.approval_id}">Approve + RECEIPT</button>
+            <button class="btn danger" type="button" data-reject="${a.approval_id}">Reject</button>
+          </div>
+        </div>
+      `).join("");
+      inbox.querySelectorAll("[data-approve]").forEach((btn) => {
+        btn.addEventListener("click", () => decide(btn.getAttribute("data-approve"), true));
+      });
+      inbox.querySelectorAll("[data-reject]").forEach((btn) => {
+        btn.addEventListener("click", () => decide(btn.getAttribute("data-reject"), false));
+      });
+    }
+
+    function decide(approvalId, approved) {
+      const idx = state.approvals.findIndex((a) => a.approval_id === approvalId);
+      if (idx < 0) return;
+      const a = state.approvals[idx];
+      state.approvals.splice(idx, 1);
+      if (approved) {
+        const part = state.stock.find((s) => s.part_key === a.part_key);
+        if (part) part.qty += a.qty;
+        log("po_approved + RECEIPT", `${approvalId} received ${a.qty} × ${a.sku} (append movement, balance ${part ? part.qty : "?"})`);
+      } else {
+        log("po_rejected", `${approvalId} closed without stock change`);
+      }
+      renderStock();
+      renderInbox();
+    }
+
+    function reset() {
+      state = clone(SEED);
+      eventLog.innerHTML = "";
+      log("inventory_checked", "Seeded catalog matching predictive-maintenance mock parts");
+      log("po_drafted", "Agent enqueued APPR-1001 / APPR-1002 for out-of-stock VFD-900");
+      renderStock();
+      renderInbox();
+    }
+
+    document.getElementById("resetBtn").addEventListener("click", reset);
+    reset();
+  </script>
+</body>
+</html>

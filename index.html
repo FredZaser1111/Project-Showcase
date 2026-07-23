@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Project showcase</title>
-  <meta name="description" content="Agentic AI & Python portfolio: automated workflows (XGBoost + agents), SEO Optimizer, NBA Z Lock, and UT Austin McCombs capstones." />
+  <meta name="description" content="Live demos: parts inventory HITL, predictive maintenance agent walkthrough, listing orchestrator. Agentic process automation for Business Application Engineering roles." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -103,7 +103,7 @@
       color: var(--bg);
       border-color: var(--accent);
     }
-    a    .btn.primary:hover {
+    a.btn.primary:hover {
       background: var(--accent-dim);
       border-color: var(--accent-dim);
     }
@@ -152,13 +152,48 @@
     <header>
       <h1>Project showcase</h1>
       <p class="lede">Agentic process automation on real data stores — predictive scores, REST/JDBC integrations, HITL approvals, and AI that cites audit events. Built for Business Application Engineering and Agentic AI roles.</p>
-      <p class="lede" style="margin-top:0.75rem;font-size:0.95rem;">
-        Hero story:
-        <a href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/BPM_APPIAN_MAPPING.md" style="color:var(--accent);">BPM / Appian mapping</a>
-        ·
-        <a href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/eval_report.json" style="color:var(--accent);">Agent eval scorecard</a>
-      </p>
+      <div class="links" style="margin-top:1.1rem;">
+        <a class="btn primary" href="demos/">Live demos</a>
+        <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/BPM_APPIAN_MAPPING.md">BPM / Appian mapping</a>
+        <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/eval_report.json">Eval scorecard</a>
+      </div>
     </header>
+
+    <p class="section-label">Live demos · click, don’t clone</p>
+    <div class="grid">
+      <article>
+        <span class="badge">Interactive · HITL</span>
+        <h2>Parts Inventory Inbox</h2>
+        <p>Approve POs and watch append-only stock receipts update — Appian-style human task over a spare-parts ledger.</p>
+        <div class="links">
+          <a class="btn primary" href="projects/parts-inventory-api/demo/">Open live demo</a>
+        </div>
+      </article>
+      <article>
+        <span class="badge">Interactive · Eval 7/7</span>
+        <h2>Maintenance Agent Walkthrough</h2>
+        <p>Step through score → inventory → expedite PO → HITL with the golden eval scorecard beside the case.</p>
+        <div class="links">
+          <a class="btn primary" href="projects/automated-workflows/demo/">Open live demo</a>
+        </div>
+      </article>
+      <article>
+        <span class="badge">Workflow mockup</span>
+        <h2>Listing Orchestrator</h2>
+        <p>Seed photos to Shopify / eBay / Etsy mock publish and consent-aware CRM — production path for Cozy Connoisseur.</p>
+        <div class="links">
+          <a class="btn primary" href="projects/listing-orchestrator/demo/">Open live demo</a>
+        </div>
+      </article>
+      <article>
+        <span class="badge">Demo hub</span>
+        <h2>All demos in one place</h2>
+        <p>Recruiter pitch page with the three clickable experiences and links back to source.</p>
+        <div class="links">
+          <a class="btn primary" href="demos/">Open demo hub</a>
+        </div>
+      </article>
+    </div>
 
     <p class="section-label">Business systems · Agentic workflows</p>
     <div class="grid">
@@ -167,8 +202,8 @@
         <h2>Predictive Maintenance Agent</h2>
         <p>Days-to-failure scoring triggers inventory checks, purchase-order drafts, and manager approval stubs—hyperautomation for procurement.</p>
         <div class="links">
-          <a class="btn primary" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/automated-workflows/predictive-maintenance-agent">Browse code</a>
-          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/maintenance_cases.json">Sample cases</a>
+          <a class="btn primary" href="projects/automated-workflows/demo/">Live demo</a>
+          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/automated-workflows/predictive-maintenance-agent">Browse code</a>
           <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/eval_report.json">Eval report</a>
         </div>
       </article>
@@ -178,7 +213,8 @@
         <h2>Parts Inventory API</h2>
         <p>Equipment spare-parts DBMS with append-only stock movements, purchase orders, and HITL approval queues—REST + SQL for Appian-style integration demos. Runs with mock agent tools without Docker.</p>
         <div class="links">
-          <a class="btn primary" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/parts-inventory-api">Browse code</a>
+          <a class="btn primary" href="projects/parts-inventory-api/demo/">Live demo</a>
+          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/parts-inventory-api">Browse code</a>
           <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/BPM_APPIAN_MAPPING.md">BPM mapping</a>
         </div>
       </article>

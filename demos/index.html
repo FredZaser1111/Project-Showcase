@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live demos — Project Showcase</title>
+  <meta name="description" content="Recruiter live demos: listing orchestrator, predictive maintenance agent walkthrough, and parts inventory HITL inbox." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419; --surface: #1a222c; --border: #2d3a47;
+      --text: #e8eef4; --muted: #8b9bab; --accent: #3ecf8e; --accent-dim: #2a9d6c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, sans-serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(62, 207, 142, 0.12), transparent 55%),
+        var(--bg);
+      color: var(--text); line-height: 1.55;
+    }
+    .wrap { max-width: 54rem; margin: 0 auto; padding: 2.75rem 1.35rem 4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .eyebrow {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.6rem;
+    }
+    h1 {
+      font-size: clamp(1.85rem, 4.5vw, 2.45rem); font-weight: 700; letter-spacing: -0.03em;
+      margin: 0 0 0.55rem; max-width: 18ch;
+    }
+    .lede { color: var(--muted); font-size: 1.05rem; max-width: 36rem; margin: 0 0 1.5rem; }
+    .cta { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.25rem; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 0.55rem 1rem; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 600; border: 1px solid var(--border); color: var(--text);
+      text-decoration: none; transition: border-color 0.15s, background 0.15s;
+    }
+    .btn:hover { border-color: var(--accent-dim); background: rgba(62, 207, 142, 0.08); text-decoration: none; }
+    .btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.85rem;
+    }
+    .grid { display: grid; gap: 1.15rem; }
+    @media (min-width: 700px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .grid .span2 { grid-column: 1 / -1; }
+    article {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.35rem 1.4rem; display: flex; flex-direction: column; gap: 0.7rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    article:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
+    .badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--muted); border: 1px solid var(--border);
+      border-radius: 6px; padding: 0.2rem 0.45rem; width: fit-content;
+    }
+    article h2 { font-size: 1.2rem; font-weight: 600; margin: 0; }
+    article p { margin: 0; color: var(--muted); font-size: 0.95rem; flex: 1; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.15rem; }
+    .note {
+      margin-top: 2rem; padding: 1rem 1.1rem; border: 1px dashed var(--border); border-radius: 10px;
+      color: var(--muted); font-size: 0.9rem;
+    }
+    footer { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Project Showcase · recruiter live demos</p>
+    <h1>Click. Don’t clone.</h1>
+    <p class="lede">Three interactive demos that show Appian-style process automation: marketplace listings, predictive procurement, and a manager HITL inventory inbox — no installs.</p>
+    <div class="cta">
+      <a class="btn primary" href="../projects/parts-inventory-api/demo/">Start with HITL inbox</a>
+      <a class="btn" href="../projects/automated-workflows/demo/">Agent walkthrough</a>
+      <a class="btn" href="../">Portfolio home</a>
+    </div>
+
+    <p class="section-label">Live demos</p>
+    <div class="grid">
+      <article class="span2">
+        <span class="badge">Recommended first · Interactive</span>
+        <h2>Parts Inventory HITL</h2>
+        <p>Approve or reject agent-drafted POs. Watch on-hand qty update only via append-style RECEIPT movements — the JDBC/Postgres pattern recruiters can map to BPM records and user tasks.</p>
+        <div class="links">
+          <a class="btn primary" href="../projects/parts-inventory-api/demo/">Open demo</a>
+          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/parts-inventory-api">Code</a>
+        </div>
+      </article>
+      <article>
+        <span class="badge">Interactive · Eval 7/7</span>
+        <h2>Maintenance agent</h2>
+        <p>Step through score → gate → inventory → PO → HITL for a real out-of-stock VFD case, with the golden eval scorecard beside it.</p>
+        <div class="links">
+          <a class="btn primary" href="../projects/automated-workflows/demo/">Open demo</a>
+          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/automated-workflows/predictive-maintenance-agent/outputs/eval_report.json">Eval JSON</a>
+        </div>
+      </article>
+      <article>
+        <span class="badge">Static mockup · Shipped</span>
+        <h2>Listing Orchestrator</h2>
+        <p>Seed photos → vision → listing copy → Shopify / eBay / Etsy mock publish → sold notify CRM. Production path for Cozy Connoisseur Co.</p>
+        <div class="links">
+          <a class="btn primary" href="../projects/listing-orchestrator/demo/">Open demo</a>
+          <a class="btn" href="https://github.com/FredZaser1111/Project-Showcase/tree/main/projects/listing-orchestrator">Code</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      These Pages demos simulate the production APIs in-browser so they always load.
+      Full Java/Postgres and Python agent runs stay in the repo for interview deep-dives
+      (<span class="mono">mvn spring-boot:run</span>, <span class="mono">python run_agent.py</span>).
+    </div>
+
+    <footer>
+      <a href="../">← Portfolio home</a>
+      ·
+      <a href="https://github.com/FredZaser1111/Project-Showcase/blob/main/projects/BPM_APPIAN_MAPPING.md">BPM / Appian mapping</a>
+    </footer>
+  </div>
+</body>
+</html>
