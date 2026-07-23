@@ -1,0 +1,37 @@
+{
+  "llm_mode": "mock",
+  "citation_count": 5,
+  "citations": [
+    {
+      "event_id": "local-PM-ASSET-0613",
+      "event_type": "monitor_only",
+      "case_id": "PM-ASSET-0613",
+      "part_key": null
+    },
+    {
+      "event_id": "local-PM-ASSET-0387",
+      "event_type": "expedite_po_pending_approval",
+      "case_id": "PM-ASSET-0387",
+      "part_key": "vfd-module"
+    },
+    {
+      "event_id": "local-PM-ASSET-0136",
+      "event_type": "expedite_po_pending_approval",
+      "case_id": "PM-ASSET-0136",
+      "part_key": "vfd-module"
+    },
+    {
+      "event_id": "local-PM-ASSET-0467",
+      "event_type": "expedite_po_pending_approval",
+      "case_id": "PM-ASSET-0467",
+      "part_key": "vfd-module"
+    },
+    {
+      "event_id": "local-PM-ASSET-0385",
+      "event_type": "expedite_po_pending_approval",
+      "case_id": "PM-ASSET-0385",
+      "part_key": "vfd-module"
+    }
+  ],
+  "recommendation": "Recommended next actions (mock):\n1. Clear open HITL approvals for out-of-stock VFDs before weekend PM windows [cite: local-PM-ASSET-0613].\n2. Auto-reserve in-stock bearing kits under $1000 per policy; notify dock B.\n3. Review repeated expedite POs for the same SKU \u2014 raise reorder_point.\nCitations refer to workflow_events.event_id values."
+}

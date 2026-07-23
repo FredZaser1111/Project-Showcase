@@ -58,6 +58,22 @@ python sync_orders.py
 
 Copy `.env.example` → `.env` (never commit). Adapters no-op into mock mode when keys are missing so the portfolio demo always runs.
 
+## Inventory ledger → Postgres (Track C Phase 2)
+
+CSV is always written to `outputs/inventory_ledger.csv`.
+
+To also append into PostgreSQL (`items`, `channel_listings`, `workflow_events`):
+
+```bash
+docker compose up -d
+pip install -r requirements.txt
+# in .env:
+# DATABASE_URL=postgresql://cozy:cozy_dev@localhost:5432/cozy_inventory
+python run_demo.py
+```
+
+View join: `v_channel_listings` in [`schema/inventory.sql`](schema/inventory.sql).
+
 ## Order sync / CRM
 
 ```bash

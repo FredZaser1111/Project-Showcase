@@ -48,3 +48,23 @@ CREATE TABLE IF NOT EXISTS workflow_events (
 CREATE INDEX IF NOT EXISTS idx_items_sku ON items(sku);
 CREATE INDEX IF NOT EXISTS idx_channel_listings_item ON channel_listings(item_id);
 CREATE INDEX IF NOT EXISTS idx_workflow_events_item ON workflow_events(item_id);
+
+CREATE OR REPLACE VIEW v_channel_listings AS
+SELECT
+    i.item_id,
+    i.sku,
+    i.title,
+    i.brand,
+    i.category,
+    i.condition,
+    i.size,
+    i.price,
+    i.status AS item_status,
+    cl.channel,
+    cl.external_id,
+    cl.url,
+    cl.status AS listing_status,
+    cl.mode,
+    cl.published_at
+FROM items i
+JOIN channel_listings cl ON cl.item_id = i.item_id;

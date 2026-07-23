@@ -44,6 +44,15 @@ cd projects/automated-workflows
 
 Writes `predictive-maintenance-agent/outputs/eval_report.json` (part recommendation, threshold gate, reserve-or-order decisions). Exit code nonzero on failures.
 
+### Grounded insights (GenAI with event citations)
+
+```bash
+cd projects/automated-workflows
+python insights.py
+```
+
+Reads live `/api/workflow-events` when the Parts API is up; otherwise uses `maintenance_cases.json`. Writes `predictive-maintenance-agent/outputs/insights.json`.
+
 ### Optional: live spare-parts inventory (maintenance agent)
 
 ```bash

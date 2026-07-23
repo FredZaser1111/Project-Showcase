@@ -2,12 +2,19 @@
 
 **Selected:** Track C — Dual hybrid (Business Application Engineering + Agentic AI)
 
-**Why:** Plan default when targeting both Appian/Bus Tech and agentic roles.
+## Status
 
-**Phase 1 delivered in-repo:**
+| Phase | Status | Notes |
+| --- | --- | --- |
+| Phase 1 — Shared backbone | Done | Views, webhook, inbox, eval harness, case upsert |
+| Phase 2 — Productize | Done | Tracing, policy, Cozy Postgres ledger, workflow-events API |
+| Phase 3 — Differentiate | Done | BPM/Appian mapping + grounded `insights.py` + portfolio hero |
+| Phase 4 — Apply hard | Kit ready | [`RESUME_AND_INTERVIEW_KIT.md`](RESUME_AND_INTERVIEW_KIT.md) — you run applications weekly |
 
-1. Parts Inventory API — SQL views (`v_parts_on_hand`, `v_open_approvals`), `agent_cases`, PO approval webhook, HITL `/inbox`, MariaDB notes
-2. Maintenance agent — HTTP retries, optional case persistence to API, mock-safe fallback
-3. Eval harness — `projects/automated-workflows/eval_agents.py` + `eval/golden_maintenance.json`
+## Key docs
 
-Later phases (productize Cozy Postgres twin, Appian Community mapping, resume packaging) stay scheduled in the career track menu plan.
+- [`BPM_APPIAN_MAPPING.md`](BPM_APPIAN_MAPPING.md)
+- [`RESUME_AND_INTERVIEW_KIT.md`](RESUME_AND_INTERVIEW_KIT.md)
+- Parts API: [`parts-inventory-api/README.md`](parts-inventory-api/README.md)
+- Eval: `python automated-workflows/eval_agents.py`
+- Insights: `python automated-workflows/insights.py`

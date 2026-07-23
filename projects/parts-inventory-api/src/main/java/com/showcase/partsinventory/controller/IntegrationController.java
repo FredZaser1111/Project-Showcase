@@ -5,6 +5,7 @@ import com.showcase.partsinventory.model.OpenApproval;
 import com.showcase.partsinventory.model.PoApprovalWebhookRequest;
 import com.showcase.partsinventory.repository.AgentCaseRepository;
 import com.showcase.partsinventory.repository.ApprovalQueueRepository;
+import com.showcase.partsinventory.repository.WorkflowEventRepository;
 import com.showcase.partsinventory.service.ApprovalWebhookService;
 import jakarta.validation.Valid;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -25,17 +26,20 @@ public class IntegrationController {
     private final ApprovalWebhookService webhooks;
     private final ApprovalQueueRepository approvals;
     private final AgentCaseRepository cases;
+    private final WorkflowEventRepository events;
     private final NamedParameterJdbcTemplate jdbc;
 
     public IntegrationController(
             ApprovalWebhookService webhooks,
             ApprovalQueueRepository approvals,
             AgentCaseRepository cases,
+            WorkflowEventRepository events,
             NamedParameterJdbcTemplate jdbc
     ) {
         this.webhooks = webhooks;
         this.approvals = approvals;
         this.cases = cases;
+        this.events = events;
         this.jdbc = jdbc;
     }
 
@@ -79,5 +83,13 @@ public class IntegrationController {
     @GetMapping("/cases")
     public List<Map<String, Object>> listCases(@RequestParam(defaultValue = "20") int limit) {
         return cases.listRecent(Math.min(Math.max(limit, 1), 100));
+    }
+
+    @GetMapping("/workflow-events")
+    public List<Map<String, Object>> workflowEvents(
+            @RequestParam(required = false) String caseId,
+            @RequestParam(defaultValue = "20") int limit
+    ) {
+        return events.listRecent(caseId, Math.min(Math.max(limit, 1), 100));
     }
 }

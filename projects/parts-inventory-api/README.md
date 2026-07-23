@@ -76,6 +76,7 @@ curl http://localhost:8080/api/purchase-orders
 | POST | `/api/webhooks/po-approved` | Approve/reject PO; optional RECEIPT append |
 | POST | `/api/cases` | Upsert agent case packet (`agent_cases`) |
 | GET | `/api/cases` | Recent durable cases |
+| GET | `/api/workflow-events` | Append-only audit events (optional `caseId`) |
 
 ### Approve a PO (webhook)
 
